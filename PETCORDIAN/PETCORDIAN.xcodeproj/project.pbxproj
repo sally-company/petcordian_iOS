@@ -26,6 +26,7 @@
 		D270A65E28C9D5DF0015F54C /* UIViewController+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D270A65C28C9D5DF0015F54C /* UIViewController+Preview.swift */; };
 		D270A66128C9DC370015F54C /* ReusableKit in Frameworks */ = {isa = PBXBuildFile; productRef = D270A66028C9DC370015F54C /* ReusableKit */; };
 		D270A66428C9DCDA0015F54C /* netfox in Frameworks */ = {isa = PBXBuildFile; productRef = D270A66328C9DCDA0015F54C /* netfox */; };
+		D270A66E28D062460015F54C /* SplashContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D270A66D28D062460015F54C /* SplashContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		D270A62F28C9D3A80015F54C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D270A65B28C9D5DF0015F54C /* UIView+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Preview.swift"; sourceTree = "<group>"; };
 		D270A65C28C9D5DF0015F54C /* UIViewController+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Preview.swift"; sourceTree = "<group>"; };
+		D270A66D28D062460015F54C /* SplashContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				D270A65A28C9D5CC0015F54C /* Extensions */,
+				D270A66B28D062200015F54C /* Splash */,
 				D270A62128C9D3A70015F54C /* AppDelegate.swift */,
 				D270A62328C9D3A70015F54C /* SceneDelegate.swift */,
 				D270A62A28C9D3A80015F54C /* Assets.xcassets */,
@@ -99,6 +102,22 @@
 				D270A65C28C9D5DF0015F54C /* UIViewController+Preview.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D270A66B28D062200015F54C /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				D270A66C28D062290015F54C /* Components */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		D270A66C28D062290015F54C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D270A66D28D062460015F54C /* SplashContentView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +223,7 @@
 				D270A62228C9D3A70015F54C /* AppDelegate.swift in Sources */,
 				D270A62428C9D3A70015F54C /* SceneDelegate.swift in Sources */,
 				D270A65D28C9D5DF0015F54C /* UIView+Preview.swift in Sources */,
+				D270A66E28D062460015F54C /* SplashContentView.swift in Sources */,
 				D270A65E28C9D5DF0015F54C /* UIViewController+Preview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
