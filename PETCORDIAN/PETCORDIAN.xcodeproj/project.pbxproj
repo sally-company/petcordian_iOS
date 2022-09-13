@@ -27,6 +27,10 @@
 		D270A66128C9DC370015F54C /* ReusableKit in Frameworks */ = {isa = PBXBuildFile; productRef = D270A66028C9DC370015F54C /* ReusableKit */; };
 		D270A66428C9DCDA0015F54C /* netfox in Frameworks */ = {isa = PBXBuildFile; productRef = D270A66328C9DCDA0015F54C /* netfox */; };
 		D270A66E28D062460015F54C /* SplashContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D270A66D28D062460015F54C /* SplashContentView.swift */; };
+		D2D4543228D064F700312390 /* SplashViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4542E28D064F700312390 /* SplashViewReactor.swift */; };
+		D2D4543328D064F700312390 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4542F28D064F700312390 /* SplashViewController.swift */; };
+		D2D4543428D064F700312390 /* SplashBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4543028D064F700312390 /* SplashBuilder.swift */; };
+		D2D4543528D064F700312390 /* SplashViewUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4543128D064F700312390 /* SplashViewUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +43,10 @@
 		D270A65B28C9D5DF0015F54C /* UIView+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Preview.swift"; sourceTree = "<group>"; };
 		D270A65C28C9D5DF0015F54C /* UIViewController+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Preview.swift"; sourceTree = "<group>"; };
 		D270A66D28D062460015F54C /* SplashContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashContentView.swift; sourceTree = "<group>"; };
+		D2D4542E28D064F700312390 /* SplashViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewReactor.swift; sourceTree = "<group>"; };
+		D2D4542F28D064F700312390 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		D2D4543028D064F700312390 /* SplashBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashBuilder.swift; sourceTree = "<group>"; };
+		D2D4543128D064F700312390 /* SplashViewUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +116,10 @@
 			isa = PBXGroup;
 			children = (
 				D270A66C28D062290015F54C /* Components */,
+				D2D4542E28D064F700312390 /* SplashViewReactor.swift */,
+				D2D4542F28D064F700312390 /* SplashViewController.swift */,
+				D2D4543028D064F700312390 /* SplashBuilder.swift */,
+				D2D4543128D064F700312390 /* SplashViewUseCase.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -220,11 +232,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2D4543428D064F700312390 /* SplashBuilder.swift in Sources */,
 				D270A62228C9D3A70015F54C /* AppDelegate.swift in Sources */,
 				D270A62428C9D3A70015F54C /* SceneDelegate.swift in Sources */,
 				D270A65D28C9D5DF0015F54C /* UIView+Preview.swift in Sources */,
 				D270A66E28D062460015F54C /* SplashContentView.swift in Sources */,
+				D2D4543228D064F700312390 /* SplashViewReactor.swift in Sources */,
+				D2D4543328D064F700312390 /* SplashViewController.swift in Sources */,
 				D270A65E28C9D5DF0015F54C /* UIViewController+Preview.swift in Sources */,
+				D2D4543528D064F700312390 /* SplashViewUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
