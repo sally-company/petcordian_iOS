@@ -66,9 +66,7 @@ class SplashViewController: UIViewController, ReactorKit.View {
     guard let navController = self.navigationController else { return }
     var navArray = navController.viewControllers
     navArray.remove(at: navArray.count - 1)
-    let vc = UIViewController()
-    vc.view.backgroundColor = .white
-    navArray.append(vc)
+    navArray.append(RootBuilder.build())
     self.navigationController?.viewControllers = navArray
   }
 }
