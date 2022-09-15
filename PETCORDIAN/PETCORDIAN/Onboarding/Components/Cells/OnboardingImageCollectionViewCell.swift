@@ -19,7 +19,7 @@ final class OnboardingImageCollectionViewCell: UICollectionViewCell, ReactorKit.
   
   public enum Typo {
     static let description = StringStyle([
-      .font(.systemFont(ofSize: 24)),
+      .font(UIFont(name: Font.Kyobo_Handwriting_2019.rawValue, size: 24) ?? .systemFont(ofSize: 24)),
       .color(.black),
       .alignment(.center)
     ])
