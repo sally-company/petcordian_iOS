@@ -108,11 +108,10 @@ extension OnboardingContentView {
     
     let submitButton = UIButton().then {
       $0.setTitle("시작하기", for: .normal)
-      $0.titleLabel?.font = .systemFont(ofSize: 18)
+      $0.titleLabel?.font = .systemFont(ofSize: 20)
       $0.setTitleColor(.white, for: .normal)
-      $0.layer.cornerRadius = 6
+      $0.layer.cornerRadius = 9
       $0.backgroundColor = .black
-      $0.layer.borderWidth = 9
     }
     
     public override init(frame: CGRect) {
