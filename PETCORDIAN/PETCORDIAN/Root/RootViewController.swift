@@ -28,6 +28,7 @@ class RootViewController: UIViewController, ReactorKit.View {
   
   var disposeBag: DisposeBag = .init()
   
+  weak var onboardingVC: UIViewController?
   weak var startingVC: UIViewController?
   weak var homeVC: UIViewController?
   
@@ -53,9 +54,16 @@ class RootViewController: UIViewController, ReactorKit.View {
 extension RootViewController: ScreenRouter {
   
   func addOnboarding() {
+    let onboardingVC = OnboardingBuilder.build()
+    self.addChildVC(onboardingVC)
+    self.onboardingVC = onboardingVC
   }
   
   func addStarting() {
+    let startingVC = UIViewController()
+    startingVC.view.backgroundColor = .cyan
+    self.addChildVC(startingVC)
+    self.startingVC = startingVC
   }
   
   func addHome() {
