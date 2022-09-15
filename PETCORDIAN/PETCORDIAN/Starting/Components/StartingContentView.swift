@@ -16,9 +16,9 @@ import SwiftUI
 struct StartingContentView_Preview: PreviewProvider {
   static var previews: some SwiftUI.View {
     Group {
-      StartingContentView.CharacterView()
+      StartingContentView.ActionView()
         .showPreview()
-        .previewLayout(.fixed(width: 390, height: 190))
+        .previewLayout(.fixed(width: 390, height: 305))
     }
   }
 }
@@ -116,6 +116,51 @@ extension StartingContentView {
         $0.right.equalTo(-95)
         $0.top.equalTo(12)
         $0.height.equalTo(self.characterImageView.snp.width)
+      }
+    }
+  }
+}
+
+extension StartingContentView {
+  
+  public class ActionView: UIView {
+    
+    private let kakaoLoginButtonView = SocialLoginButtonView(title: "카카오")
+    private let googleLoginButtonView = SocialLoginButtonView(title: "구글")
+    private let naverLoginButtonView = SocialLoginButtonView(title: "네이버")
+    
+    public override init(frame: CGRect) {
+      super.init(frame: frame)
+      self.setup()
+    }
+    
+    public required init?(coder: NSCoder) {
+      super.init(coder: coder)
+      fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setup() {
+      let stack = self.layout()
+      
+      self.addSubview(stack)
+      
+      stack.snp.makeConstraints {
+        $0.top.equalTo(28)
+        $0.left.equalTo(40)
+        $0.right.equalTo(-35)
+      }
+    }
+    
+    private func layout() -> UIView {
+      return UIStackView().then {
+        $0.axis = .vertical
+        $0.distribution = .fill
+        $0.alignment = .fill
+        $0.spacing = 16
+        
+        $0.addArrangedSubview(self.kakaoLoginButtonView)
+        $0.addArrangedSubview(self.googleLoginButtonView)
+        $0.addArrangedSubview(self.naverLoginButtonView)
       }
     }
   }
