@@ -34,6 +34,7 @@
 		D2D4543B28D083D900312390 /* RootViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4543728D083D900312390 /* RootViewReactor.swift */; };
 		D2D4543C28D083D900312390 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4543828D083D900312390 /* RootViewController.swift */; };
 		D2D4543D28D083D900312390 /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4543928D083D900312390 /* RootBuilder.swift */; };
+		D2D4544228D1A54D00312390 /* OnboardingItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4544128D1A54D00312390 /* OnboardingItems.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		D2D4543728D083D900312390 /* RootViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewReactor.swift; sourceTree = "<group>"; };
 		D2D4543828D083D900312390 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		D2D4543928D083D900312390 /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
+		D2D4544128D1A54D00312390 /* OnboardingItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingItems.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				D270A65A28C9D5CC0015F54C /* Extensions */,
 				D270A66B28D062200015F54C /* Splash */,
 				D2D4543628D083BA00312390 /* Root */,
+				D2D4543F28D16D0100312390 /* Onboarding */,
 				D270A62128C9D3A70015F54C /* AppDelegate.swift */,
 				D270A62328C9D3A70015F54C /* SceneDelegate.swift */,
 				D270A62A28C9D3A80015F54C /* Assets.xcassets */,
@@ -147,6 +150,22 @@
 				D2D4543928D083D900312390 /* RootBuilder.swift */,
 			);
 			path = Root;
+			sourceTree = "<group>";
+		};
+		D2D4543F28D16D0100312390 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				D2D4544028D1A53D00312390 /* Entity */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		D2D4544028D1A53D00312390 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D2D4544128D1A54D00312390 /* OnboardingItems.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2D4543428D064F700312390 /* SplashBuilder.swift in Sources */,
+				D2D4544228D1A54D00312390 /* OnboardingItems.swift in Sources */,
 				D2D4543B28D083D900312390 /* RootViewReactor.swift in Sources */,
 				D270A62228C9D3A70015F54C /* AppDelegate.swift in Sources */,
 				D2D4543C28D083D900312390 /* RootViewController.swift in Sources */,
