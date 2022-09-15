@@ -32,7 +32,8 @@ final class OnboardingImageCollectionViewCell: UICollectionViewCell, ReactorKit.
   }
   
   private let onboardingImageView = UIImageView().then {
-    $0.contentMode = .scaleAspectFit
+    $0.layer.cornerRadius = 34
+    $0.contentMode = .scaleAspectFill
     $0.clipsToBounds = true
   }
   
@@ -82,7 +83,7 @@ final class OnboardingImageCollectionViewCell: UICollectionViewCell, ReactorKit.
   
   private func setLayout() {
     self.maintTitleLabel.snp.makeConstraints {
-      $0.top.equalTo(100)
+      $0.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(100)
       $0.centerX.equalToSuperview()
     }
     
@@ -93,7 +94,9 @@ final class OnboardingImageCollectionViewCell: UICollectionViewCell, ReactorKit.
     
     self.onboardingImageView.snp.makeConstraints {
       $0.top.equalTo(self.descriptionLabel.snp.bottom).offset(40)
-      $0.centerX.equalToSuperview()
+      $0.left.equalTo(24)
+      $0.right.equalTo(-24)
+      $0.height.equalTo(self.onboardingImageView.snp.width)
     }
   }
 }

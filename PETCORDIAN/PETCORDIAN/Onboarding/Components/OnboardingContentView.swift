@@ -88,7 +88,7 @@ public class OnboardingContentView: UIView {
   }
   
   public func setSubmitButtonIsHidden(page: Int) {
-    let isHidden: Bool = page == 2 ? false : true
+    let isHidden: Bool = page == 1 ? false : true
     self.submitButton.submitButton.isHidden = isHidden
   }
   

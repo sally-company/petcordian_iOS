@@ -5,8 +5,8 @@
 //  Created by Hyunwoo Jang on 2022/09/14.
 //
 
-import Foundation
 import Differentiator
+import Foundation
 
 public struct OnboardingSection: Hashable {
   public enum Identity: String {
@@ -14,6 +14,12 @@ public struct OnboardingSection: Hashable {
   }
   public let identity: Identity
   public var items: [Item]
+}
+
+extension OnboardingSection: SectionModelType {
+  public init(original: OnboardingSection, items: [Item]) {
+    self = OnboardingSection(identity: original.identity, items: items)
+  }
 }
 
 extension OnboardingSection {
