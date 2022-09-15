@@ -6,6 +6,7 @@
 //
 
 import ReactorKit
+import Foundation
 
 class RootViewReactor: Reactor {
     
@@ -39,9 +40,16 @@ class RootViewReactor: Reactor {
   }
   
   private func viewDidLoadMutation() -> Observable<Mutation> {
-    // TODO: 앱의 첫 시작이라면 온보딩 화면으로 이동
+    if UserDefaults.standard.bool(forKey: "launchedBefore") == false {
+      UserDefaults.standard.set(true, forKey: "launchedBefore")
+      self.screenRouter.addOnboarding()
+      return .empty()
+    }
     
-    // TODO: 앱의 첫 시작이 아니고 저장된 유저 정보가 없다면 시작 화면으로 이동
+    if UserDefaults.standard.bool(forKey: "launchedBefore") == true {
+      self.screenRouter.addStarting()
+      return .empty()
+    }
     
     // TODO: 저장된 유저 정보가 있다면 홈 화면으로 이동
     

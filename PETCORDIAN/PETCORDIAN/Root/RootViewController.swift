@@ -16,6 +16,7 @@ protocol ScreenRouter {
   func addStarting()
   func addHome()
   
+  func removeOnboarding()
   func removeStarting()
   func removeHome()
 }
@@ -28,6 +29,7 @@ class RootViewController: UIViewController, ReactorKit.View {
   
   var disposeBag: DisposeBag = .init()
   
+  weak var onboardingVC: UIViewController?
   weak var startingVC: UIViewController?
   weak var homeVC: UIViewController?
   
@@ -53,12 +55,26 @@ class RootViewController: UIViewController, ReactorKit.View {
 extension RootViewController: ScreenRouter {
   
   func addOnboarding() {
+    let onboardingVC = OnboardingBuilder.build(delegate: self)
+    self.addChildVC(onboardingVC)
+    self.onboardingVC = onboardingVC
   }
   
   func addStarting() {
+    let startingVC = UIViewController()
+    startingVC.view.backgroundColor = .cyan
+    self.addChildVC(startingVC)
+    self.startingVC = startingVC
   }
   
   func addHome() {
+  }
+  
+  func removeOnboarding() {
+    if let onboardingVC = self.onboardingVC {
+      self.removeChildVC(onboardingVC)
+      self.onboardingVC = nil
+    }
   }
   
   func removeStarting() {
@@ -80,5 +96,13 @@ extension RootViewController: ScreenRouter {
     self.willMove(toParent: nil)
     viewController.view.removeFromSuperview()
     viewController.removeFromParent()
+  }
+}
+
+extension RootViewController: OnboardingViewControllerDelegate {
+  
+  func onboardingViewControllerStartingButtonTapped() {
+    self.removeOnboarding()
+    self.addStarting()
   }
 }

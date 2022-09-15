@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D26A8C0628D2B7E100FCDD7E /* OnboardingViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26A8C0228D2B7E100FCDD7E /* OnboardingViewReactor.swift */; };
+		D26A8C0728D2B7E100FCDD7E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26A8C0328D2B7E100FCDD7E /* OnboardingViewController.swift */; };
+		D26A8C0828D2B7E100FCDD7E /* OnboardingBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26A8C0428D2B7E100FCDD7E /* OnboardingBuilder.swift */; };
+		D26A8C0928D2B7E100FCDD7E /* OnboardingViewUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26A8C0528D2B7E100FCDD7E /* OnboardingViewUseCase.swift */; };
+		D26A8C0D28D2CFFD00FCDD7E /* Kyobo Handwriting 2019.otf in Resources */ = {isa = PBXBuildFile; fileRef = D26A8C0C28D2CFFD00FCDD7E /* Kyobo Handwriting 2019.otf */; };
+		D26A8C1028D2EA1C00FCDD7E /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26A8C0F28D2EA1C00FCDD7E /* Font.swift */; };
 		D270A62228C9D3A70015F54C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D270A62128C9D3A70015F54C /* AppDelegate.swift */; };
 		D270A62428C9D3A70015F54C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D270A62328C9D3A70015F54C /* SceneDelegate.swift */; };
 		D270A62B28C9D3A80015F54C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D270A62A28C9D3A80015F54C /* Assets.xcassets */; };
@@ -34,9 +40,20 @@
 		D2D4543B28D083D900312390 /* RootViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4543728D083D900312390 /* RootViewReactor.swift */; };
 		D2D4543C28D083D900312390 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4543828D083D900312390 /* RootViewController.swift */; };
 		D2D4543D28D083D900312390 /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4543928D083D900312390 /* RootBuilder.swift */; };
+		D2D4544228D1A54D00312390 /* OnboardingItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4544128D1A54D00312390 /* OnboardingItems.swift */; };
+		D2D4544728D1C99600312390 /* OnboardingImageSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4544628D1C99600312390 /* OnboardingImageSection.swift */; };
+		D2D4544928D1CA0F00312390 /* OnboardingCellReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4544828D1CA0F00312390 /* OnboardingCellReactor.swift */; };
+		D2D4544B28D1D35600312390 /* OnboardingImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4544A28D1D35600312390 /* OnboardingImageCollectionViewCell.swift */; };
+		D2D4544D28D1D8DA00312390 /* OnboardingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4544C28D1D8DA00312390 /* OnboardingContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D26A8C0228D2B7E100FCDD7E /* OnboardingViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewReactor.swift; sourceTree = "<group>"; };
+		D26A8C0328D2B7E100FCDD7E /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		D26A8C0428D2B7E100FCDD7E /* OnboardingBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingBuilder.swift; sourceTree = "<group>"; };
+		D26A8C0528D2B7E100FCDD7E /* OnboardingViewUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewUseCase.swift; sourceTree = "<group>"; };
+		D26A8C0C28D2CFFD00FCDD7E /* Kyobo Handwriting 2019.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kyobo Handwriting 2019.otf"; sourceTree = "<group>"; };
+		D26A8C0F28D2EA1C00FCDD7E /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		D270A61E28C9D3A70015F54C /* PETCORDIAN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PETCORDIAN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D270A62128C9D3A70015F54C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D270A62328C9D3A70015F54C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +70,11 @@
 		D2D4543728D083D900312390 /* RootViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewReactor.swift; sourceTree = "<group>"; };
 		D2D4543828D083D900312390 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		D2D4543928D083D900312390 /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
+		D2D4544128D1A54D00312390 /* OnboardingItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingItems.swift; sourceTree = "<group>"; };
+		D2D4544628D1C99600312390 /* OnboardingImageSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingImageSection.swift; sourceTree = "<group>"; };
+		D2D4544828D1CA0F00312390 /* OnboardingCellReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCellReactor.swift; sourceTree = "<group>"; };
+		D2D4544A28D1D35600312390 /* OnboardingImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		D2D4544C28D1D8DA00312390 /* OnboardingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +101,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D26A8C0A28D2CEF600FCDD7E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D26A8C0B28D2CF9300FCDD7E /* Kyobo_Handwriting_2019 */,
+				D270A62A28C9D3A80015F54C /* Assets.xcassets */,
+				D270A62C28C9D3A80015F54C /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D26A8C0B28D2CF9300FCDD7E /* Kyobo_Handwriting_2019 */ = {
+			isa = PBXGroup;
+			children = (
+				D26A8C0C28D2CFFD00FCDD7E /* Kyobo Handwriting 2019.otf */,
+			);
+			path = Kyobo_Handwriting_2019;
+			sourceTree = "<group>";
+		};
+		D26A8C0E28D2EA0F00FCDD7E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D26A8C0F28D2EA1C00FCDD7E /* Font.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		D270A61528C9D3A70015F54C = {
 			isa = PBXGroup;
 			children = (
@@ -98,13 +146,14 @@
 		D270A62028C9D3A70015F54C /* PETCORDIAN */ = {
 			isa = PBXGroup;
 			children = (
+				D26A8C0E28D2EA0F00FCDD7E /* Common */,
+				D26A8C0A28D2CEF600FCDD7E /* Resources */,
 				D270A65A28C9D5CC0015F54C /* Extensions */,
 				D270A66B28D062200015F54C /* Splash */,
 				D2D4543628D083BA00312390 /* Root */,
+				D2D4543F28D16D0100312390 /* Onboarding */,
 				D270A62128C9D3A70015F54C /* AppDelegate.swift */,
 				D270A62328C9D3A70015F54C /* SceneDelegate.swift */,
-				D270A62A28C9D3A80015F54C /* Assets.xcassets */,
-				D270A62C28C9D3A80015F54C /* LaunchScreen.storyboard */,
 				D270A62F28C9D3A80015F54C /* Info.plist */,
 			);
 			path = PETCORDIAN;
@@ -147,6 +196,54 @@
 				D2D4543928D083D900312390 /* RootBuilder.swift */,
 			);
 			path = Root;
+			sourceTree = "<group>";
+		};
+		D2D4543F28D16D0100312390 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				D2D4544028D1A53D00312390 /* Entity */,
+				D2D4544328D1C95E00312390 /* Components */,
+				D26A8C0228D2B7E100FCDD7E /* OnboardingViewReactor.swift */,
+				D26A8C0328D2B7E100FCDD7E /* OnboardingViewController.swift */,
+				D26A8C0428D2B7E100FCDD7E /* OnboardingBuilder.swift */,
+				D26A8C0528D2B7E100FCDD7E /* OnboardingViewUseCase.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		D2D4544028D1A53D00312390 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D2D4544128D1A54D00312390 /* OnboardingItems.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		D2D4544328D1C95E00312390 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D2D4544428D1C97800312390 /* Cells */,
+				D2D4544C28D1D8DA00312390 /* OnboardingContentView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D2D4544428D1C97800312390 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D2D4544528D1C98100312390 /* Section */,
+				D2D4544828D1CA0F00312390 /* OnboardingCellReactor.swift */,
+				D2D4544A28D1D35600312390 /* OnboardingImageCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D2D4544528D1C98100312390 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				D2D4544628D1C99600312390 /* OnboardingImageSection.swift */,
+			);
+			path = Section;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D270A62E28C9D3A80015F54C /* LaunchScreen.storyboard in Resources */,
+				D26A8C0D28D2CFFD00FCDD7E /* Kyobo Handwriting 2019.otf in Resources */,
 				D270A62B28C9D3A80015F54C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,17 +348,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2D4543428D064F700312390 /* SplashBuilder.swift in Sources */,
+				D2D4544228D1A54D00312390 /* OnboardingItems.swift in Sources */,
 				D2D4543B28D083D900312390 /* RootViewReactor.swift in Sources */,
 				D270A62228C9D3A70015F54C /* AppDelegate.swift in Sources */,
+				D26A8C0928D2B7E100FCDD7E /* OnboardingViewUseCase.swift in Sources */,
+				D26A8C0728D2B7E100FCDD7E /* OnboardingViewController.swift in Sources */,
+				D2D4544728D1C99600312390 /* OnboardingImageSection.swift in Sources */,
 				D2D4543C28D083D900312390 /* RootViewController.swift in Sources */,
 				D270A62428C9D3A70015F54C /* SceneDelegate.swift in Sources */,
+				D26A8C0828D2B7E100FCDD7E /* OnboardingBuilder.swift in Sources */,
 				D270A65D28C9D5DF0015F54C /* UIView+Preview.swift in Sources */,
 				D270A66E28D062460015F54C /* SplashContentView.swift in Sources */,
+				D26A8C1028D2EA1C00FCDD7E /* Font.swift in Sources */,
 				D2D4543228D064F700312390 /* SplashViewReactor.swift in Sources */,
+				D2D4544928D1CA0F00312390 /* OnboardingCellReactor.swift in Sources */,
 				D2D4543328D064F700312390 /* SplashViewController.swift in Sources */,
+				D2D4544D28D1D8DA00312390 /* OnboardingContentView.swift in Sources */,
 				D270A65E28C9D5DF0015F54C /* UIViewController+Preview.swift in Sources */,
 				D2D4543528D064F700312390 /* SplashViewUseCase.swift in Sources */,
 				D2D4543D28D083D900312390 /* RootBuilder.swift in Sources */,
+				D26A8C0628D2B7E100FCDD7E /* OnboardingViewReactor.swift in Sources */,
+				D2D4544B28D1D35600312390 /* OnboardingImageCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
