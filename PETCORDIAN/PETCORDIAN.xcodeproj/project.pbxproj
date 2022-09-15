@@ -13,6 +13,7 @@
 		D26A8C0928D2B7E100FCDD7E /* OnboardingViewUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26A8C0528D2B7E100FCDD7E /* OnboardingViewUseCase.swift */; };
 		D26A8C0D28D2CFFD00FCDD7E /* Kyobo Handwriting 2019.otf in Resources */ = {isa = PBXBuildFile; fileRef = D26A8C0C28D2CFFD00FCDD7E /* Kyobo Handwriting 2019.otf */; };
 		D26A8C1028D2EA1C00FCDD7E /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26A8C0F28D2EA1C00FCDD7E /* Font.swift */; };
+		D26A8C1528D3185A00FCDD7E /* StartingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26A8C1428D3185A00FCDD7E /* StartingContentView.swift */; };
 		D270A62228C9D3A70015F54C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D270A62128C9D3A70015F54C /* AppDelegate.swift */; };
 		D270A62428C9D3A70015F54C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D270A62328C9D3A70015F54C /* SceneDelegate.swift */; };
 		D270A62B28C9D3A80015F54C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D270A62A28C9D3A80015F54C /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		D26A8C0528D2B7E100FCDD7E /* OnboardingViewUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewUseCase.swift; sourceTree = "<group>"; };
 		D26A8C0C28D2CFFD00FCDD7E /* Kyobo Handwriting 2019.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kyobo Handwriting 2019.otf"; sourceTree = "<group>"; };
 		D26A8C0F28D2EA1C00FCDD7E /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		D26A8C1428D3185A00FCDD7E /* StartingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingContentView.swift; sourceTree = "<group>"; };
 		D270A61E28C9D3A70015F54C /* PETCORDIAN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PETCORDIAN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D270A62128C9D3A70015F54C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D270A62328C9D3A70015F54C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,22 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		D26A8C1228D3182900FCDD7E /* Starting */ = {
+			isa = PBXGroup;
+			children = (
+				D26A8C1328D3183700FCDD7E /* Components */,
+			);
+			path = Starting;
+			sourceTree = "<group>";
+		};
+		D26A8C1328D3183700FCDD7E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D26A8C1428D3185A00FCDD7E /* StartingContentView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		D270A61528C9D3A70015F54C = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +170,7 @@
 				D270A66B28D062200015F54C /* Splash */,
 				D2D4543628D083BA00312390 /* Root */,
 				D2D4543F28D16D0100312390 /* Onboarding */,
+				D26A8C1228D3182900FCDD7E /* Starting */,
 				D270A62128C9D3A70015F54C /* AppDelegate.swift */,
 				D270A62328C9D3A70015F54C /* SceneDelegate.swift */,
 				D270A62F28C9D3A80015F54C /* Info.plist */,
@@ -362,6 +381,7 @@
 				D26A8C1028D2EA1C00FCDD7E /* Font.swift in Sources */,
 				D2D4543228D064F700312390 /* SplashViewReactor.swift in Sources */,
 				D2D4544928D1CA0F00312390 /* OnboardingCellReactor.swift in Sources */,
+				D26A8C1528D3185A00FCDD7E /* StartingContentView.swift in Sources */,
 				D2D4543328D064F700312390 /* SplashViewController.swift in Sources */,
 				D2D4544D28D1D8DA00312390 /* OnboardingContentView.swift in Sources */,
 				D270A65E28C9D5DF0015F54C /* UIViewController+Preview.swift in Sources */,
