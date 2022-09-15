@@ -35,6 +35,10 @@
 		D2D4543C28D083D900312390 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4543828D083D900312390 /* RootViewController.swift */; };
 		D2D4543D28D083D900312390 /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4543928D083D900312390 /* RootBuilder.swift */; };
 		D2D4544228D1A54D00312390 /* OnboardingItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4544128D1A54D00312390 /* OnboardingItems.swift */; };
+		D2D4544728D1C99600312390 /* OnboardingImageSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4544628D1C99600312390 /* OnboardingImageSection.swift */; };
+		D2D4544928D1CA0F00312390 /* OnboardingCellReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4544828D1CA0F00312390 /* OnboardingCellReactor.swift */; };
+		D2D4544B28D1D35600312390 /* OnboardingImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4544A28D1D35600312390 /* OnboardingImageCollectionViewCell.swift */; };
+		D2D4544D28D1D8DA00312390 /* OnboardingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4544C28D1D8DA00312390 /* OnboardingContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +59,10 @@
 		D2D4543828D083D900312390 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		D2D4543928D083D900312390 /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
 		D2D4544128D1A54D00312390 /* OnboardingItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingItems.swift; sourceTree = "<group>"; };
+		D2D4544628D1C99600312390 /* OnboardingImageSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingImageSection.swift; sourceTree = "<group>"; };
+		D2D4544828D1CA0F00312390 /* OnboardingCellReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCellReactor.swift; sourceTree = "<group>"; };
+		D2D4544A28D1D35600312390 /* OnboardingImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		D2D4544C28D1D8DA00312390 /* OnboardingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				D2D4544028D1A53D00312390 /* Entity */,
+				D2D4544328D1C95E00312390 /* Components */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -166,6 +175,33 @@
 				D2D4544128D1A54D00312390 /* OnboardingItems.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		D2D4544328D1C95E00312390 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D2D4544428D1C97800312390 /* Cells */,
+				D2D4544C28D1D8DA00312390 /* OnboardingContentView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D2D4544428D1C97800312390 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D2D4544528D1C98100312390 /* Section */,
+				D2D4544828D1CA0F00312390 /* OnboardingCellReactor.swift */,
+				D2D4544A28D1D35600312390 /* OnboardingImageCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D2D4544528D1C98100312390 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				D2D4544628D1C99600312390 /* OnboardingImageSection.swift */,
+			);
+			path = Section;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,15 +308,19 @@
 				D2D4544228D1A54D00312390 /* OnboardingItems.swift in Sources */,
 				D2D4543B28D083D900312390 /* RootViewReactor.swift in Sources */,
 				D270A62228C9D3A70015F54C /* AppDelegate.swift in Sources */,
+				D2D4544728D1C99600312390 /* OnboardingImageSection.swift in Sources */,
 				D2D4543C28D083D900312390 /* RootViewController.swift in Sources */,
 				D270A62428C9D3A70015F54C /* SceneDelegate.swift in Sources */,
 				D270A65D28C9D5DF0015F54C /* UIView+Preview.swift in Sources */,
 				D270A66E28D062460015F54C /* SplashContentView.swift in Sources */,
 				D2D4543228D064F700312390 /* SplashViewReactor.swift in Sources */,
+				D2D4544928D1CA0F00312390 /* OnboardingCellReactor.swift in Sources */,
 				D2D4543328D064F700312390 /* SplashViewController.swift in Sources */,
+				D2D4544D28D1D8DA00312390 /* OnboardingContentView.swift in Sources */,
 				D270A65E28C9D5DF0015F54C /* UIViewController+Preview.swift in Sources */,
 				D2D4543528D064F700312390 /* SplashViewUseCase.swift in Sources */,
 				D2D4543D28D083D900312390 /* RootBuilder.swift in Sources */,
+				D2D4544B28D1D35600312390 /* OnboardingImageCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
