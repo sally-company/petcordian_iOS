@@ -16,9 +16,9 @@ import SwiftUI
 struct StartingContentView_Preview: PreviewProvider {
   static var previews: some SwiftUI.View {
     Group {
-      StartingContentView.HeaderView()
+      StartingContentView.CharacterView()
         .showPreview()
-        .previewLayout(.fixed(width: 390, height: 317))
+        .previewLayout(.fixed(width: 390, height: 190))
     }
   }
 }
@@ -84,6 +84,38 @@ extension StartingContentView {
       self.descriptionLabel.snp.makeConstraints {
         $0.top.equalTo(self.logoLabel.snp.bottom).offset(24)
         $0.centerX.equalToSuperview()
+      }
+    }
+  }
+}
+
+extension StartingContentView {
+  
+  public class CharacterView: UIView {
+    
+    private let characterImageView = UIImageView().then {
+      $0.image = UIImage(named: "starting_Character")
+      $0.contentMode = .scaleAspectFill
+    }
+    
+    public override init(frame: CGRect) {
+      super.init(frame: frame)
+      self.setup()
+    }
+    
+    public required init?(coder: NSCoder) {
+      super.init(coder: coder)
+      fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setup() {
+      self.addSubview(self.characterImageView)
+      
+      self.characterImageView.snp.makeConstraints {
+        $0.left.equalTo(95)
+        $0.right.equalTo(-95)
+        $0.top.equalTo(12)
+        $0.height.equalTo(self.characterImageView.snp.width)
       }
     }
   }
