@@ -16,9 +16,9 @@ import SwiftUI
 struct StartingContentView_Preview: PreviewProvider {
   static var previews: some SwiftUI.View {
     Group {
-      StartingContentView.SocialLoginButtonView(title: "카카오")
+      StartingContentView.HeaderView()
         .showPreview()
-        .previewLayout(.fixed(width: 390, height: 56))
+        .previewLayout(.fixed(width: 390, height: 317))
     }
   }
 }
@@ -37,6 +37,55 @@ public class StartingContentView: UIView {
   }
   
   private func setup() {
+  }
+}
+
+extension StartingContentView {
+  
+  public class HeaderView: UIView {
+    
+    private let logoLabel = UILabel().then {
+      $0.numberOfLines = 1
+      $0.attributedText = "LOGO".styled(
+        with: StringStyle([
+          .font(.boldSystemFont(ofSize: 55)),
+          .color(.black)
+        ]))
+    }
+    
+    private let descriptionLabel = UILabel().then {
+      $0.numberOfLines = 2
+      $0.attributedText = "나의 작은 반려동물의 일기장을\n넘겨볼 수 있는 시간".styled(
+        with: StringStyle([
+          .font(UIFont(name: Font.Kyobo_Handwriting_2019.rawValue, size: 21) ?? .systemFont(ofSize: 21)),
+          .color(.black)
+        ]))
+    }
+    
+    public override init(frame: CGRect) {
+      super.init(frame: frame)
+      self.setup()
+    }
+    
+    public required init?(coder: NSCoder) {
+      super.init(coder: coder)
+      fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setup() {
+      self.addSubview(self.logoLabel)
+      self.addSubview(self.descriptionLabel)
+      
+      self.logoLabel.snp.makeConstraints {
+        $0.top.equalTo(167)
+        $0.centerX.equalToSuperview()
+      }
+      
+      self.descriptionLabel.snp.makeConstraints {
+        $0.top.equalTo(self.logoLabel.snp.bottom).offset(24)
+        $0.centerX.equalToSuperview()
+      }
+    }
   }
 }
 
