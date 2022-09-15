@@ -42,7 +42,7 @@ public class StartingContentView: UIView {
 
 extension StartingContentView {
   
-  public class HeaderView: UIView {
+  public class TopView: UIView {
     
     private let logoLabel = UILabel().then {
       $0.numberOfLines = 1
