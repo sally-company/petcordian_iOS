@@ -16,6 +16,7 @@ protocol ScreenRouter {
   func addStarting()
   func addHome()
   
+  func removeOnboarding()
   func removeStarting()
   func removeHome()
 }
@@ -54,7 +55,7 @@ class RootViewController: UIViewController, ReactorKit.View {
 extension RootViewController: ScreenRouter {
   
   func addOnboarding() {
-    let onboardingVC = OnboardingBuilder.build()
+    let onboardingVC = OnboardingBuilder.build(delegate: self)
     self.addChildVC(onboardingVC)
     self.onboardingVC = onboardingVC
   }
@@ -67,6 +68,13 @@ extension RootViewController: ScreenRouter {
   }
   
   func addHome() {
+  }
+  
+  func removeOnboarding() {
+    if let onboardingVC = self.onboardingVC {
+      self.removeChildVC(onboardingVC)
+      self.onboardingVC = nil
+    }
   }
   
   func removeStarting() {
@@ -88,5 +96,13 @@ extension RootViewController: ScreenRouter {
     self.willMove(toParent: nil)
     viewController.view.removeFromSuperview()
     viewController.removeFromParent()
+  }
+}
+
+extension RootViewController: OnboardingViewControllerDelegate {
+  
+  func onboardingViewControllerStartingButtonTapped() {
+    self.removeOnboarding()
+    self.addStarting()
   }
 }

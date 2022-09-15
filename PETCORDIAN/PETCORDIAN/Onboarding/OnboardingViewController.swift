@@ -11,6 +11,10 @@ import RxDataSources
 import RxSwift
 import UIKit
 
+protocol OnboardingViewControllerDelegate: AnyObject {
+  func onboardingViewControllerStartingButtonTapped()
+}
+
 class OnboardingViewController: UIViewController, ReactorKit.View {
   
   typealias Reactor = OnboardingViewReactor
@@ -18,6 +22,8 @@ class OnboardingViewController: UIViewController, ReactorKit.View {
   // MARK: Properties
   
   var disposeBag: DisposeBag = .init()
+  
+  weak var delegate: OnboardingViewControllerDelegate?
   
   private lazy var dataSource = self.createDataSource()
   
@@ -58,15 +64,21 @@ class OnboardingViewController: UIViewController, ReactorKit.View {
   
   // MARK: Bind
   func bind(reactor: Reactor) {
-    self.fetchIntroImageState(reactor: reactor)
-    self.collectionViewDelegate(reactor: reactor)
-    self.contentOffsetChanged(reactor: reactor)
-    self.fetcheNumberOfPage(reactor: reactor)
-    self.moveToPosition(reactor: reactor)
-    self.changeToMovePosition(reactor: reactor)
+    self.setCollectionViewDelegate()
+    self.bindOnboardingImageState(reactor: reactor)
+    self.bindContentOffsetChanged(reactor: reactor)
+    self.bindPageCount(reactor: reactor)
+    self.bindMoveToPosition(reactor: reactor)
+    self.bindChangeToPosition(reactor: reactor)
+    self.bindStartingButtonTapped()
   }
   
-  private func fetchIntroImageState(reactor: Reactor) {
+  private func setCollectionViewDelegate() {
+    self.contentView.collectionView.rx.setDelegate(self)
+      .disposed(by: self.disposeBag)
+  }
+  
+  private func bindOnboardingImageState(reactor: Reactor) {
     reactor.state
       .map { $0.sections }
       .distinctUntilChanged()
@@ -75,12 +87,7 @@ class OnboardingViewController: UIViewController, ReactorKit.View {
       .disposed(by: self.disposeBag)
   }
   
-  private func collectionViewDelegate(reactor: Reactor) {
-    self.contentView.collectionView.rx.setDelegate(self)
-      .disposed(by: self.disposeBag)
-  }
-  
-  private func contentOffsetChanged(reactor: Reactor) {
+  private func bindContentOffsetChanged(reactor: Reactor) {
     self.contentView.collectionView.rx.contentOffset
       .distinctUntilChanged()
       .filter { $0.x > 0 }
@@ -93,7 +100,7 @@ class OnboardingViewController: UIViewController, ReactorKit.View {
       .disposed(by: self.disposeBag)
   }
   
-  private func fetcheNumberOfPage(reactor: Reactor) {
+  private func bindPageCount(reactor: Reactor) {
     reactor.state
       .map { $0.pageCount }
       .distinctUntilChanged()
@@ -104,12 +111,12 @@ class OnboardingViewController: UIViewController, ReactorKit.View {
       .disposed(by: self.disposeBag)
   }
   
-  private func moveToPosition(reactor: Reactor) {
+  private func bindMoveToPosition(reactor: Reactor) {
     reactor.state
       .map {$0.moveToPosition }
       .distinctUntilChanged()
       .asDriver(onErrorJustReturn: 0)
-      .drive(onNext: {[weak self] position in
+      .drive(onNext: { [weak self] position in
         guard let self = self else{ return }
         self.contentView.setCurrentPageControl(position: position)
         self.contentView.setSubmitButtonIsHidden(page: position)
@@ -117,12 +124,22 @@ class OnboardingViewController: UIViewController, ReactorKit.View {
       .disposed(by: self.disposeBag)
   }
   
-  private func changeToMovePosition(reactor: Reactor) {
+  private func bindChangeToPosition(reactor: Reactor) {
     reactor.pulse(\.$changeToPosition)
       .compactMap { $0 }
-      .bind(onNext: {[weak self] position in
+      .bind(onNext: { [weak self] position in
         guard let self = self else { return }
         self.contentView.positionChanged(position: position)
+      })
+      .disposed(by: self.disposeBag)
+  }
+  
+  private func bindStartingButtonTapped() {
+    self.contentView.submitButton.submitButton.rx.tap
+      .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
+      .bind(onNext: { [weak self] _ in
+        guard let self = self else { return }
+        self.delegate?.onboardingViewControllerStartingButtonTapped()
       })
       .disposed(by: self.disposeBag)
   }
