@@ -40,7 +40,8 @@ public class OnboardingContentView: UIView {
   }
   
   public let pageControl = UIPageControl().then {
-    $0.transform = CGAffineTransform(scaleX: 2, y: 2)
+    $0.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+    
     $0.pageIndicatorTintColor = .gray
     $0.currentPageIndicatorTintColor = .black
   }
@@ -69,7 +70,7 @@ public class OnboardingContentView: UIView {
     }
     
     self.pageControl.snp.makeConstraints {
-      $0.bottom.equalTo(-(UIScreen.main.bounds.height * 0.223))
+      $0.bottom.equalTo(-(UIScreen.main.bounds.height * (159.0 / 812.0)))
       $0.centerX.equalToSuperview()
     }
     
@@ -130,7 +131,7 @@ extension OnboardingContentView {
     private func setup() {
       self.addSubview(self.submitButton)
       self.submitButton.snp.makeConstraints {
-        $0.bottom.equalTo(-40)
+        $0.bottom.equalTo(-6)
         $0.left.right.equalToSuperview()
         $0.height.equalTo(56)
       }

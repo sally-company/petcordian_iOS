@@ -18,14 +18,8 @@ final class OnboardingImageCollectionViewCell: UICollectionViewCell, ReactorKit.
   typealias Reactor = OnboardingCellReactor
   
   public enum Typo {
-    static let mainTitle = StringStyle([
-      .font(.boldSystemFont(ofSize: 26)),
-      .color(.black),
-      .alignment(.center)
-    ])
-    
     static let description = StringStyle([
-      .font(.systemFont(ofSize: 16)),
+      .font(.systemFont(ofSize: 24)),
       .color(.black),
       .alignment(.center)
     ])
@@ -35,10 +29,6 @@ final class OnboardingImageCollectionViewCell: UICollectionViewCell, ReactorKit.
     $0.layer.cornerRadius = 34
     $0.contentMode = .scaleAspectFill
     $0.clipsToBounds = true
-  }
-  
-  private let maintTitleLabel = UILabel().then {
-    $0.numberOfLines = 0
   }
   
   private let descriptionLabel = UILabel().then {
@@ -57,7 +47,7 @@ final class OnboardingImageCollectionViewCell: UICollectionViewCell, ReactorKit.
   private func setup() {
     self.contentView.backgroundColor = .white
     
-    [self.onboardingImageView, self.maintTitleLabel, self.descriptionLabel].forEach {
+    [self.onboardingImageView, self.descriptionLabel].forEach {
       self.contentView.addSubview($0)
     }
   }
@@ -70,7 +60,6 @@ final class OnboardingImageCollectionViewCell: UICollectionViewCell, ReactorKit.
       .do(onNext: { [weak self] items in
         guard let self = self else { return }
         self.onboardingImageView.image = items.screenshot
-        self.maintTitleLabel.attributedText = items.mainTitle.styled(with: Typo.mainTitle)
         self.descriptionLabel.attributedText = items.description.styled(with: Typo.description)
       })
         .drive(onNext: { [weak self] items in
@@ -81,22 +70,17 @@ final class OnboardingImageCollectionViewCell: UICollectionViewCell, ReactorKit.
         
   }
   
-  private func setLayout() {
-    self.maintTitleLabel.snp.makeConstraints {
+  private func setLayout() {    
+    self.descriptionLabel.snp.makeConstraints {
       $0.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(100)
       $0.centerX.equalToSuperview()
     }
     
-    self.descriptionLabel.snp.makeConstraints {
-      $0.top.equalTo(self.maintTitleLabel.snp.bottom).offset(13)
-      $0.centerX.equalToSuperview()
-    }
-    
     self.onboardingImageView.snp.makeConstraints {
-      $0.top.equalTo(self.descriptionLabel.snp.bottom).offset(40)
+      $0.top.equalTo(self.descriptionLabel.snp.bottom).offset(32)
       $0.left.equalTo(24)
       $0.right.equalTo(-24)
-      $0.height.equalTo(self.onboardingImageView.snp.width)
+      $0.height.equalTo(self.onboardingImageView.snp.width).multipliedBy(379.0/327.0)
     }
   }
 }

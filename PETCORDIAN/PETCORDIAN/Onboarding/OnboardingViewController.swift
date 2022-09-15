@@ -63,7 +63,6 @@ class OnboardingViewController: UIViewController, ReactorKit.View {
     self.contentOffsetChanged(reactor: reactor)
     self.fetcheNumberOfPage(reactor: reactor)
     self.moveToPosition(reactor: reactor)
-    self.bindNext(reactor: reactor)
     self.changeToMovePosition(reactor: reactor)
   }
   
@@ -115,18 +114,6 @@ class OnboardingViewController: UIViewController, ReactorKit.View {
         self.contentView.setCurrentPageControl(position: position)
         self.contentView.setSubmitButtonIsHidden(page: position)
       })
-      .disposed(by: self.disposeBag)
-  }
-  
-  private func bindNext(reactor: Reactor) {
-    self.contentView.submitButton.submitButton.rx.tap
-      .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
-      .map { [weak self] _ -> Int in
-        guard let self = self else { return 0 }
-        return self.visibleCurrentCellIndexPath?.item ?? 0
-      }
-      .map { .next($0) }
-      .bind(to: reactor.action)
       .disposed(by: self.disposeBag)
   }
   
