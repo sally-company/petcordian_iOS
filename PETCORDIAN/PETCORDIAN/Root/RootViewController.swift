@@ -61,8 +61,7 @@ extension RootViewController: ScreenRouter {
   }
   
   func addStarting() {
-    let startingVC = UIViewController()
-    startingVC.view.backgroundColor = .cyan
+    let startingVC = StartingBuilder.build()
     self.addChildVC(startingVC)
     self.startingVC = startingVC
   }
