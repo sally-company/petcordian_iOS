@@ -18,7 +18,7 @@ struct ProfileNameAgeContentView_Preview: PreviewProvider {
     Group {
       ProfileNameAgeContentView()
         .showPreview()
-        .previewLayout(.fixed(width: 390, height: 20))
+        .previewLayout(.fixed(width: 390, height: 150))
     }
   }
 }
@@ -26,7 +26,10 @@ struct ProfileNameAgeContentView_Preview: PreviewProvider {
 
 public class ProfileNameAgeContentView: UIView {
   
-  private let progressView = ProgressView()
+  private let progressView = ProgressView().then {
+    $0.firstStepLineView.backgroundColor = .black
+  }
+  private let titleView = TitleView()
   
   public override init(frame: CGRect) {
     super.init(frame: frame)
@@ -40,20 +43,75 @@ public class ProfileNameAgeContentView: UIView {
   
   private func setup() {
     self.addSubview(self.progressView)
+    self.addSubview(self.titleView)
     
     self.progressView.snp.makeConstraints {
-      $0.top.equalTo(self.safeAreaLayoutGuide).offset(50)
+      $0.top.equalTo(self.safeAreaLayoutGuide).offset(9)
       $0.left.equalTo(24)
       $0.right.equalTo(-24)
+    }
+    
+    self.titleView.snp.makeConstraints {
+      $0.top.equalTo(self.progressView.snp.bottom).offset(18)
+      $0.left.right.equalToSuperview()
+    }
+  }
+}
+
+extension ProfileNameAgeContentView {
+  
+  public class TitleView: UIView {
+    
+    private let progressLabel = UILabel().then {
+      $0.numberOfLines = 1
+      $0.attributedText = "1 / 3".styled(
+        with: StringStyle([
+          .font(.systemFont(ofSize: 18)),
+          .color(.black)
+        ]))
+    }
+    
+    private let titleLabel = UILabel().then {
+      $0.numberOfLines = 2
+      $0.attributedText = "생명체의 정보가\n필요하다몽!".styled(
+        with: StringStyle([
+          .font(.systemFont(ofSize: 24)),
+          .color(.black)
+        ]))
+    }
+    
+    public override init(frame: CGRect) {
+      super.init(frame: frame)
+      self.setup()
+    }
+    
+    public required init?(coder: NSCoder) {
+      super.init(coder: coder)
+      fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setup() {
+      self.addSubview(self.progressLabel)
+      self.addSubview(self.titleLabel)
+      
+      self.progressLabel.snp.makeConstraints {
+        $0.left.equalTo(24)
+        $0.top.equalToSuperview()
+      }
+      
+      self.titleLabel.snp.makeConstraints {
+        $0.left.equalTo(self.progressLabel.snp.left)
+        $0.top.equalTo(self.progressLabel.snp.bottom).offset(10)
+      }
     }
   }
 }
 
 public class ProgressView: UIView {
   
-  private let firstStepLineView = UIView()
-  private let secondStepLineView = UIView()
-  private let thirdStepLineView = UIView()
+  public let firstStepLineView = UIView()
+  public let secondStepLineView = UIView()
+  public let thirdStepLineView = UIView()
   
   public override init(frame: CGRect) {
     super.init(frame: frame)
