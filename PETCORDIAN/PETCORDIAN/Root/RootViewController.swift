@@ -61,7 +61,7 @@ extension RootViewController: ScreenRouter {
   }
   
   func addStarting() {
-    let startingVC = StartingBuilder.build()
+    let startingVC = SignUpBuilder.build()
     self.addChildVC(startingVC)
     self.startingVC = startingVC
   }

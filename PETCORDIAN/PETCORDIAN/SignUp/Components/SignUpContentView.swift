@@ -1,5 +1,5 @@
 //
-//  StartingContentView.swift
+//  SignUpContentView.swift
 //  PETCORDIAN
 //
 //  Created by Hyunwoo Jang on 2022/09/15.
@@ -16,14 +16,14 @@ import SwiftUI
 struct StartingContentView_Preview: PreviewProvider {
   static var previews: some SwiftUI.View {
     Group {
-      StartingContentView()
+      SignUpContentView()
         .showPreview()
     }
   }
 }
 #endif
 
-public class StartingContentView: UIView {
+public class SignUpContentView: UIView { // SignUp
   
   private let topView = TopView()
   private let characterView = CharacterView()
@@ -62,7 +62,7 @@ public class StartingContentView: UIView {
   }
 }
 
-extension StartingContentView {
+extension SignUpContentView {
   
   public class TopView: UIView {
     
@@ -116,7 +116,7 @@ extension StartingContentView {
   }
 }
 
-extension StartingContentView {
+extension SignUpContentView {
   
   public class CharacterView: UIView {
     
@@ -148,7 +148,7 @@ extension StartingContentView {
   }
 }
 
-extension StartingContentView {
+extension SignUpContentView {
   
   public class ActionView: UIView {
     
@@ -201,7 +201,7 @@ extension StartingContentView {
   }
 }
 
-extension StartingContentView {
+extension SignUpContentView {
   
   public class SocialLoginButtonView: UIView {
     

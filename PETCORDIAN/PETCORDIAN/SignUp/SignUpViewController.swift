@@ -1,5 +1,5 @@
 //
-//  StartingViewController.swift
+//  SignUpViewController.swift
 //  PETCORDIAN
 //
 //  Created by Hyunwoo Jang on 2022/09/16.
@@ -10,9 +10,9 @@ import RxCocoa
 import RxSwift
 import UIKit
 
-class StartingViewController: UIViewController, ReactorKit.View {
+class SignUpViewController: UIViewController, ReactorKit.View {
   
-  typealias Reactor = StartingViewReactor
+  typealias Reactor = SignUpViewReactor
   
   // MARK: Properties
   
@@ -20,7 +20,7 @@ class StartingViewController: UIViewController, ReactorKit.View {
   
   // MARK: UI
   
-  private let contentView = StartingContentView()
+  private let contentView = SignUpContentView()
   
   deinit {
     print("\(self)")
