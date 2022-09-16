@@ -16,15 +16,18 @@ import SwiftUI
 struct StartingContentView_Preview: PreviewProvider {
   static var previews: some SwiftUI.View {
     Group {
-      StartingContentView.ActionView()
+      StartingContentView()
         .showPreview()
-        .previewLayout(.fixed(width: 390, height: 305))
     }
   }
 }
 #endif
 
 public class StartingContentView: UIView {
+  
+  private let topView = TopView()
+  private let characterView = CharacterView()
+  private let actionView = ActionView()
   
   public override init(frame: CGRect) {
     super.init(frame: frame)
@@ -37,6 +40,25 @@ public class StartingContentView: UIView {
   }
   
   private func setup() {
+    self.addSubview(self.topView)
+    self.addSubview(self.characterView)
+    self.addSubview(self.actionView)
+    
+    self.topView.snp.makeConstraints {
+      $0.top.equalTo(self.snp.top).offset(UIScreen.main.bounds.height * (167 / 812))
+      $0.left.right.equalToSuperview()
+    }
+    
+    self.characterView.snp.makeConstraints {
+      $0.top.equalTo(self.topView.snp.bottom)
+      $0.left.right.equalToSuperview()
+    }
+    
+    self.actionView.snp.makeConstraints {
+      $0.top.equalTo(self.characterView.snp.bottom)
+      $0.left.right.equalToSuperview()
+      $0.bottom.equalToSuperview()
+    }
   }
 }
 
@@ -58,7 +80,8 @@ extension StartingContentView {
       $0.attributedText = "나의 작은 반려동물의 일기장을\n넘겨볼 수 있는 시간".styled(
         with: StringStyle([
           .font(UIFont(name: Font.Kyobo_Handwriting_2019.rawValue, size: 21) ?? .systemFont(ofSize: 21)),
-          .color(.black)
+          .color(.black),
+          .alignment(.center)
         ]))
     }
     
@@ -73,11 +96,15 @@ extension StartingContentView {
     }
     
     private func setup() {
+      self.snp.makeConstraints {
+        $0.height.equalTo(138)
+      }
+      
       self.addSubview(self.logoLabel)
       self.addSubview(self.descriptionLabel)
       
       self.logoLabel.snp.makeConstraints {
-        $0.top.equalTo(167)
+        $0.top.equalToSuperview()
         $0.centerX.equalToSuperview()
       }
       
@@ -140,14 +167,22 @@ extension StartingContentView {
     }
     
     private func setup() {
+      self.snp.makeConstraints {
+        $0.height.equalTo(self.snp.width).multipliedBy(305.0/375.0)
+      }
+      
       let stack = self.layout()
       
       self.addSubview(stack)
       
       stack.snp.makeConstraints {
-        $0.top.equalTo(28)
         $0.left.equalTo(40)
         $0.right.equalTo(-35)
+        if UIScreen.main.bounds.size.height < 700 {
+          $0.bottom.equalTo(-5)
+        } else {
+          $0.top.equalTo(28)
+        }
       }
     }
     
