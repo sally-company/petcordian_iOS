@@ -25,7 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //    let vc = Inject.ViewControllerHost(SplashBuilder.build())
 //    let navController = UINavigationController(rootViewController: vc)
 //    window?.rootViewController = navController
-    let vc = TestViewController()
+    let vc = ProfileNameAgeBuilder.build()
     window?.rootViewController = vc
     
     window?.makeKeyAndVisible()
@@ -33,23 +33,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     #if DEBUG
       NFX.sharedInstance().start()
     #endif
-  }
-}
-
-import SnapKit
-
-class TestViewController: UIViewController {
-  
-  let testView = ProfileNameAgeContentView()
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    
-    self.view.backgroundColor = .white
-    self.view.addSubview(testView)
-    
-    testView.snp.makeConstraints {
-      $0.edges.equalToSuperview()
-    }
   }
 }

@@ -30,6 +30,7 @@ public class ProfileNameAgeContentView: UIView {
     $0.firstStepLineView.backgroundColor = .black
   }
   private let titleView = TitleView()
+  public let nameInputView = InputView()
   
   public override init(frame: CGRect) {
     super.init(frame: frame)
@@ -44,6 +45,7 @@ public class ProfileNameAgeContentView: UIView {
   private func setup() {
     self.addSubview(self.progressView)
     self.addSubview(self.titleView)
+    self.addSubview(self.nameInputView)
     
     self.progressView.snp.makeConstraints {
       $0.top.equalTo(self.safeAreaLayoutGuide).offset(9)
@@ -54,6 +56,12 @@ public class ProfileNameAgeContentView: UIView {
     self.titleView.snp.makeConstraints {
       $0.top.equalTo(self.progressView.snp.bottom).offset(18)
       $0.left.right.equalToSuperview()
+    }
+    
+    self.nameInputView.snp.makeConstraints {
+      $0.top.equalTo(self.titleView.snp.bottom)
+      $0.left.equalTo(24)
+      $0.right.equalTo(-24)
     }
   }
 }
@@ -91,6 +99,10 @@ extension ProfileNameAgeContentView {
     }
     
     private func setup() {
+      self.snp.makeConstraints {
+        $0.height.equalTo(105)
+      }
+      
       self.addSubview(self.progressLabel)
       self.addSubview(self.titleLabel)
       
