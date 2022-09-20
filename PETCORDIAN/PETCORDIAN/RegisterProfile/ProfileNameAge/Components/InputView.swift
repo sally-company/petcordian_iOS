@@ -140,6 +140,13 @@ private class NameInputView: UIView {
   }
   
   private lazy var nameTextField = UnderLineTextField().then {
+    $0.addAction(for: .editingChanged) { nameTextField in
+      if nameTextField.text == "" {
+        nameTextField.checkImageView.isHidden = true
+      } else {
+        nameTextField.checkImageView.isHidden = false
+      }
+    }
     $0.setPlaceholder(placeholder: "반려동물의 이름을 입력해주세요", color: .systemGray3)
     $0.layer.masksToBounds = true
     $0.delegate = self
@@ -183,20 +190,6 @@ extension NameInputView: UITextFieldDelegate {
   public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     textField.resignFirstResponder()
   }
-
-  public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-
-    guard let text = textField.text else { return true }
-    let newText = (text as NSString).replacingCharacters(in: range, with: string)
-
-    if newText == "" {
-      self.nameTextField.checkImageView.isHidden = true
-    } else {
-      self.nameTextField.checkImageView.isHidden = false
-    }
-    
-    return true
-  }
 }
 
 public class AgeInputView: UIView {
@@ -212,8 +205,16 @@ public class AgeInputView: UIView {
   }
   
   private lazy var ageTextField = UnderLineTextField().then {
+    $0.addAction(for: .editingChanged) { ageTextField in
+      if ageTextField.text == "" {
+        ageTextField.checkImageView.isHidden = true
+      } else {
+        ageTextField.checkImageView.isHidden = false
+      }
+    }
     $0.setPlaceholder(placeholder: "최대 숫자 2자리", color: .systemGray3)
     $0.layer.masksToBounds = true
+    $0.keyboardType = .numberPad
     $0.delegate = self
   }
   
@@ -254,19 +255,5 @@ extension AgeInputView: UITextFieldDelegate {
 
   public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     textField.resignFirstResponder()
-  }
-
-  public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-
-    guard let text = textField.text else { return true }
-    let newText = (text as NSString).replacingCharacters(in: range, with: string)
-
-    if newText == "" {
-      self.ageTextField.checkImageView.isHidden = true
-    } else {
-      self.ageTextField.checkImageView.isHidden = false
-    }
-    
-    return true
   }
 }
