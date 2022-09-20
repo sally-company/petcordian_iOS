@@ -72,6 +72,8 @@ class SignUpViewController: UIViewController, ReactorKit.View {
   
   private func presentRegisterProfileScene() {
     let registerProfileScene = RegisterProfileRootBuilder.build()
-    self.navigationController?.pushViewController(registerProfileScene, animated: true)
+    let navController = UINavigationController(rootViewController: registerProfileScene)
+    navController.modalPresentationStyle = .fullScreen
+    self.present(navController, animated: true)
   }
 }
