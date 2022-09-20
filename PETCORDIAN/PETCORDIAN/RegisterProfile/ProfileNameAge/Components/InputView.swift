@@ -14,8 +14,8 @@ extension ProfileNameAgeContentView {
   
   public class InputView: UIView {
     
-    private let nameInputView = NameInputView()
-    private let ageInputView = AgeInputView()
+    public let nameInputView = NameInputView()
+    public let ageInputView = AgeInputView()
     
     private let genderLabel = UILabel().then {
       $0.numberOfLines = 1
@@ -127,7 +127,7 @@ extension ProfileNameAgeContentView {
   }
 }
 
-private class NameInputView: UIView {
+public class NameInputView: UIView {
   
   private let nameLabel = UILabel().then {
     $0.numberOfLines = 1
@@ -139,7 +139,7 @@ private class NameInputView: UIView {
     $0.setContentHuggingPriority(.init(rawValue: 999), for: .vertical)
   }
   
-  private lazy var nameTextField = UnderLineTextField().then {
+  public lazy var nameTextField = UnderLineTextField().then {
     $0.addAction(for: .editingChanged) { nameTextField in
       if nameTextField.text == "" {
         nameTextField.checkImageView.isHidden = true
@@ -205,7 +205,7 @@ public class AgeInputView: UIView {
     $0.setContentHuggingPriority(.init(rawValue: 999), for: .vertical)
   }
   
-  private lazy var ageTextField = UnderLineTextField().then {
+  public lazy var ageTextField = UnderLineTextField().then {
     $0.addAction(for: .editingChanged) { ageTextField in
       if ageTextField.text == "" {
         ageTextField.checkImageView.isHidden = true

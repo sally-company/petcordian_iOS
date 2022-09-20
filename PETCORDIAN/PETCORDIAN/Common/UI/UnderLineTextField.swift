@@ -9,7 +9,7 @@ import SnapKit
 import Then
 import UIKit
 
-class UnderLineTextField: UITextField {
+public class UnderLineTextField: UITextField {
   
   private lazy var placeholderColor: UIColor = .systemGray3
   private lazy var placeholderString: String = ""

@@ -30,7 +30,7 @@ public class ProfileNameAgeContentView: UIView {
     $0.firstStepLineView.backgroundColor = .black
   }
   private let titleView = TitleView()
-  public let nameInputView = InputView()
+  public let nameAgeInputView = InputView()
   public let petButton = PETButton(title: "다음")
   
   public override init(frame: CGRect) {
@@ -46,7 +46,7 @@ public class ProfileNameAgeContentView: UIView {
   private func setup() {
     self.addSubview(self.progressView)
     self.addSubview(self.titleView)
-    self.addSubview(self.nameInputView)
+    self.addSubview(self.nameAgeInputView)
     self.addSubview(self.petButton)
     
     self.progressView.snp.makeConstraints {
@@ -60,7 +60,7 @@ public class ProfileNameAgeContentView: UIView {
       $0.left.right.equalToSuperview()
     }
     
-    self.nameInputView.snp.makeConstraints {
+    self.nameAgeInputView.snp.makeConstraints {
       $0.top.equalTo(self.titleView.snp.bottom)
       $0.left.equalTo(24)
       $0.right.equalTo(-24)
