@@ -31,7 +31,7 @@ public class ProfileNameAgeContentView: UIView {
   }
   private let titleView = TitleView()
   public let nameInputView = InputView()
-  private let petButton = PETButton(title: "다음")
+  public let petButton = PETButton(title: "다음")
   
   public override init(frame: CGRect) {
     super.init(frame: frame)
@@ -69,7 +69,7 @@ public class ProfileNameAgeContentView: UIView {
     self.petButton.snp.makeConstraints {
       $0.left.equalTo(24)
       $0.right.equalTo(-24)
-      $0.bottom.equalTo(-40)
+      $0.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom).offset(-12)
     }
   }
 }
