@@ -44,6 +44,34 @@ class SignUpViewController: UIViewController, ReactorKit.View {
   }
   
   func bind(reactor: Reactor) {
-    
+    self.bindKakaoLoginButton()
+    self.bindGoogleLoginButton()
+    self.bindNaverLoginButton()
+  }
+  
+  func bindKakaoLoginButton() {
+    self.contentView.actionView.kakaoLoginButtonView.button.rx.tap
+      .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
+      .bind(onNext: { [weak self] in self?.presentRegisterProfileScene() })
+      .disposed(by: self.disposeBag)
+  }
+  
+  func bindGoogleLoginButton() {
+    self.contentView.actionView.googleLoginButtonView.button.rx.tap
+      .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
+      .bind(onNext: { [weak self] in self?.presentRegisterProfileScene() })
+      .disposed(by: self.disposeBag)
+  }
+  
+  func bindNaverLoginButton() {
+    self.contentView.actionView.naverLoginButtonView.button.rx.tap
+      .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
+      .bind(onNext: { [weak self] in self?.presentRegisterProfileScene() })
+      .disposed(by: self.disposeBag)
+  }
+  
+  private func presentRegisterProfileScene() {
+    let registerProfileScene = RegisterProfileRootBuilder.build()
+    self.navigationController?.pushViewController(registerProfileScene, animated: true)
   }
 }

@@ -1,13 +1,13 @@
 //
-//  ProfileNameAgeViewReactor.swift
+//  RegisterProfileRootViewReactor.swift
 //  PETCORDIAN
 //
-//  Created by Hyunwoo Jang on 2022/09/19.
+//  Created by Hyunwoo Jang on 2022/09/20.
 //
 
 import ReactorKit
 
-class ProfileNameAgeViewReactor: Reactor {
+class RegisterProfileRootViewReactor: Reactor {
     
   enum Action {
     
@@ -18,22 +18,20 @@ class ProfileNameAgeViewReactor: Reactor {
   }
   
   struct State {
+    
   }
   
   let initialState: State
   
-  private let useCase: ProfileNameAgeUseCase
-  
   init(
-    useCase: ProfileNameAgeUseCase
   ) {
     defer { _ = self.state }
     self.initialState = State()
-    self.useCase = useCase
+    
   }
   
   func mutate(action: Action) -> Observable<Mutation> {
-
+    
   }
   
   func reduce(state: State, mutation: Mutation) -> State {

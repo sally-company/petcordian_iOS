@@ -12,6 +12,10 @@ import RxSwift
 import SnapKit
 import UIKit
 
+protocol ProfileNameAgeViewControllerDelegate: AnyObject {
+  func ProfileNameAgeViewControllerDidValidProfileNameAge()
+}
+
 class ProfileNameAgeViewController: UIViewController, ReactorKit.View {
   
   typealias Reactor = ProfileNameAgeViewReactor
@@ -23,6 +27,8 @@ class ProfileNameAgeViewController: UIViewController, ReactorKit.View {
   private let radioButtonController = RadioButtonController()
   
   var keyboardDispose: Disposable? = nil
+  
+  weak var delegate: ProfileNameAgeViewControllerDelegate?
   
   // MARK: UI
   
@@ -80,7 +86,14 @@ class ProfileNameAgeViewController: UIViewController, ReactorKit.View {
   // MARK: Binding
   
   func bind(reactor: Reactor) {
-    
+    self.bindNextButton()
+  }
+  
+  func bindNextButton() {
+    self.contentView.petButton.rx.tap
+      .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
+      .bind(onNext: { [weak self] in self?.delegate?.ProfileNameAgeViewControllerDidValidProfileNameAge() })
+      .disposed(by: self.disposeBag)
   }
   
   private func installRxKeyboard() {

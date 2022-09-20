@@ -17,6 +17,9 @@
 		D224B74B28D854620095F3EF /* RadioButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D224B74A28D854620095F3EF /* RadioButtonController.swift */; };
 		D23704A928D94FC1004794E6 /* UnderLineTextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23704A828D94FC1004794E6 /* UnderLineTextField+Extension.swift */; };
 		D23704AC28D958FA004794E6 /* RxKeyboard in Frameworks */ = {isa = PBXBuildFile; productRef = D23704AB28D958FA004794E6 /* RxKeyboard */; };
+		D23704B328D96442004794E6 /* RegisterProfileRootViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23704AF28D96442004794E6 /* RegisterProfileRootViewReactor.swift */; };
+		D23704B428D96442004794E6 /* RegisterProfileRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23704B028D96442004794E6 /* RegisterProfileRootViewController.swift */; };
+		D23704B528D96442004794E6 /* RegisterProfileRootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23704B128D96442004794E6 /* RegisterProfileRootBuilder.swift */; };
 		D25C404F28D8673500B5590D /* PETButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25C404E28D8673500B5590D /* PETButton.swift */; };
 		D26A8C0628D2B7E100FCDD7E /* OnboardingViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26A8C0228D2B7E100FCDD7E /* OnboardingViewReactor.swift */; };
 		D26A8C0728D2B7E100FCDD7E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26A8C0328D2B7E100FCDD7E /* OnboardingViewController.swift */; };
@@ -74,6 +77,9 @@
 		D224B74828D84EE80095F3EF /* UnderLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderLineTextField.swift; sourceTree = "<group>"; };
 		D224B74A28D854620095F3EF /* RadioButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonController.swift; sourceTree = "<group>"; };
 		D23704A828D94FC1004794E6 /* UnderLineTextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UnderLineTextField+Extension.swift"; sourceTree = "<group>"; };
+		D23704AF28D96442004794E6 /* RegisterProfileRootViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProfileRootViewReactor.swift; sourceTree = "<group>"; };
+		D23704B028D96442004794E6 /* RegisterProfileRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProfileRootViewController.swift; sourceTree = "<group>"; };
+		D23704B128D96442004794E6 /* RegisterProfileRootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProfileRootBuilder.swift; sourceTree = "<group>"; };
 		D25C404E28D8673500B5590D /* PETButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PETButton.swift; sourceTree = "<group>"; };
 		D26A8C0228D2B7E100FCDD7E /* OnboardingViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewReactor.swift; sourceTree = "<group>"; };
 		D26A8C0328D2B7E100FCDD7E /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -196,6 +202,9 @@
 			isa = PBXGroup;
 			children = (
 				D26A8C1F28D4216A00FCDD7E /* ProfileNameAge */,
+				D23704AF28D96442004794E6 /* RegisterProfileRootViewReactor.swift */,
+				D23704B028D96442004794E6 /* RegisterProfileRootViewController.swift */,
+				D23704B128D96442004794E6 /* RegisterProfileRootBuilder.swift */,
 			);
 			path = RegisterProfile;
 			sourceTree = "<group>";
@@ -453,8 +462,10 @@
 				D224B74428D8491A0095F3EF /* UIButton+Extension.swift in Sources */,
 				D2D4543B28D083D900312390 /* RootViewReactor.swift in Sources */,
 				D224B74B28D854620095F3EF /* RadioButtonController.swift in Sources */,
+				D23704B528D96442004794E6 /* RegisterProfileRootBuilder.swift in Sources */,
 				D270A62228C9D3A70015F54C /* AppDelegate.swift in Sources */,
 				D26A8C0928D2B7E100FCDD7E /* OnboardingViewUseCase.swift in Sources */,
+				D23704B328D96442004794E6 /* RegisterProfileRootViewReactor.swift in Sources */,
 				D26A8C0728D2B7E100FCDD7E /* OnboardingViewController.swift in Sources */,
 				D2D4544728D1C99600312390 /* OnboardingImageSection.swift in Sources */,
 				D2D4543C28D083D900312390 /* RootViewController.swift in Sources */,
@@ -473,6 +484,7 @@
 				D26A8C1528D3185A00FCDD7E /* SignUpContentView.swift in Sources */,
 				D224B73F28D8409D0095F3EF /* ProfileNameAgeViewReactor.swift in Sources */,
 				D2D4543328D064F700312390 /* SplashViewController.swift in Sources */,
+				D23704B428D96442004794E6 /* RegisterProfileRootViewController.swift in Sources */,
 				D224B73A28D8403F0095F3EF /* InputView.swift in Sources */,
 				D2D4544D28D1D8DA00312390 /* OnboardingContentView.swift in Sources */,
 				D270A65E28C9D5DF0015F54C /* UIViewController+Preview.swift in Sources */,

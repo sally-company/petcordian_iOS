@@ -22,11 +22,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     window = UIWindow(frame: windowScene.coordinateSpace.bounds)
     window?.windowScene = windowScene
-//    let vc = Inject.ViewControllerHost(SplashBuilder.build())
-//    let navController = UINavigationController(rootViewController: vc)
-//    window?.rootViewController = navController
-    let vc = ProfileNameAgeBuilder.build()
-    window?.rootViewController = vc
+    let vc = Inject.ViewControllerHost(SplashBuilder.build())
+    let navController = UINavigationController(rootViewController: vc)
+    window?.rootViewController = navController
     
     window?.makeKeyAndVisible()
     
