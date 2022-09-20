@@ -16,6 +16,7 @@
 		D224B74928D84EE80095F3EF /* UnderLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D224B74828D84EE80095F3EF /* UnderLineTextField.swift */; };
 		D224B74B28D854620095F3EF /* RadioButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D224B74A28D854620095F3EF /* RadioButtonController.swift */; };
 		D23704A928D94FC1004794E6 /* UnderLineTextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23704A828D94FC1004794E6 /* UnderLineTextField+Extension.swift */; };
+		D23704AC28D958FA004794E6 /* RxKeyboard in Frameworks */ = {isa = PBXBuildFile; productRef = D23704AB28D958FA004794E6 /* RxKeyboard */; };
 		D25C404F28D8673500B5590D /* PETButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25C404E28D8673500B5590D /* PETButton.swift */; };
 		D26A8C0628D2B7E100FCDD7E /* OnboardingViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26A8C0228D2B7E100FCDD7E /* OnboardingViewReactor.swift */; };
 		D26A8C0728D2B7E100FCDD7E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26A8C0328D2B7E100FCDD7E /* OnboardingViewController.swift */; };
@@ -117,6 +118,7 @@
 				D270A66428C9DCDA0015F54C /* netfox in Frameworks */,
 				D270A63D28C9D4CF0015F54C /* SnapKit in Frameworks */,
 				D270A63728C9D4710015F54C /* ReactorKit in Frameworks */,
+				D23704AC28D958FA004794E6 /* RxKeyboard in Frameworks */,
 				D270A66128C9DC370015F54C /* ReusableKit in Frameworks */,
 				D270A64028C9D4DF0015F54C /* RxCocoa in Frameworks */,
 				D270A64828C9D5210015F54C /* RxDataSources in Frameworks */,
@@ -372,6 +374,7 @@
 				D270A65828C9D5C40015F54C /* Kingfisher */,
 				D270A66028C9DC370015F54C /* ReusableKit */,
 				D270A66328C9DCDA0015F54C /* netfox */,
+				D23704AB28D958FA004794E6 /* RxKeyboard */,
 			);
 			productName = PETCORDIAN;
 			productReference = D270A61E28C9D3A70015F54C /* PETCORDIAN.app */;
@@ -415,6 +418,7 @@
 				D270A65728C9D5C40015F54C /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				D270A65F28C9DC370015F54C /* XCRemoteSwiftPackageReference "ReusableKit" */,
 				D270A66228C9DCDA0015F54C /* XCRemoteSwiftPackageReference "netfox" */,
+				D23704AA28D958FA004794E6 /* XCRemoteSwiftPackageReference "RxKeyboard" */,
 			);
 			productRefGroup = D270A61F28C9D3A70015F54C /* Products */;
 			projectDirPath = "";
@@ -692,6 +696,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D23704AA28D958FA004794E6 /* XCRemoteSwiftPackageReference "RxKeyboard" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxKeyboard";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		D270A63528C9D4710015F54C /* XCRemoteSwiftPackageReference "ReactorKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactorKit/ReactorKit.git";
@@ -799,6 +811,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D23704AB28D958FA004794E6 /* RxKeyboard */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D23704AA28D958FA004794E6 /* XCRemoteSwiftPackageReference "RxKeyboard" */;
+			productName = RxKeyboard;
+		};
 		D270A63628C9D4710015F54C /* ReactorKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D270A63528C9D4710015F54C /* XCRemoteSwiftPackageReference "ReactorKit" */;
