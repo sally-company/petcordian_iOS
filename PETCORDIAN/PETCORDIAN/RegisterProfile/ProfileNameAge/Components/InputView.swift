@@ -149,6 +149,7 @@ private class NameInputView: UIView {
     }
     $0.setPlaceholder(placeholder: "반려동물의 이름을 입력해주세요", color: .systemGray3)
     $0.layer.masksToBounds = true
+    $0.autocorrectionType = .no
     $0.delegate = self
   }
   
