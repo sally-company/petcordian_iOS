@@ -57,7 +57,16 @@ class RegisterProfileRootViewController: UIViewController, ReactorKit.View {
 extension RegisterProfileRootViewController: ProfileNameAgeViewControllerDelegate {
   
   func ProfileNameAgeViewControllerDidValidProfileNameAge() {
-    let profileRelationScene = ProfileRelationBuilder.build()
+    let profileRelationScene = ProfileRelationBuilder.build(delegate: self)
     self.navigationController?.pushViewController(profileRelationScene, animated: true)
+  }
+}
+
+extension RegisterProfileRootViewController: ProfileRelationViewControllerDelegate {
+  
+  func ProfileRelationViewControllerDidValidProfileRelation() {
+    let vc = UIViewController()
+    vc.view.backgroundColor = .white
+    self.navigationController?.pushViewController(vc, animated: true)
   }
 }

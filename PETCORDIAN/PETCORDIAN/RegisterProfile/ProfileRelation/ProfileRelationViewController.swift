@@ -12,6 +12,10 @@ import RxSwift
 import Then
 import UIKit
 
+protocol ProfileRelationViewControllerDelegate: AnyObject {
+  func ProfileRelationViewControllerDidValidProfileRelation()
+}
+
 class ProfileRelationViewController: UIViewController, ReactorKit.View {
   
   typealias Reactor = ProfileRelationViewReactor
@@ -21,6 +25,8 @@ class ProfileRelationViewController: UIViewController, ReactorKit.View {
   var disposeBag: DisposeBag = .init()
   
   var keyboardDispose: Disposable? = nil
+  
+  weak var delegate: ProfileRelationViewControllerDelegate?
   
   // MARK: UI
   
@@ -62,6 +68,16 @@ class ProfileRelationViewController: UIViewController, ReactorKit.View {
   func bind(reactor: Reactor) {
     self.bindTypingText(reactor: reactor)
     self.bindNextButtonEnabled(reactor: reactor)
+    self.bindNextButton()
+  }
+  
+  func bindNextButton() {
+    self.contentView.petButton.rx.tap
+      .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
+      .bind(onNext: { [weak self] in
+        self?.delegate?.ProfileRelationViewControllerDidValidProfileRelation()
+      })
+      .disposed(by: self.disposeBag)
   }
   
   func bindTypingText(reactor: Reactor) {

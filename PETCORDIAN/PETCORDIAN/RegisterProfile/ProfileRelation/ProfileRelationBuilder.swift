@@ -8,11 +8,12 @@
 import UIKit
 
 final class ProfileRelationBuilder {
-  class func build() -> UIViewController {
+  class func build(delegate: ProfileRelationViewControllerDelegate) -> UIViewController {
     let viewController = ProfileRelationViewController()
     let useCase = ProfileRelationUseCaseImpl()
     let reactor = ProfileRelationViewReactor(useCase: useCase)
     viewController.reactor = reactor
+    viewController.delegate = delegate
     
     return viewController
   }
