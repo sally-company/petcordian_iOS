@@ -20,6 +20,11 @@
 		D23333A128DAB61400E0A00D /* ProfileRelationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D233339D28DAB61400E0A00D /* ProfileRelationViewController.swift */; };
 		D23333A228DAB61400E0A00D /* ProfileRelationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D233339E28DAB61400E0A00D /* ProfileRelationBuilder.swift */; };
 		D23333A328DAB61400E0A00D /* ProfileRelationViewUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D233339F28DAB61400E0A00D /* ProfileRelationViewUseCase.swift */; };
+		D23333A728DAE97600E0A00D /* ProfileImageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23333A628DAE97600E0A00D /* ProfileImageContentView.swift */; };
+		D23333AC28DAE98900E0A00D /* ProfileImageViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23333A828DAE98900E0A00D /* ProfileImageViewReactor.swift */; };
+		D23333AD28DAE98900E0A00D /* ProfileImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23333A928DAE98900E0A00D /* ProfileImageViewController.swift */; };
+		D23333AE28DAE98900E0A00D /* ProfileImageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23333AA28DAE98900E0A00D /* ProfileImageBuilder.swift */; };
+		D23333AF28DAE98900E0A00D /* ProfileImageViewUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23333AB28DAE98900E0A00D /* ProfileImageViewUseCase.swift */; };
 		D23704A928D94FC1004794E6 /* UnderLineTextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23704A828D94FC1004794E6 /* UnderLineTextField+Extension.swift */; };
 		D23704AC28D958FA004794E6 /* RxKeyboard in Frameworks */ = {isa = PBXBuildFile; productRef = D23704AB28D958FA004794E6 /* RxKeyboard */; };
 		D23704B328D96442004794E6 /* RegisterProfileRootViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23704AF28D96442004794E6 /* RegisterProfileRootViewReactor.swift */; };
@@ -89,6 +94,11 @@
 		D233339D28DAB61400E0A00D /* ProfileRelationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRelationViewController.swift; sourceTree = "<group>"; };
 		D233339E28DAB61400E0A00D /* ProfileRelationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRelationBuilder.swift; sourceTree = "<group>"; };
 		D233339F28DAB61400E0A00D /* ProfileRelationViewUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRelationViewUseCase.swift; sourceTree = "<group>"; };
+		D23333A628DAE97600E0A00D /* ProfileImageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageContentView.swift; sourceTree = "<group>"; };
+		D23333A828DAE98900E0A00D /* ProfileImageViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageViewReactor.swift; sourceTree = "<group>"; };
+		D23333A928DAE98900E0A00D /* ProfileImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageViewController.swift; sourceTree = "<group>"; };
+		D23333AA28DAE98900E0A00D /* ProfileImageBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageBuilder.swift; sourceTree = "<group>"; };
+		D23333AB28DAE98900E0A00D /* ProfileImageViewUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageViewUseCase.swift; sourceTree = "<group>"; };
 		D23704A828D94FC1004794E6 /* UnderLineTextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UnderLineTextField+Extension.swift"; sourceTree = "<group>"; };
 		D23704AF28D96442004794E6 /* RegisterProfileRootViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProfileRootViewReactor.swift; sourceTree = "<group>"; };
 		D23704B028D96442004794E6 /* RegisterProfileRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProfileRootViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +187,26 @@
 			path = Root;
 			sourceTree = "<group>";
 		};
+		D23333A528DAE96200E0A00D /* ProfileImage */ = {
+			isa = PBXGroup;
+			children = (
+				D23333B028DAE98D00E0A00D /* Components */,
+				D23333A828DAE98900E0A00D /* ProfileImageViewReactor.swift */,
+				D23333A928DAE98900E0A00D /* ProfileImageViewController.swift */,
+				D23333AA28DAE98900E0A00D /* ProfileImageBuilder.swift */,
+				D23333AB28DAE98900E0A00D /* ProfileImageViewUseCase.swift */,
+			);
+			path = ProfileImage;
+			sourceTree = "<group>";
+		};
+		D23333B028DAE98D00E0A00D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D23333A628DAE97600E0A00D /* ProfileImageContentView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		D23704B928D9A542004794E6 /* ProfileRelation */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +290,7 @@
 				D23333A428DADE9000E0A00D /* Root */,
 				D26A8C1F28D4216A00FCDD7E /* ProfileNameAge */,
 				D23704B928D9A542004794E6 /* ProfileRelation */,
+				D23333A528DAE96200E0A00D /* ProfileImage */,
 			);
 			path = RegisterProfile;
 			sourceTree = "<group>";
@@ -522,11 +553,13 @@
 				D224B74B28D854620095F3EF /* RadioButtonController.swift in Sources */,
 				D23704B528D96442004794E6 /* RegisterProfileRootBuilder.swift in Sources */,
 				D270A62228C9D3A70015F54C /* AppDelegate.swift in Sources */,
+				D23333A728DAE97600E0A00D /* ProfileImageContentView.swift in Sources */,
 				D26A8C0928D2B7E100FCDD7E /* OnboardingViewUseCase.swift in Sources */,
 				D23704B328D96442004794E6 /* RegisterProfileRootViewReactor.swift in Sources */,
 				D26A8C0728D2B7E100FCDD7E /* OnboardingViewController.swift in Sources */,
 				D2D4544728D1C99600312390 /* OnboardingImageSection.swift in Sources */,
 				D2D4543C28D083D900312390 /* RootViewController.swift in Sources */,
+				D23333AD28DAE98900E0A00D /* ProfileImageViewController.swift in Sources */,
 				D270A62428C9D3A70015F54C /* SceneDelegate.swift in Sources */,
 				D26A8C0828D2B7E100FCDD7E /* OnboardingBuilder.swift in Sources */,
 				D270A65D28C9D5DF0015F54C /* UIView+Preview.swift in Sources */,
@@ -535,6 +568,7 @@
 				D224B74028D8409D0095F3EF /* ProfileNameAgeViewController.swift in Sources */,
 				D25C404F28D8673500B5590D /* PETButton.swift in Sources */,
 				D270A66E28D062460015F54C /* SplashContentView.swift in Sources */,
+				D23333AC28DAE98900E0A00D /* ProfileImageViewReactor.swift in Sources */,
 				D23704A928D94FC1004794E6 /* UnderLineTextField+Extension.swift in Sources */,
 				D23704B828D98791004794E6 /* String+Extension.swift in Sources */,
 				D26A8C1028D2EA1C00FCDD7E /* Font.swift in Sources */,
@@ -551,9 +585,11 @@
 				D2D4543528D064F700312390 /* SplashViewUseCase.swift in Sources */,
 				D26A8C1D28D41D9800FCDD7E /* SignUpViewUseCase.swift in Sources */,
 				D26A8C2228D421DE00FCDD7E /* ProfileNameAgeContentView.swift in Sources */,
+				D23333AE28DAE98900E0A00D /* ProfileImageBuilder.swift in Sources */,
 				D23704BC28D9A573004794E6 /* ProfileRelationContentView.swift in Sources */,
 				D2D4543D28D083D900312390 /* RootBuilder.swift in Sources */,
 				D224B74928D84EE80095F3EF /* UnderLineTextField.swift in Sources */,
+				D23333AF28DAE98900E0A00D /* ProfileImageViewUseCase.swift in Sources */,
 				D224B74128D8409D0095F3EF /* ProfileNameAgeBuilder.swift in Sources */,
 				D26A8C0628D2B7E100FCDD7E /* OnboardingViewReactor.swift in Sources */,
 				D233339B28DAAAE300E0A00D /* RelationItem.swift in Sources */,

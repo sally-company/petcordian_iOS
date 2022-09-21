@@ -65,8 +65,7 @@ extension RegisterProfileRootViewController: ProfileNameAgeViewControllerDelegat
 extension RegisterProfileRootViewController: ProfileRelationViewControllerDelegate {
   
   func ProfileRelationViewControllerDidValidProfileRelation() {
-    let vc = UIViewController()
-    vc.view.backgroundColor = .white
-    self.navigationController?.pushViewController(vc, animated: true)
+    let profileImageScene = ProfileImageBuilder.build()
+    self.navigationController?.pushViewController(profileImageScene, animated: true)
   }
 }
