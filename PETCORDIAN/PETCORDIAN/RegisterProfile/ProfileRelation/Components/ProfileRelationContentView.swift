@@ -6,6 +6,7 @@
 //
 
 import BonMot
+import ReusableKit
 import SnapKit
 import Then
 import UIKit
@@ -25,15 +26,52 @@ struct ProfileRelationContentView_Preview: PreviewProvider {
 
 public class ProfileRelationContentView: UIView {
   
+  enum Reusable {
+    static let buttonCell = ReusableCell<RelationButtonCell>()
+  }
+  
   private let progressView = ProgressView().then {
     $0.firstStepLineView.backgroundColor = .black
     $0.secondStepLineView.backgroundColor = .black
   }
+  
   private let titleView = TitleView()
+  
+  public lazy var collectionView = UICollectionView(
+    frame: .zero,
+    collectionViewLayout: UICollectionViewFlowLayout().then {
+      $0.scrollDirection = .vertical
+      $0.minimumLineSpacing = 8
+      $0.minimumInteritemSpacing = 4
+    }
+  ).then {
+    $0.register(Reusable.buttonCell)
+    $0.isScrollEnabled = false
+    $0.backgroundColor = .white
+    $0.contentInsetAdjustmentBehavior = .never
+    $0.allowsMultipleSelection = false
+    $0.dataSource = self
+    $0.delegate = self
+  }
+  
+  private var collectionViewContentSizeObserver: NSKeyValueObservation?
+  
+  func startObserving() {
+    self.collectionViewContentSizeObserver = self.collectionView.observe(\.contentSize, changeHandler: { [weak self] collection, _ in
+      self?.collectionView.snp.makeConstraints {
+        $0.height.equalTo(collection.contentSize.height)
+        
+        self?.layoutIfNeeded()
+      }
+    })
+  }
+  
+  private var lastSelectedIndexPath: IndexPath?
   
   public override init(frame: CGRect) {
     super.init(frame: frame)
     self.setup()
+    self.startObserving()
   }
   
   public required init?(coder: NSCoder) {
@@ -44,6 +82,7 @@ public class ProfileRelationContentView: UIView {
   private func setup() {
     self.addSubview(self.progressView)
     self.addSubview(self.titleView)
+    self.addSubview(self.collectionView)
     
     self.progressView.snp.makeConstraints {
       $0.top.equalTo(self.safeAreaLayoutGuide).offset(9)
@@ -55,6 +94,57 @@ public class ProfileRelationContentView: UIView {
       $0.top.equalTo(self.progressView.snp.bottom).offset(18)
       $0.left.right.equalToSuperview()
     }
+    
+    self.collectionView.snp.makeConstraints {
+      $0.top.equalTo(self.titleView.snp.bottom)
+      $0.left.equalTo(24)
+      $0.right.equalTo(-27)
+    }
+  }
+}
+
+extension ProfileRelationContentView: UICollectionViewDataSource {
+
+  public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    return RelationItem.relationItems.count
+  }
+
+  public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cell = collectionView.dequeue(Reusable.buttonCell, for: indexPath)
+    
+    let target = RelationItem.relationItems[indexPath.item].name
+    cell.layer.borderColor = UIColor.black.cgColor
+    cell.layer.borderWidth = 1
+    cell.layer.cornerRadius = 20
+    cell.configure(with: target)
+    
+    return cell
+  }
+}
+
+extension ProfileRelationContentView: UICollectionViewDelegate {
+  
+  public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    guard lastSelectedIndexPath != indexPath else { return }
+    
+    if let index = lastSelectedIndexPath {
+      let cell = collectionView.cellForItem(at: index) as! RelationButtonCell
+      cell.isSelected = false
+    }
+    
+    let cell = collectionView.cellForItem(at: indexPath) as! RelationButtonCell
+    cell.isSelected = true
+    
+    self.lastSelectedIndexPath = indexPath
+  }
+}
+
+extension ProfileRelationContentView: UICollectionViewDelegateFlowLayout {
+  
+  public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    let width = ((collectionView.frame.size.width - 24) / 4) 
+    
+    return .init(width: width, height: 42)
   }
 }
 
