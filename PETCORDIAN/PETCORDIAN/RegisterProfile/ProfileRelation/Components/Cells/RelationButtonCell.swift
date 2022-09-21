@@ -10,7 +10,13 @@ import SnapKit
 import Then
 import UIKit
 
+protocol RelationButtonCellDelegate: AnyObject {
+  func RelationButtonCellItemIsSelected(_ title: String)
+}
+
 class RelationButtonCell: UICollectionViewCell {
+  
+  weak var delegate: RelationButtonCellDelegate?
   
   enum Typo {
     static let title = StringStyle([
@@ -23,11 +29,11 @@ class RelationButtonCell: UICollectionViewCell {
     $0.numberOfLines = 1
   }
   
-  
   override var isSelected: Bool {
     didSet {
       self.backgroundColor = isSelected ? .black : .white
       self.titleLabel.textColor = isSelected ? .white : .black
+      self.delegate?.RelationButtonCellItemIsSelected(self.titleLabel.text ?? "")
     }
   }
   

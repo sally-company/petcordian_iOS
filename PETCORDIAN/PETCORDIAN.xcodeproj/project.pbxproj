@@ -167,6 +167,16 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		D23333A428DADE9000E0A00D /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				D23704AF28D96442004794E6 /* RegisterProfileRootViewReactor.swift */,
+				D23704B028D96442004794E6 /* RegisterProfileRootViewController.swift */,
+				D23704B128D96442004794E6 /* RegisterProfileRootBuilder.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 		D23704B928D9A542004794E6 /* ProfileRelation */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,11 +257,9 @@
 		D26A8C1E28D4211900FCDD7E /* RegisterProfile */ = {
 			isa = PBXGroup;
 			children = (
+				D23333A428DADE9000E0A00D /* Root */,
 				D26A8C1F28D4216A00FCDD7E /* ProfileNameAge */,
 				D23704B928D9A542004794E6 /* ProfileRelation */,
-				D23704AF28D96442004794E6 /* RegisterProfileRootViewReactor.swift */,
-				D23704B028D96442004794E6 /* RegisterProfileRootViewController.swift */,
-				D23704B128D96442004794E6 /* RegisterProfileRootBuilder.swift */,
 			);
 			path = RegisterProfile;
 			sourceTree = "<group>";

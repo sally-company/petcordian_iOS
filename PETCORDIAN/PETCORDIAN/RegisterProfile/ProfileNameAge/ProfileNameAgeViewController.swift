@@ -90,7 +90,7 @@ class ProfileNameAgeViewController: UIViewController, ReactorKit.View {
     self.bindTypingName(reactor: reactor)
     self.bindTypingAge(reactor: reactor)
     self.bindGenderButton(reactor: reactor)
-    self.bindNextButtonEnalbed(reactor: reactor)
+    self.bindNextButtonEnabled(reactor: reactor)
   }
   
   func bindNextButton() {
@@ -132,7 +132,7 @@ class ProfileNameAgeViewController: UIViewController, ReactorKit.View {
       .disposed(by: self.disposeBag)
   }
   
-  func bindNextButtonEnalbed(reactor: Reactor) {
+  func bindNextButtonEnabled(reactor: Reactor) {
     reactor.state
       .map { $0.isEnabled }
       .distinctUntilChanged()

@@ -9,6 +9,7 @@ import ReactorKit
 import RxCocoa
 import RxKeyboard
 import RxSwift
+import Then
 import UIKit
 
 class ProfileRelationViewController: UIViewController, ReactorKit.View {
@@ -23,7 +24,9 @@ class ProfileRelationViewController: UIViewController, ReactorKit.View {
   
   // MARK: UI
   
-  private let contentView = ProfileRelationContentView()
+  private lazy var contentView = ProfileRelationContentView().then {
+    $0.delegate = self
+  }
   
   deinit {
     print("\(self)")
@@ -57,7 +60,25 @@ class ProfileRelationViewController: UIViewController, ReactorKit.View {
   }
   
   func bind(reactor: Reactor) {
-    
+    self.bindTypingText(reactor: reactor)
+    self.bindNextButtonEnabled(reactor: reactor)
+  }
+  
+  func bindTypingText(reactor: Reactor) {
+    self.contentView.textField.rx.text
+      .skip(1)
+      .distinctUntilChanged()
+      .map { Reactor.Action.typingRelationText($0 ?? "") }
+      .bind(to: reactor.action)
+      .disposed(by: self.disposeBag)
+  }
+  
+  func bindNextButtonEnabled(reactor: Reactor) {
+    reactor.state
+      .map { $0.isEnabled }
+      .distinctUntilChanged()
+      .bind(to: self.contentView.petButton.rx.isEnabled)
+      .disposed(by: self.disposeBag)
   }
   
   private func installRxKeyboard() {
@@ -82,5 +103,16 @@ class ProfileRelationViewController: UIViewController, ReactorKit.View {
   private func unInstallRxKeyboard() {
     self.keyboardDispose?.dispose()
     self.keyboardDispose = nil
+  }
+}
+
+extension ProfileRelationViewController: ProfileRelationContentViewDelegate {
+
+  func ProfileRelationContentViewCellItemSelected(_ title: String) {
+    reactor?.action.onNext(.selectRelationName(title))
+    
+    if title == "기타" {
+      reactor?.action.onNext(.selectRelationName(""))
+    }
   }
 }

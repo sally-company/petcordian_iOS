@@ -24,7 +24,13 @@ struct ProfileRelationContentView_Preview: PreviewProvider {
 }
 #endif
 
+protocol ProfileRelationContentViewDelegate: AnyObject {
+  func ProfileRelationContentViewCellItemSelected(_ title: String)
+}
+
 public class ProfileRelationContentView: UIView {
+  
+  weak var delegate: ProfileRelationContentViewDelegate?
   
   enum Reusable {
     static let buttonCell = ReusableCell<RelationButtonCell>()
@@ -54,7 +60,7 @@ public class ProfileRelationContentView: UIView {
     $0.delegate = self
   }
   
-  private lazy var textField = UnderLineTextField().then {
+  public lazy var textField = UnderLineTextField().then {
     $0.addAction(for: .editingChanged) { textField in
       if textField.text == "" {
         textField.checkImageView.isHidden = true
@@ -149,6 +155,7 @@ extension ProfileRelationContentView: UICollectionViewDataSource {
     cell.layer.borderWidth = 1
     cell.layer.cornerRadius = 20
     cell.configure(with: target)
+    cell.delegate = self
     
     return cell
   }
@@ -182,6 +189,13 @@ extension ProfileRelationContentView: UITextFieldDelegate {
   
   public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     textField.resignFirstResponder()
+  }
+}
+
+extension ProfileRelationContentView: RelationButtonCellDelegate {
+  
+  func RelationButtonCellItemIsSelected(_ title: String) {
+    self.delegate?.ProfileRelationContentViewCellItemSelected(title)
   }
 }
 
