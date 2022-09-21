@@ -54,6 +54,21 @@ public class ProfileRelationContentView: UIView {
     $0.delegate = self
   }
   
+  private lazy var textField = UnderLineTextField().then {
+    $0.addAction(for: .editingChanged) { textField in
+      if textField.text == "" {
+        textField.checkImageView.isHidden = true
+      } else {
+        textField.checkImageView.isHidden = false
+      }
+    }
+    $0.setPlaceholder(placeholder: "반려동물과의 관계를 입력해주세요", color: .systemGray3)
+    $0.layer.masksToBounds = true
+    $0.autocorrectionType = .no
+    $0.isHidden = true
+    $0.delegate = self
+  }
+  
   private var collectionViewContentSizeObserver: NSKeyValueObservation?
   
   func startObserving() {
@@ -83,6 +98,7 @@ public class ProfileRelationContentView: UIView {
     self.addSubview(self.progressView)
     self.addSubview(self.titleView)
     self.addSubview(self.collectionView)
+    self.addSubview(self.textField)
     
     self.progressView.snp.makeConstraints {
       $0.top.equalTo(self.safeAreaLayoutGuide).offset(9)
@@ -99,6 +115,13 @@ public class ProfileRelationContentView: UIView {
       $0.top.equalTo(self.titleView.snp.bottom)
       $0.left.equalTo(24)
       $0.right.equalTo(-27)
+    }
+    
+    self.textField.snp.makeConstraints {
+      $0.top.equalTo(self.collectionView.snp.bottom).offset(24)
+      $0.left.equalTo(24)
+      $0.right.equalTo(-24)
+      $0.height.equalTo(42)
     }
   }
 }
@@ -130,12 +153,26 @@ extension ProfileRelationContentView: UICollectionViewDelegate {
     if let index = lastSelectedIndexPath {
       let cell = collectionView.cellForItem(at: index) as! RelationButtonCell
       cell.isSelected = false
+      self.textField.isHidden = true
+      self.textField.text = ""
+      self.textField.resignFirstResponder()
     }
     
     let cell = collectionView.cellForItem(at: indexPath) as! RelationButtonCell
     cell.isSelected = true
+    if indexPath.item == 7 {
+      self.textField.isHidden = false
+      self.textField.becomeFirstResponder()
+    }
     
     self.lastSelectedIndexPath = indexPath
+  }
+}
+
+extension ProfileRelationContentView: UITextFieldDelegate {
+  
+  public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    textField.resignFirstResponder()
   }
 }
 
