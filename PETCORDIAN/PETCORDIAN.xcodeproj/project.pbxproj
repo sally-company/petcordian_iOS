@@ -16,6 +16,10 @@
 		D224B74928D84EE80095F3EF /* UnderLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D224B74828D84EE80095F3EF /* UnderLineTextField.swift */; };
 		D224B74B28D854620095F3EF /* RadioButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D224B74A28D854620095F3EF /* RadioButtonController.swift */; };
 		D233339B28DAAAE300E0A00D /* RelationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D233339A28DAAAE300E0A00D /* RelationItem.swift */; };
+		D23333A028DAB61400E0A00D /* ProfileRelationViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D233339C28DAB61400E0A00D /* ProfileRelationViewReactor.swift */; };
+		D23333A128DAB61400E0A00D /* ProfileRelationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D233339D28DAB61400E0A00D /* ProfileRelationViewController.swift */; };
+		D23333A228DAB61400E0A00D /* ProfileRelationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D233339E28DAB61400E0A00D /* ProfileRelationBuilder.swift */; };
+		D23333A328DAB61400E0A00D /* ProfileRelationViewUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D233339F28DAB61400E0A00D /* ProfileRelationViewUseCase.swift */; };
 		D23704A928D94FC1004794E6 /* UnderLineTextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23704A828D94FC1004794E6 /* UnderLineTextField+Extension.swift */; };
 		D23704AC28D958FA004794E6 /* RxKeyboard in Frameworks */ = {isa = PBXBuildFile; productRef = D23704AB28D958FA004794E6 /* RxKeyboard */; };
 		D23704B328D96442004794E6 /* RegisterProfileRootViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23704AF28D96442004794E6 /* RegisterProfileRootViewReactor.swift */; };
@@ -81,6 +85,10 @@
 		D224B74828D84EE80095F3EF /* UnderLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderLineTextField.swift; sourceTree = "<group>"; };
 		D224B74A28D854620095F3EF /* RadioButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonController.swift; sourceTree = "<group>"; };
 		D233339A28DAAAE300E0A00D /* RelationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationItem.swift; sourceTree = "<group>"; };
+		D233339C28DAB61400E0A00D /* ProfileRelationViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRelationViewReactor.swift; sourceTree = "<group>"; };
+		D233339D28DAB61400E0A00D /* ProfileRelationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRelationViewController.swift; sourceTree = "<group>"; };
+		D233339E28DAB61400E0A00D /* ProfileRelationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRelationBuilder.swift; sourceTree = "<group>"; };
+		D233339F28DAB61400E0A00D /* ProfileRelationViewUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRelationViewUseCase.swift; sourceTree = "<group>"; };
 		D23704A828D94FC1004794E6 /* UnderLineTextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UnderLineTextField+Extension.swift"; sourceTree = "<group>"; };
 		D23704AF28D96442004794E6 /* RegisterProfileRootViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProfileRootViewReactor.swift; sourceTree = "<group>"; };
 		D23704B028D96442004794E6 /* RegisterProfileRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProfileRootViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +171,10 @@
 			isa = PBXGroup;
 			children = (
 				D23704BA28D9A553004794E6 /* Components */,
+				D233339C28DAB61400E0A00D /* ProfileRelationViewReactor.swift */,
+				D233339D28DAB61400E0A00D /* ProfileRelationViewController.swift */,
+				D233339E28DAB61400E0A00D /* ProfileRelationBuilder.swift */,
+				D233339F28DAB61400E0A00D /* ProfileRelationViewUseCase.swift */,
 			);
 			path = ProfileRelation;
 			sourceTree = "<group>";
@@ -492,10 +504,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D23333A028DAB61400E0A00D /* ProfileRelationViewReactor.swift in Sources */,
 				D2D4543428D064F700312390 /* SplashBuilder.swift in Sources */,
 				D224B74228D8409D0095F3EF /* ProfileNameAgeViewUseCase.swift in Sources */,
 				D2D4544228D1A54D00312390 /* OnboardingItems.swift in Sources */,
 				D224B74428D8491A0095F3EF /* UIButton+Extension.swift in Sources */,
+				D23333A128DAB61400E0A00D /* ProfileRelationViewController.swift in Sources */,
 				D2D4543B28D083D900312390 /* RootViewReactor.swift in Sources */,
 				D224B74B28D854620095F3EF /* RadioButtonController.swift in Sources */,
 				D23704B528D96442004794E6 /* RegisterProfileRootBuilder.swift in Sources */,
@@ -519,6 +533,7 @@
 				D2D4543228D064F700312390 /* SplashViewReactor.swift in Sources */,
 				D2D4544928D1CA0F00312390 /* OnboardingCellReactor.swift in Sources */,
 				D26A8C1528D3185A00FCDD7E /* SignUpContentView.swift in Sources */,
+				D23333A228DAB61400E0A00D /* ProfileRelationBuilder.swift in Sources */,
 				D224B73F28D8409D0095F3EF /* ProfileNameAgeViewReactor.swift in Sources */,
 				D2D4543328D064F700312390 /* SplashViewController.swift in Sources */,
 				D23704B428D96442004794E6 /* RegisterProfileRootViewController.swift in Sources */,
@@ -534,6 +549,7 @@
 				D224B74128D8409D0095F3EF /* ProfileNameAgeBuilder.swift in Sources */,
 				D26A8C0628D2B7E100FCDD7E /* OnboardingViewReactor.swift in Sources */,
 				D233339B28DAAAE300E0A00D /* RelationItem.swift in Sources */,
+				D23333A328DAB61400E0A00D /* ProfileRelationViewUseCase.swift in Sources */,
 				D2D4544B28D1D35600312390 /* OnboardingImageCollectionViewCell.swift in Sources */,
 				D23704C128D9BF76004794E6 /* RelationButtonCell.swift in Sources */,
 				D26A8C1B28D41D9800FCDD7E /* SignUpViewController.swift in Sources */,

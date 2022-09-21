@@ -69,6 +69,8 @@ public class ProfileRelationContentView: UIView {
     $0.delegate = self
   }
   
+  public let petButton = PETButton(title: "다음")
+  
   private var collectionViewContentSizeObserver: NSKeyValueObservation?
   
   func startObserving() {
@@ -99,6 +101,7 @@ public class ProfileRelationContentView: UIView {
     self.addSubview(self.titleView)
     self.addSubview(self.collectionView)
     self.addSubview(self.textField)
+    self.addSubview(self.petButton)
     
     self.progressView.snp.makeConstraints {
       $0.top.equalTo(self.safeAreaLayoutGuide).offset(9)
@@ -122,6 +125,12 @@ public class ProfileRelationContentView: UIView {
       $0.left.equalTo(24)
       $0.right.equalTo(-24)
       $0.height.equalTo(42)
+    }
+    
+    self.petButton.snp.makeConstraints {
+      $0.left.equalTo(24)
+      $0.right.equalTo(-24)
+      $0.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom).offset(-12)
     }
   }
 }
