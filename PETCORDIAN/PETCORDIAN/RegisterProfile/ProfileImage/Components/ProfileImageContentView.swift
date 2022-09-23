@@ -32,7 +32,7 @@ public class ProfileImageContentView: UIView {
   }
   
   private let titleView = TitleView()
-  private let photoImageView = PhotoImageView()
+  public let photoImageView = PhotoImageView()
   private let petButton = PETButton(title: "확인")
   
   public override init(frame: CGRect) {
@@ -133,10 +133,17 @@ extension ProfileImageContentView {
   
   public class PhotoImageView: UIView {
     
-    private lazy var photoButton = UIButton().then {
+    public let defaultProfileImageView = UIImageView().then {
       $0.backgroundColor = .systemGray3
-      $0.layer.cornerRadius = 157 / 2
-      $0.layer.masksToBounds = true
+      $0.contentMode = .scaleAspectFill
+    }
+    
+    public var selectedProfileImageView = UIImageView().then {
+      $0.contentMode = .scaleAspectFill
+    }
+    
+    public lazy var photoButton = UIButton().then {
+      $0.backgroundColor = .clear
     }
     
     public override init(frame: CGRect) {
@@ -150,7 +157,20 @@ extension ProfileImageContentView {
     }
     
     private func setup() {
+      self.layer.cornerRadius = 157 / 2
+      self.layer.masksToBounds = true
+      
+      self.addSubview(self.defaultProfileImageView)
+      self.addSubview(self.selectedProfileImageView)
       self.addSubview(self.photoButton)
+      
+      self.defaultProfileImageView.snp.makeConstraints {
+        $0.edges.equalToSuperview()
+      }
+      
+      self.selectedProfileImageView.snp.makeConstraints {
+        $0.edges.equalToSuperview()
+      }
       
       self.photoButton.snp.makeConstraints {
         $0.edges.equalToSuperview()

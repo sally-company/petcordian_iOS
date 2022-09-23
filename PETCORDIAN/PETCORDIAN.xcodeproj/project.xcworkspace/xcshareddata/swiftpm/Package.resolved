@@ -136,6 +136,15 @@
       }
     },
     {
+      "identity" : "tocropviewcontroller",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/TimOliver/TOCropViewController",
+      "state" : {
+        "branch" : "main",
+        "revision" : "a942414508012b13102f776eb65dac655f31cabb"
+      }
+    },
+    {
       "identity" : "weakmaptable",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ReactorKit/WeakMapTable.git",
