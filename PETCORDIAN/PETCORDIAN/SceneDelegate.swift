@@ -7,6 +7,8 @@
 
 import Inject
 import netfox
+import KakaoSDKAuth
+import KakaoSDKCommon
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -31,5 +33,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     #if DEBUG
       NFX.sharedInstance().start()
     #endif
+  }
+  
+  func scene(
+    _ scene: UIScene,
+    openURLContexts URLContexts: Set<UIOpenURLContext>
+  ) {
+      if let url = URLContexts.first?.url {
+          if (AuthApi.isKakaoTalkLoginUrl(url)) {
+              _ = AuthController.handleOpenUrl(url: url)
+          }
+      }
   }
 }
