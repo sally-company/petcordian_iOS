@@ -6,6 +6,7 @@
 //
 
 import CropViewController
+import Lottie
 import ReactorKit
 import RxCocoa
 import RxSwift
@@ -108,6 +109,13 @@ class ProfileImageViewController: UIViewController, ReactorKit.View {
           }
         }
         // TODO: 버튼 타이틀 변경
+        let animationView = AnimationView(name: "lottie")
+        
+        self.view.addSubview(animationView)
+        animationView.frame = animationView.superview?.bounds ?? .zero
+        animationView.contentMode = .scaleAspectFit
+        
+        animationView.play()
       })
       .disposed(by: self.disposeBag)
   }
