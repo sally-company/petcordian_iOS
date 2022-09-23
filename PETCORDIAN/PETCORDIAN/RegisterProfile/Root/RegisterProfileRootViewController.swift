@@ -47,6 +47,17 @@ class RegisterProfileRootViewController: UIViewController, ReactorKit.View {
   
   private func setup() {
     self.addProfileNameAgeView()
+    self.addCancelButton()
+  }
+  
+  private func addCancelButton() {
+    let cancelButton = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(cancelAction))
+    cancelButton.tintColor = .black
+    self.navigationItem.rightBarButtonItem = cancelButton
+  }
+  
+  @objc private func cancelAction() {
+    self.dismiss(animated: true)
   }
   
   func bind(reactor: Reactor) {
