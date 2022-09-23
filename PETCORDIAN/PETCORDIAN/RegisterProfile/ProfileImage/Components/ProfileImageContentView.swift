@@ -25,15 +25,18 @@ struct ProfileImageContentView_Preview: PreviewProvider {
 
 public class ProfileImageContentView: UIView {
   
-  private let progressView = ProgressView().then {
+  public let progressView = ProgressView().then {
     $0.firstStepLineView.backgroundColor = .black
     $0.secondStepLineView.backgroundColor = .black
     $0.thirdStepLineView.backgroundColor = .black
   }
   
-  private let titleView = TitleView()
+  public let titleView = TitleView()
   public let photoImageView = PhotoImageView()
-  private let petButton = PETButton(title: "확인")
+  public var petButton = PETButton(title: "확인")
+  public let beginTitleView = BeginTitleView().then {
+    $0.alpha = 0.0
+  }
   
   public override init(frame: CGRect) {
     super.init(frame: frame)
@@ -50,6 +53,7 @@ public class ProfileImageContentView: UIView {
     self.addSubview(self.titleView)
     self.addSubview(self.photoImageView)
     self.addSubview(self.petButton)
+    self.addSubview(self.beginTitleView)
     
     self.progressView.snp.makeConstraints {
       $0.top.equalTo(self.safeAreaLayoutGuide).offset(9)
@@ -72,6 +76,10 @@ public class ProfileImageContentView: UIView {
       $0.left.equalTo(24)
       $0.right.equalTo(-24)
       $0.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom).offset(-12)
+    }
+    
+    self.beginTitleView.snp.makeConstraints {
+      $0.left.right.top.equalToSuperview()
     }
   }
 }
@@ -174,6 +182,61 @@ extension ProfileImageContentView {
       
       self.photoButton.snp.makeConstraints {
         $0.edges.equalToSuperview()
+      }
+    }
+  }
+}
+
+extension ProfileImageContentView {
+  
+  public class BeginTitleView: UIView {
+    
+    enum Typo {
+      static let title = StringStyle([
+        .font(.systemFont(ofSize: 24)),
+        .color(.black)
+      ])
+    }
+    
+    private let titleLabel = UILabel().then {
+      $0.numberOfLines = 2
+      $0.attributedText = "펫코디언에 $$가 등록되었다몽!\n어떤 말을 하는지 들으러 오라몽-.".styled(
+        with: StringStyle([
+          .font(.systemFont(ofSize: 24)),
+          .color(.black)
+        ]))
+    }
+    
+    public var title: String {
+      set {
+        self.titleLabel.attributedText = newValue.styled(with: Typo.title)
+        self.layoutIfNeeded()
+      }
+      get {
+        self.titleLabel.text ?? ""
+      }
+    }
+    
+    public override init(frame: CGRect) {
+      super.init(frame: frame)
+      self.setup()
+    }
+    
+    public required init?(coder: NSCoder) {
+      super.init(coder: coder)
+      fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setup() {
+      self.snp.makeConstraints {
+        $0.height.equalTo(105)
+      }
+      
+      self.addSubview(self.titleLabel)
+      
+      self.titleLabel.snp.makeConstraints {
+        $0.top.equalTo(174)
+        $0.left.equalTo(24)
       }
     }
   }

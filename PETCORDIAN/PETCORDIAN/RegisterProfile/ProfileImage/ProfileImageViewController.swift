@@ -9,6 +9,7 @@ import CropViewController
 import ReactorKit
 import RxCocoa
 import RxSwift
+import SnapKit
 import UIKit
 
 class ProfileImageViewController: UIViewController, ReactorKit.View {
@@ -63,6 +64,7 @@ class ProfileImageViewController: UIViewController, ReactorKit.View {
   func bind(reactor: Reactor) {
     self.bindPhotoSelectButton()
     self.bindImage(reactor: reactor)
+    self.bindConfirmButton()
   }
   
   private func bindPhotoSelectButton() {
@@ -80,6 +82,32 @@ class ProfileImageViewController: UIViewController, ReactorKit.View {
       .bind(onNext: { [weak self] profileImage in
         guard let self = self else { return }
         self.contentView.photoImageView.selectedProfileImageView.image = profileImage
+      })
+      .disposed(by: self.disposeBag)
+  }
+  
+  private func bindConfirmButton() {
+    self.contentView.petButton.rx.tap
+      .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
+      .bind(onNext: { [weak self] in
+        guard let self = self else { return }
+        UIView.animate(withDuration: 1.0, delay: 0) {
+          self.contentView.progressView.alpha = 0.0
+          self.contentView.titleView.alpha = 0.0
+          DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            UIView.animate(withDuration: 1.0) {
+              self.contentView.beginTitleView.alpha = 1.0
+            }
+            
+            UIView.animate(withDuration: 1.0, delay: 0, options: .curveEaseOut) {
+              self.contentView.photoImageView.snp.updateConstraints {
+                $0.top.equalTo(self.contentView.titleView.snp.bottom).offset(80)
+              }
+              self.contentView.photoImageView.superview?.layoutIfNeeded()
+            }
+          }
+        }
+        // TODO: 버튼 타이틀 변경
       })
       .disposed(by: self.disposeBag)
   }
