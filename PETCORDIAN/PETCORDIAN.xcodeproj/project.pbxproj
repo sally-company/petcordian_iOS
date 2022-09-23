@@ -26,6 +26,7 @@
 		D23333AE28DAE98900E0A00D /* ProfileImageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23333AA28DAE98900E0A00D /* ProfileImageBuilder.swift */; };
 		D23333AF28DAE98900E0A00D /* ProfileImageViewUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23333AB28DAE98900E0A00D /* ProfileImageViewUseCase.swift */; };
 		D23333B628DAFC4800E0A00D /* CropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = D23333B528DAFC4800E0A00D /* CropViewController */; };
+		D23333C528DD969A00E0A00D /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D23333C428DD969A00E0A00D /* Lottie */; };
 		D23704A928D94FC1004794E6 /* UnderLineTextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23704A828D94FC1004794E6 /* UnderLineTextField+Extension.swift */; };
 		D23704AC28D958FA004794E6 /* RxKeyboard in Frameworks */ = {isa = PBXBuildFile; productRef = D23704AB28D958FA004794E6 /* RxKeyboard */; };
 		D23704B328D96442004794E6 /* RegisterProfileRootViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23704AF28D96442004794E6 /* RegisterProfileRootViewReactor.swift */; };
@@ -155,6 +156,7 @@
 				D270A66128C9DC370015F54C /* ReusableKit in Frameworks */,
 				D270A64028C9D4DF0015F54C /* RxCocoa in Frameworks */,
 				D270A64828C9D5210015F54C /* RxDataSources in Frameworks */,
+				D23333C528DD969A00E0A00D /* Lottie in Frameworks */,
 				D270A65428C9D5B00015F54C /* Moya in Frameworks */,
 				D23333B628DAFC4800E0A00D /* CropViewController in Frameworks */,
 				D270A65628C9D5B00015F54C /* RxMoya in Frameworks */,
@@ -474,6 +476,7 @@
 				D270A66328C9DCDA0015F54C /* netfox */,
 				D23704AB28D958FA004794E6 /* RxKeyboard */,
 				D23333B528DAFC4800E0A00D /* CropViewController */,
+				D23333C428DD969A00E0A00D /* Lottie */,
 			);
 			productName = PETCORDIAN;
 			productReference = D270A61E28C9D3A70015F54C /* PETCORDIAN.app */;
@@ -519,6 +522,7 @@
 				D270A66228C9DCDA0015F54C /* XCRemoteSwiftPackageReference "netfox" */,
 				D23704AA28D958FA004794E6 /* XCRemoteSwiftPackageReference "RxKeyboard" */,
 				D23333B428DAFC4800E0A00D /* XCRemoteSwiftPackageReference "TOCropViewController" */,
+				D23333C328DD969A00E0A00D /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = D270A61F28C9D3A70015F54C /* Products */;
 			projectDirPath = "";
@@ -820,6 +824,14 @@
 				kind = branch;
 			};
 		};
+		D23333C328DD969A00E0A00D /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		D23704AA28D958FA004794E6 /* XCRemoteSwiftPackageReference "RxKeyboard" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RxSwiftCommunity/RxKeyboard";
@@ -939,6 +951,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D23333B428DAFC4800E0A00D /* XCRemoteSwiftPackageReference "TOCropViewController" */;
 			productName = CropViewController;
+		};
+		D23333C428DD969A00E0A00D /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D23333C328DD969A00E0A00D /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 		D23704AB28D958FA004794E6 /* RxKeyboard */ = {
 			isa = XCSwiftPackageProductDependency;
