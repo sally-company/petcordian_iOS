@@ -25,6 +25,13 @@ struct ProfileImageContentView_Preview: PreviewProvider {
 
 public class ProfileImageContentView: UIView {
   
+  enum Typo {
+    static let petName = StringStyle([
+      .font(.boldSystemFont(ofSize: 24)),
+      .color(.black)
+    ])
+  }
+  
   public let progressView = ProgressView().then {
     $0.firstStepLineView.backgroundColor = .black
     $0.secondStepLineView.backgroundColor = .black
@@ -33,9 +40,25 @@ public class ProfileImageContentView: UIView {
   
   public let titleView = TitleView()
   public let photoImageView = PhotoImageView()
-  public var petButton = PETButton(title: "확인")
+  public let petOkButton = PETButton(title: "확인")
+  public let petStartButton = PETButton(title: "시작하기").then {
+    $0.isHidden = true
+  }
   public let beginTitleView = BeginTitleView().then {
     $0.alpha = 0.0
+  }
+  private let petNameLabel = UILabel().then {
+    $0.numberOfLines = 1
+  }
+  
+  public var petName: String {
+    set {
+      self.petNameLabel.attributedText = newValue.styled(with: Typo.petName)
+      self.layoutIfNeeded()
+    }
+    get {
+      self.petNameLabel.text ?? ""
+    }
   }
   
   public override init(frame: CGRect) {
@@ -52,8 +75,10 @@ public class ProfileImageContentView: UIView {
     self.addSubview(self.progressView)
     self.addSubview(self.titleView)
     self.addSubview(self.photoImageView)
-    self.addSubview(self.petButton)
+    self.addSubview(self.petOkButton)
+    self.addSubview(self.petStartButton)
     self.addSubview(self.beginTitleView)
+    self.addSubview(self.petNameLabel)
     
     self.progressView.snp.makeConstraints {
       $0.top.equalTo(self.safeAreaLayoutGuide).offset(9)
@@ -72,7 +97,13 @@ public class ProfileImageContentView: UIView {
       $0.size.equalTo(157)
     }
     
-    self.petButton.snp.makeConstraints {
+    self.petOkButton.snp.makeConstraints {
+      $0.left.equalTo(24)
+      $0.right.equalTo(-24)
+      $0.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom).offset(-12)
+    }
+    
+    self.petStartButton.snp.makeConstraints {
       $0.left.equalTo(24)
       $0.right.equalTo(-24)
       $0.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom).offset(-12)
@@ -80,6 +111,11 @@ public class ProfileImageContentView: UIView {
     
     self.beginTitleView.snp.makeConstraints {
       $0.left.right.top.equalToSuperview()
+    }
+    
+    self.petNameLabel.snp.makeConstraints {
+      $0.centerX.equalToSuperview()
+      $0.top.equalTo(self.photoImageView.snp.bottom).offset(30)
     }
   }
 }

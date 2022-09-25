@@ -88,7 +88,7 @@ class ProfileImageViewController: UIViewController, ReactorKit.View {
   }
   
   private func bindConfirmButton() {
-    self.contentView.petButton.rx.tap
+    self.contentView.petOkButton.rx.tap
       .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
       .bind(onNext: { [weak self] in
         guard let self = self else { return }
@@ -97,18 +97,20 @@ class ProfileImageViewController: UIViewController, ReactorKit.View {
           self.contentView.titleView.alpha = 0.0
           DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             UIView.animate(withDuration: 1.0) {
+              self.navigationController?.navigationBar.alpha = 0.0
               self.contentView.beginTitleView.alpha = 1.0
             }
             
             UIView.animate(withDuration: 1.0, delay: 0, options: .curveEaseOut) {
               self.contentView.photoImageView.snp.updateConstraints {
-                $0.top.equalTo(self.contentView.titleView.snp.bottom).offset(80)
+                $0.top.equalTo(self.contentView.titleView.snp.bottom).offset(120)
               }
               self.contentView.photoImageView.superview?.layoutIfNeeded()
             }
           }
         }
-        // TODO: 버튼 타이틀 변경
+        self.contentView.petOkButton.isHidden = true
+        self.contentView.petStartButton.isHidden = false
         let animationView = AnimationView(name: "lottie")
         
         self.view.addSubview(animationView)
@@ -143,7 +145,7 @@ extension ProfileImageViewController: UIImagePickerControllerDelegate, UINavigat
   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
     guard let image = (info[UIImagePickerController.InfoKey.originalImage] as? UIImage) else { return }
     
-    let croppingStyle = CropViewCroppingStyle.circular
+    let croppingStyle = CropViewCroppingStyle.default
     let cropController = CropViewController(croppingStyle: croppingStyle, image: image)
     cropController.delegate = self
     
@@ -165,7 +167,7 @@ extension ProfileImageViewController: UIImagePickerControllerDelegate, UINavigat
 
 extension ProfileImageViewController: CropViewControllerDelegate {
   
-  func cropViewController(_ cropViewController: CropViewController, didCropToCircularImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
+  func cropViewController(_ cropViewController: CropViewController, didCropToImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
     self.croppedRect = cropRect
     self.croppedAngle = angle
     self.updateImageViewWithImage(image, fromCropViewController: cropViewController)
