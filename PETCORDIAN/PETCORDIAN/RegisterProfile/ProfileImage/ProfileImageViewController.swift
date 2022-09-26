@@ -7,13 +7,14 @@
 
 import CropViewController
 import Lottie
+import Photos
 import ReactorKit
 import RxCocoa
 import RxSwift
 import SnapKit
 import UIKit
 
-class ProfileImageViewController: UIViewController, ReactorKit.View {
+class ProfileImageViewController: BaseViewController, ReactorKit.View {
   
   typealias Reactor = ProfileImageViewReactor
   
@@ -73,7 +74,10 @@ class ProfileImageViewController: UIViewController, ReactorKit.View {
     self.contentView.photoImageView.photoButton.rx.tap
       .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
       .bind(onNext: { [weak self] in
-        self?.presentProfileImagePicker()
+        guard let self = self else { return }
+        DispatchQueue.main.async {
+          self.checkAlbumPermission()
+        }
       })
       .disposed(by: self.disposeBag)
   }
@@ -148,6 +152,48 @@ class ProfileImageViewController: UIViewController, ReactorKit.View {
         print(registerProfileData)
       })
       .disposed(by: self.disposeBag)
+  }
+  
+  private func checkAlbumPermission() {
+    PHPhotoLibrary.requestAuthorization(for: .readWrite) { status in
+      switch status {
+      case .notDetermined:
+        #if DEBUG
+        print("notDetermined")
+        #endif
+        
+      case .restricted:
+        #if DEBUG
+        print("restrincted")
+        #endif
+        
+      case .denied:
+        #if DEBUG
+        print("denied")
+        #endif
+        
+        self.showAlert(title: "Permission Denied", message: "사진 라이브러리의 사용 권한이 거부되었기 때문에 사용할 수 없습니다. 사진 라이브러리의 권한 설정을 변경하시겠습니까?") { _ in
+          guard let settingUrl = URL(string: UIApplication.openSettingsURLString) else {
+            return
+          }
+          
+          if UIApplication.shared.canOpenURL(settingUrl) {
+            UIApplication.shared.open(settingUrl)
+          }
+        }
+        
+      case .authorized, .limited:
+        #if DEBUG
+        print("authrized", "limited")
+        #endif
+        DispatchQueue.main.async {
+          self.presentProfileImagePicker()
+        }
+        
+      default:
+        break
+      }
+    }
   }
 }
 
