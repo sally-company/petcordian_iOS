@@ -5,8 +5,6 @@
 //  Created by Hyunwoo Jang on 2022/09/16.
 //
 
-import KakaoSDKAuth
-import KakaoSDKUser
 import ReactorKit
 import RxCocoa
 import RxSwift
@@ -55,22 +53,9 @@ class SignUpViewController: UIViewController, ReactorKit.View {
     self.contentView.actionView.kakaoLoginButtonView.button.rx.tap
       .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
       .bind(onNext: { [weak self] in
-        if (UserApi.isKakaoTalkLoginAvailable()) {
-            UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
-                if let error = error {
-                    print(error)
-                }
-                else {
-                    print("loginWithKakaoTalk() success.")
-
-                    //do something
-                    //_ = oauthToken
-                  print("Token", oauthToken?.accessToken)
-                  self?.presentRegisterProfileScene()
-                }
-            }
-        } else {
-          print("카카오톡이 설치되어 있지 않을 경우, 처리할 로직")
+        KakaoLoginDataManager.shared.login { token in
+          print(token)
+          self?.presentRegisterProfileScene()
         }
       })
       .disposed(by: self.disposeBag)

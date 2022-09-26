@@ -31,6 +31,7 @@
 		D23333CB28DD99CF00E0A00D /* RxKakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = D23333CA28DD99CF00E0A00D /* RxKakaoSDK */; };
 		D23333F028E06AA400E0A00D /* RegisterProfileItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23333EF28E06AA400E0A00D /* RegisterProfileItem.swift */; };
 		D23333F228E1403600E0A00D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23333F128E1403600E0A00D /* BaseViewController.swift */; };
+		D233341E28E1858D00E0A00D /* KakaoLoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D233341D28E1858D00E0A00D /* KakaoLoginDataManager.swift */; };
 		D23704A928D94FC1004794E6 /* UnderLineTextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23704A828D94FC1004794E6 /* UnderLineTextField+Extension.swift */; };
 		D23704AC28D958FA004794E6 /* RxKeyboard in Frameworks */ = {isa = PBXBuildFile; productRef = D23704AB28D958FA004794E6 /* RxKeyboard */; };
 		D23704B328D96442004794E6 /* RegisterProfileRootViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23704AF28D96442004794E6 /* RegisterProfileRootViewReactor.swift */; };
@@ -107,6 +108,7 @@
 		D23333AB28DAE98900E0A00D /* ProfileImageViewUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageViewUseCase.swift; sourceTree = "<group>"; };
 		D23333EF28E06AA400E0A00D /* RegisterProfileItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProfileItem.swift; sourceTree = "<group>"; };
 		D23333F128E1403600E0A00D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D233341D28E1858D00E0A00D /* KakaoLoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginDataManager.swift; sourceTree = "<group>"; };
 		D23704A828D94FC1004794E6 /* UnderLineTextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UnderLineTextField+Extension.swift"; sourceTree = "<group>"; };
 		D23704AF28D96442004794E6 /* RegisterProfileRootViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProfileRootViewReactor.swift; sourceTree = "<group>"; };
 		D23704B028D96442004794E6 /* RegisterProfileRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProfileRootViewController.swift; sourceTree = "<group>"; };
@@ -227,6 +229,14 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		D233341C28E1857200E0A00D /* SocialLoginDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				D233341D28E1858D00E0A00D /* KakaoLoginDataManager.swift */,
+			);
+			path = SocialLoginDataManager;
+			sourceTree = "<group>";
+		};
 		D23704B928D9A542004794E6 /* ProfileRelation */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +291,7 @@
 				D26A8C0F28D2EA1C00FCDD7E /* Font.swift */,
 				D233339A28DAAAE300E0A00D /* RelationItem.swift */,
 				D224B74728D84ED60095F3EF /* UI */,
+				D233341C28E1857200E0A00D /* SocialLoginDataManager */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -618,6 +629,7 @@
 				D26A8C1D28D41D9800FCDD7E /* SignUpViewUseCase.swift in Sources */,
 				D26A8C2228D421DE00FCDD7E /* ProfileNameAgeContentView.swift in Sources */,
 				D23333AE28DAE98900E0A00D /* ProfileImageBuilder.swift in Sources */,
+				D233341E28E1858D00E0A00D /* KakaoLoginDataManager.swift in Sources */,
 				D23704BC28D9A573004794E6 /* ProfileRelationContentView.swift in Sources */,
 				D2D4543D28D083D900312390 /* RootBuilder.swift in Sources */,
 				D224B74928D84EE80095F3EF /* UnderLineTextField.swift in Sources */,
