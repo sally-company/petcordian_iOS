@@ -54,9 +54,16 @@ class SignUpViewController: UIViewController, ReactorKit.View {
       .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
       .bind(onNext: { [weak self] in
         KakaoLoginDataManager.shared.login { token in
-          print(token)
-          self?.presentRegisterProfileScene()
+          #if DEBUG
+          print("accessToken: ", token)
+          #endif
+          KakaoLoginDataManager.shared.getUserId { id in
+            #if DEBUG
+            print("userId: ", id)
+            #endif
+          }
         }
+        self?.presentRegisterProfileScene()
       })
       .disposed(by: self.disposeBag)
   }
