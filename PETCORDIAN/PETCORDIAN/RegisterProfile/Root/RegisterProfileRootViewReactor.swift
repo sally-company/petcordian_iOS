@@ -27,7 +27,6 @@ class RegisterProfileRootViewReactor: Reactor {
   ) {
     defer { _ = self.state }
     self.initialState = State()
-    
   }
   
   func mutate(action: Action) -> Observable<Mutation> {

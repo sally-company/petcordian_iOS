@@ -5,6 +5,8 @@
 //  Created by Hyunwoo Jang on 2022/09/08.
 //
 
+import KakaoSDKAuth
+import KakaoSDKCommon
 import UIKit
 
 @main
@@ -14,8 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     _ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
-      return true
-    }
+    KakaoSDK.initSDK(appKey: "7e6fbc0aab90753a9de39fa70c970707")
+    return true
+  }
   
   // MARK: UISceneSession Lifecycle
   
@@ -25,5 +28,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     options: UIScene.ConnectionOptions
   ) -> UISceneConfiguration {
     return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+  }
+  
+  func application(
+    _ app: UIApplication,
+    open url: URL,
+    options: [UIApplication.OpenURLOptionsKey : Any] = [:]
+  ) -> Bool {
+    if (AuthApi.isKakaoTalkLoginUrl(url)) {
+      return AuthController.handleOpenUrl(url: url)
+    }
+    
+    return false
   }
 }

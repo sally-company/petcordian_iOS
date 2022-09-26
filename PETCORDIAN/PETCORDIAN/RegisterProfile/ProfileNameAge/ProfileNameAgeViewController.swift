@@ -13,7 +13,7 @@ import SnapKit
 import UIKit
 
 protocol ProfileNameAgeViewControllerDelegate: AnyObject {
-  func ProfileNameAgeViewControllerDidValidProfileNameAge()
+  func profileNameAgeViewControllerDidValidProfileNameAge(name: String, age: String, gender: String)
 }
 
 class ProfileNameAgeViewController: UIViewController, ReactorKit.View {
@@ -90,13 +90,19 @@ class ProfileNameAgeViewController: UIViewController, ReactorKit.View {
     self.bindTypingName(reactor: reactor)
     self.bindTypingAge(reactor: reactor)
     self.bindGenderButton(reactor: reactor)
-    self.bindNextButtonEnalbed(reactor: reactor)
+    self.bindNextButtonEnabled(reactor: reactor)
   }
   
   func bindNextButton() {
     self.contentView.petButton.rx.tap
       .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
-      .bind(onNext: { [weak self] in self?.delegate?.ProfileNameAgeViewControllerDidValidProfileNameAge() })
+      .bind(onNext: { [weak self] in
+        guard let self = self else { return }
+        self.delegate?.profileNameAgeViewControllerDidValidProfileNameAge(
+          name: self.reactor?.currentState.name ?? "",
+          age: self.reactor?.currentState.age ?? "",
+          gender: self.radioButtonController.selectedButton?.titleLabel?.text ?? "")
+      })
       .disposed(by: self.disposeBag)
   }
   
@@ -132,7 +138,7 @@ class ProfileNameAgeViewController: UIViewController, ReactorKit.View {
       .disposed(by: self.disposeBag)
   }
   
-  func bindNextButtonEnalbed(reactor: Reactor) {
+  func bindNextButtonEnabled(reactor: Reactor) {
     reactor.state
       .map { $0.isEnabled }
       .distinctUntilChanged()
