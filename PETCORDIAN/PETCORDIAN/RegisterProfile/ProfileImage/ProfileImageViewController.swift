@@ -66,6 +66,7 @@ class ProfileImageViewController: UIViewController, ReactorKit.View {
     self.bindPhotoSelectButton()
     self.bindImage(reactor: reactor)
     self.bindConfirmButton()
+    self.bindStartButton()
   }
   
   private func bindPhotoSelectButton() {
@@ -98,7 +99,7 @@ class ProfileImageViewController: UIViewController, ReactorKit.View {
           DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             UIView.animate(withDuration: 1.0) {
               self.navigationController?.navigationBar.alpha = 0.0
-              self.contentView.beginTitleView.alpha = 1.0
+              self.contentView.startTitleView.alpha = 1.0
             }
             
             UIView.animate(withDuration: 1.0, delay: 0, options: .curveEaseOut) {
@@ -117,7 +118,34 @@ class ProfileImageViewController: UIViewController, ReactorKit.View {
         animationView.frame = animationView.superview?.bounds ?? .zero
         animationView.contentMode = .scaleAspectFit
         
-        animationView.play()
+        animationView.play { _ in
+          animationView.isHidden = true
+        }
+      })
+      .disposed(by: self.disposeBag)
+  }
+  
+  private func bindStartButton() {
+    self.contentView.petStartButton.rx.tap
+      .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
+      .bind(onNext: { [weak self] in
+        guard let self = self else { return }
+        
+        let age = Int(self.reactor?.age ?? "") ?? 0
+        var relation: String = ""
+        if self.reactor?.buttonText != "" {
+          relation = self.reactor?.buttonText ?? ""
+        } else if self.reactor?.textFieldText != "" {
+          relation = self.reactor?.textFieldText ?? ""
+        }
+        
+        let registerProfileData = RegisterProfileItem(name: self.reactor?.name ?? "",
+                                                      age: age,
+                                                      gender: self.reactor?.gender ?? "",
+                                                      relation: relation,
+                                                      profileImage: self.reactor?.currentState.profileImage)
+        
+        print(registerProfileData)
       })
       .disposed(by: self.disposeBag)
   }

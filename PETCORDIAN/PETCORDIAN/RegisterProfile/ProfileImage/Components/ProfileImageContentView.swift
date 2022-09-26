@@ -44,7 +44,7 @@ public class ProfileImageContentView: UIView {
   public let petStartButton = PETButton(title: "시작하기").then {
     $0.isHidden = true
   }
-  public let beginTitleView = BeginTitleView().then {
+  public let startTitleView = StartTitleView().then {
     $0.alpha = 0.0
   }
   private let petNameLabel = UILabel().then {
@@ -77,7 +77,7 @@ public class ProfileImageContentView: UIView {
     self.addSubview(self.photoImageView)
     self.addSubview(self.petOkButton)
     self.addSubview(self.petStartButton)
-    self.addSubview(self.beginTitleView)
+    self.addSubview(self.startTitleView)
     self.addSubview(self.petNameLabel)
     
     self.progressView.snp.makeConstraints {
@@ -109,7 +109,7 @@ public class ProfileImageContentView: UIView {
       $0.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom).offset(-12)
     }
     
-    self.beginTitleView.snp.makeConstraints {
+    self.startTitleView.snp.makeConstraints {
       $0.left.right.top.equalToSuperview()
     }
     
@@ -225,7 +225,7 @@ extension ProfileImageContentView {
 
 extension ProfileImageContentView {
   
-  public class BeginTitleView: UIView {
+  public class StartTitleView: UIView {
     
     enum Typo {
       static let title = StringStyle([

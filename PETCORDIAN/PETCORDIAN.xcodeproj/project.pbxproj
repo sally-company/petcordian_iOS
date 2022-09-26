@@ -29,6 +29,7 @@
 		D23333C528DD969A00E0A00D /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D23333C428DD969A00E0A00D /* Lottie */; };
 		D23333C828DD99B700E0A00D /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = D23333C728DD99B700E0A00D /* KakaoSDK */; };
 		D23333CB28DD99CF00E0A00D /* RxKakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = D23333CA28DD99CF00E0A00D /* RxKakaoSDK */; };
+		D23333F028E06AA400E0A00D /* RegisterProfileItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23333EF28E06AA400E0A00D /* RegisterProfileItem.swift */; };
 		D23704A928D94FC1004794E6 /* UnderLineTextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23704A828D94FC1004794E6 /* UnderLineTextField+Extension.swift */; };
 		D23704AC28D958FA004794E6 /* RxKeyboard in Frameworks */ = {isa = PBXBuildFile; productRef = D23704AB28D958FA004794E6 /* RxKeyboard */; };
 		D23704B328D96442004794E6 /* RegisterProfileRootViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23704AF28D96442004794E6 /* RegisterProfileRootViewReactor.swift */; };
@@ -103,6 +104,7 @@
 		D23333A928DAE98900E0A00D /* ProfileImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageViewController.swift; sourceTree = "<group>"; };
 		D23333AA28DAE98900E0A00D /* ProfileImageBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageBuilder.swift; sourceTree = "<group>"; };
 		D23333AB28DAE98900E0A00D /* ProfileImageViewUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageViewUseCase.swift; sourceTree = "<group>"; };
+		D23333EF28E06AA400E0A00D /* RegisterProfileItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProfileItem.swift; sourceTree = "<group>"; };
 		D23704A828D94FC1004794E6 /* UnderLineTextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UnderLineTextField+Extension.swift"; sourceTree = "<group>"; };
 		D23704AF28D96442004794E6 /* RegisterProfileRootViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProfileRootViewReactor.swift; sourceTree = "<group>"; };
 		D23704B028D96442004794E6 /* RegisterProfileRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProfileRootViewController.swift; sourceTree = "<group>"; };
@@ -215,6 +217,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		D23333EE28E06A9100E0A00D /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D23333EF28E06AA400E0A00D /* RegisterProfileItem.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		D23704B928D9A542004794E6 /* ProfileRelation */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +305,7 @@
 		D26A8C1E28D4211900FCDD7E /* RegisterProfile */ = {
 			isa = PBXGroup;
 			children = (
+				D23333EE28E06A9100E0A00D /* Entity */,
 				D23333A428DADE9000E0A00D /* Root */,
 				D26A8C1F28D4216A00FCDD7E /* ProfileNameAge */,
 				D23704B928D9A542004794E6 /* ProfileRelation */,
@@ -584,6 +595,7 @@
 				D224B74028D8409D0095F3EF /* ProfileNameAgeViewController.swift in Sources */,
 				D25C404F28D8673500B5590D /* PETButton.swift in Sources */,
 				D270A66E28D062460015F54C /* SplashContentView.swift in Sources */,
+				D23333F028E06AA400E0A00D /* RegisterProfileItem.swift in Sources */,
 				D23333AC28DAE98900E0A00D /* ProfileImageViewReactor.swift in Sources */,
 				D23704A928D94FC1004794E6 /* UnderLineTextField+Extension.swift in Sources */,
 				D23704B828D98791004794E6 /* String+Extension.swift in Sources */,

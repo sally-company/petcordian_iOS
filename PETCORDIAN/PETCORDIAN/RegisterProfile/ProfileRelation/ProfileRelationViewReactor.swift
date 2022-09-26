@@ -9,6 +9,10 @@ import ReactorKit
 
 class ProfileRelationViewReactor: Reactor {
   
+  var name: String
+  var age: String
+  var gender: String
+  
   enum Action {
     case selectRelationName(String)
     case typingRelationText(String)
@@ -20,7 +24,9 @@ class ProfileRelationViewReactor: Reactor {
   }
   
   struct State {
+    // 버튼 텍스트
     var relationName: String = ""
+    // 텍스트필드 텍스트
     var relationText: String = ""
     var isEnabled: Bool {
       return self.relationName != "" || self.relationText.isNameValid()
@@ -32,11 +38,17 @@ class ProfileRelationViewReactor: Reactor {
   let useCase: ProfileRelationUseCase
   
   init(
-    useCase: ProfileRelationUseCase
+    useCase: ProfileRelationUseCase,
+    name: String,
+    age: String,
+    gender: String
   ) {
     defer { _ = self.state }
     self.initialState = State()
     self.useCase = useCase
+    self.name = name
+    self.age = age
+    self.gender = gender
   }
   
   func mutate(action: Action) -> Observable<Mutation> {

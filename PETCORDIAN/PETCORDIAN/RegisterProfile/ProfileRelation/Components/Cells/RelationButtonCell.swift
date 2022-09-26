@@ -11,7 +11,7 @@ import Then
 import UIKit
 
 protocol RelationButtonCellDelegate: AnyObject {
-  func RelationButtonCellItemIsSelected(_ title: String)
+  func relationButtonCellItemIsSelected(_ title: String)
 }
 
 class RelationButtonCell: UICollectionViewCell {
@@ -33,13 +33,13 @@ class RelationButtonCell: UICollectionViewCell {
     didSet {
       self.backgroundColor = isSelected ? .black : .white
       self.titleLabel.textColor = isSelected ? .white : .black
-      self.delegate?.RelationButtonCellItemIsSelected(self.titleLabel.text ?? "")
+      self.delegate?.relationButtonCellItemIsSelected(self.titleLabel.text ?? "")
     }
   }
   
   override init(frame: CGRect) {
     super.init(frame: frame)
-        self.setup()
+    self.setup()
   }
   
   required init?(coder: NSCoder) {

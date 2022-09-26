@@ -13,7 +13,7 @@ import SnapKit
 import UIKit
 
 protocol ProfileNameAgeViewControllerDelegate: AnyObject {
-  func ProfileNameAgeViewControllerDidValidProfileNameAge()
+  func profileNameAgeViewControllerDidValidProfileNameAge(name: String, age: String, gender: String)
 }
 
 class ProfileNameAgeViewController: UIViewController, ReactorKit.View {
@@ -96,7 +96,13 @@ class ProfileNameAgeViewController: UIViewController, ReactorKit.View {
   func bindNextButton() {
     self.contentView.petButton.rx.tap
       .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
-      .bind(onNext: { [weak self] in self?.delegate?.ProfileNameAgeViewControllerDidValidProfileNameAge() })
+      .bind(onNext: { [weak self] in
+        guard let self = self else { return }
+        self.delegate?.profileNameAgeViewControllerDidValidProfileNameAge(
+          name: self.reactor?.currentState.name ?? "",
+          age: self.reactor?.currentState.age ?? "",
+          gender: self.radioButtonController.selectedButton?.titleLabel?.text ?? "")
+      })
       .disposed(by: self.disposeBag)
   }
   

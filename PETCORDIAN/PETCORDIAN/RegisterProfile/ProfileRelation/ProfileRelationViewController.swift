@@ -13,7 +13,7 @@ import Then
 import UIKit
 
 protocol ProfileRelationViewControllerDelegate: AnyObject {
-  func ProfileRelationViewControllerDidValidProfileRelation()
+  func profileRelationViewControllerDidValidProfileRelation(name: String, age: String, gender: String, buttonText: String, textFieldText: String)
 }
 
 class ProfileRelationViewController: UIViewController, ReactorKit.View {
@@ -86,7 +86,13 @@ class ProfileRelationViewController: UIViewController, ReactorKit.View {
     self.contentView.petButton.rx.tap
       .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
       .bind(onNext: { [weak self] in
-        self?.delegate?.ProfileRelationViewControllerDidValidProfileRelation()
+        guard let self = self else { return }
+        self.delegate?.profileRelationViewControllerDidValidProfileRelation(
+          name: self.reactor?.name ?? "",
+          age: self.reactor?.age ?? "",
+          gender: self.reactor?.gender ?? "",
+          buttonText: self.reactor?.currentState.relationName ?? "",
+          textFieldText: self.reactor?.currentState.relationText ?? "")
       })
       .disposed(by: self.disposeBag)
   }
@@ -135,9 +141,8 @@ class ProfileRelationViewController: UIViewController, ReactorKit.View {
 
 extension ProfileRelationViewController: ProfileRelationContentViewDelegate {
 
-  func ProfileRelationContentViewCellItemSelected(_ title: String) {
+  func profileRelationContentViewCellItemSelected(_ title: String) {
     reactor?.action.onNext(.selectRelationName(title))
-    
     if title == "기타" {
       reactor?.action.onNext(.selectRelationName(""))
     }

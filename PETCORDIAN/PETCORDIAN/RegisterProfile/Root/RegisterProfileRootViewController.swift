@@ -67,16 +67,23 @@ class RegisterProfileRootViewController: UIViewController, ReactorKit.View {
 
 extension RegisterProfileRootViewController: ProfileNameAgeViewControllerDelegate {
   
-  func ProfileNameAgeViewControllerDidValidProfileNameAge() {
-    let profileRelationScene = ProfileRelationBuilder.build(delegate: self)
+  func profileNameAgeViewControllerDidValidProfileNameAge(name: String, age: String, gender: String) {
+    let profileRelationScene = ProfileRelationBuilder.build(delegate: self,
+                                                            name: name,
+                                                            age: age,
+                                                            gender: gender)
     self.navigationController?.pushViewController(profileRelationScene, animated: true)
   }
 }
 
 extension RegisterProfileRootViewController: ProfileRelationViewControllerDelegate {
   
-  func ProfileRelationViewControllerDidValidProfileRelation() {
-    let profileImageScene = ProfileImageBuilder.build()
+  func profileRelationViewControllerDidValidProfileRelation(name: String, age: String, gender: String, buttonText: String, textFieldText: String) {
+    let profileImageScene = ProfileImageBuilder.build(name: name,
+                                                      age: age,
+                                                      gender: gender,
+                                                      buttonText: buttonText,
+                                                      textFieldText: textFieldText)
     self.navigationController?.pushViewController(profileImageScene, animated: true)
   }
 }

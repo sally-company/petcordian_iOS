@@ -25,7 +25,7 @@ struct ProfileRelationContentView_Preview: PreviewProvider {
 #endif
 
 protocol ProfileRelationContentViewDelegate: AnyObject {
-  func ProfileRelationContentViewCellItemSelected(_ title: String)
+  func profileRelationContentViewCellItemSelected(_ title: String)
 }
 
 public class ProfileRelationContentView: UIView {
@@ -194,8 +194,8 @@ extension ProfileRelationContentView: UITextFieldDelegate {
 
 extension ProfileRelationContentView: RelationButtonCellDelegate {
   
-  func RelationButtonCellItemIsSelected(_ title: String) {
-    self.delegate?.ProfileRelationContentViewCellItemSelected(title)
+  func relationButtonCellItemIsSelected(_ title: String) {
+    self.delegate?.profileRelationContentViewCellItemSelected(title)
   }
 }
 
