@@ -32,4 +32,16 @@ class KakaoLoginDataManager {
       print("카카오톡이 설치되어 있지 않을 경우, 처리할 로직")
     }
   }
+  
+  func logout(completion: @escaping () -> ()) {
+    UserApi.shared.logout {(error) in
+      if let error = error {
+        print(error)
+      } else {
+        DispatchQueue.main.async {
+          completion()
+        }
+      }
+    }
+  }
 }
