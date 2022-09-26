@@ -1,5 +1,5 @@
 //
-//  StartingViewReactor.swift
+//  SignUpViewReactor.swift
 //  PETCORDIAN
 //
 //  Created by Hyunwoo Jang on 2022/09/16.
@@ -7,7 +7,7 @@
 
 import ReactorKit
 
-class StartingViewReactor: Reactor {
+class SignUpViewReactor: Reactor {
     
   enum Action {
     
@@ -23,10 +23,10 @@ class StartingViewReactor: Reactor {
   
   let initialState: State
   
-  private let useCase: StartingUseCase
+  private let useCase: SignUpViewUseCase
   
   init(
-    useCase: StartingUseCase
+    useCase: SignUpViewUseCase
   ) {
     defer { _ = self.state }
     self.initialState = State()

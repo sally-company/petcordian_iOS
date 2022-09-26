@@ -1,5 +1,5 @@
 //
-//  StartingContentView.swift
+//  SignUpContentView.swift
 //  PETCORDIAN
 //
 //  Created by Hyunwoo Jang on 2022/09/15.
@@ -16,18 +16,18 @@ import SwiftUI
 struct StartingContentView_Preview: PreviewProvider {
   static var previews: some SwiftUI.View {
     Group {
-      StartingContentView()
+      SignUpContentView()
         .showPreview()
     }
   }
 }
 #endif
 
-public class StartingContentView: UIView {
+public class SignUpContentView: UIView { // SignUp
   
   private let topView = TopView()
   private let characterView = CharacterView()
-  private let actionView = ActionView()
+  public let actionView = ActionView()
   
   public override init(frame: CGRect) {
     super.init(frame: frame)
@@ -62,7 +62,7 @@ public class StartingContentView: UIView {
   }
 }
 
-extension StartingContentView {
+extension SignUpContentView {
   
   public class TopView: UIView {
     
@@ -116,7 +116,7 @@ extension StartingContentView {
   }
 }
 
-extension StartingContentView {
+extension SignUpContentView {
   
   public class CharacterView: UIView {
     
@@ -148,13 +148,13 @@ extension StartingContentView {
   }
 }
 
-extension StartingContentView {
+extension SignUpContentView {
   
   public class ActionView: UIView {
     
-    private let kakaoLoginButtonView = SocialLoginButtonView(title: "카카오")
-    private let googleLoginButtonView = SocialLoginButtonView(title: "구글")
-    private let naverLoginButtonView = SocialLoginButtonView(title: "네이버")
+    public let kakaoLoginButtonView = SocialLoginButtonView(title: "카카오")
+    public let googleLoginButtonView = SocialLoginButtonView(title: "구글")
+    public let naverLoginButtonView = SocialLoginButtonView(title: "네이버")
     
     public override init(frame: CGRect) {
       super.init(frame: frame)
@@ -201,7 +201,7 @@ extension StartingContentView {
   }
 }
 
-extension StartingContentView {
+extension SignUpContentView {
   
   public class SocialLoginButtonView: UIView {
     
@@ -225,7 +225,7 @@ extension StartingContentView {
         ]))
     }
     
-    private let button = UIButton()
+    public let button = UIButton()
     
     public override var intrinsicContentSize: CGSize {
       return .init(width: UIView.noIntrinsicMetric, height: 56)
