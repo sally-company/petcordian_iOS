@@ -83,8 +83,8 @@ class SignUpViewController: BaseViewController, ReactorKit.View {
       .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
       .bind(onNext: { [weak self] in
         guard let self = self else { return }
+        GoogleLoginDataManager.shared.deleteUser(vc: self)
         GoogleLoginDataManager.shared.signOut(vc: self)
-        
       })
       .disposed(by: self.disposeBag)
   }

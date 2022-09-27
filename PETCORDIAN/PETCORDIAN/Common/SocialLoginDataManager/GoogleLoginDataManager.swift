@@ -63,4 +63,21 @@ class GoogleLoginDataManager {
       vc.showAlert(title: "에러", message: "Error signing out: \(signOutError)", actionHandler: nil)
     }
   }
+  
+  func deleteUser(vc: BaseViewController) {
+    let user = Auth.auth().currentUser
+    
+    guard let user = user else {
+      vc.showAlert(title: "알림", message: "등록된 유저 정보가 없습니다.", actionHandler: nil)
+      return
+    }
+    
+    user.delete { error in
+      if let error = error {
+        vc.showAlert(title: "에러", message: error.localizedDescription, actionHandler: nil)
+      } else {
+        vc.showAlert(title: "알림", message: "사용자 정보가 삭제되었습니다.", actionHandler: nil)
+      }
+    }
+  }
 }
