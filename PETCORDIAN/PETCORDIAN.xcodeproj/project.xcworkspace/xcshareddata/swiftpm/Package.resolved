@@ -199,6 +199,15 @@
       }
     },
     {
+      "identity" : "naveridlogin-sdk-ios-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jaemyeong/naveridlogin-sdk-ios-spm",
+      "state" : {
+        "branch" : "main",
+        "revision" : "1569710ec29bc923492bbf7025423038e628c1e2"
+      }
+    },
+    {
       "identity" : "netfox",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/kasketis/netfox",
