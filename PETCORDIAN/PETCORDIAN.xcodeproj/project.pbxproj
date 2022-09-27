@@ -32,6 +32,13 @@
 		D23333F028E06AA400E0A00D /* RegisterProfileItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23333EF28E06AA400E0A00D /* RegisterProfileItem.swift */; };
 		D23333F228E1403600E0A00D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23333F128E1403600E0A00D /* BaseViewController.swift */; };
 		D233341E28E1858D00E0A00D /* KakaoLoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D233341D28E1858D00E0A00D /* KakaoLoginDataManager.swift */; };
+		D233D2DA28E2A53000095763 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D233D2D928E2A53000095763 /* GoogleService-Info.plist */; };
+		D233D2DD28E2A60F00095763 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D233D2DC28E2A60F00095763 /* FirebaseAnalytics */; };
+		D233D2DF28E2A60F00095763 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D233D2DE28E2A60F00095763 /* FirebaseAuth */; };
+		D233D2E128E2A60F00095763 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = D233D2E028E2A60F00095763 /* FirebaseCrashlytics */; };
+		D233D2E328E2A60F00095763 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = D233D2E228E2A60F00095763 /* FirebaseMessaging */; };
+		D233D2E528E2A60F00095763 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = D233D2E428E2A60F00095763 /* FirebaseRemoteConfig */; };
+		D233D2E828E2B9A000095763 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = D233D2E728E2B9A000095763 /* GoogleSignIn */; };
 		D23704A928D94FC1004794E6 /* UnderLineTextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23704A828D94FC1004794E6 /* UnderLineTextField+Extension.swift */; };
 		D23704AC28D958FA004794E6 /* RxKeyboard in Frameworks */ = {isa = PBXBuildFile; productRef = D23704AB28D958FA004794E6 /* RxKeyboard */; };
 		D23704B328D96442004794E6 /* RegisterProfileRootViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23704AF28D96442004794E6 /* RegisterProfileRootViewReactor.swift */; };
@@ -109,6 +116,7 @@
 		D23333EF28E06AA400E0A00D /* RegisterProfileItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProfileItem.swift; sourceTree = "<group>"; };
 		D23333F128E1403600E0A00D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D233341D28E1858D00E0A00D /* KakaoLoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginDataManager.swift; sourceTree = "<group>"; };
+		D233D2D928E2A53000095763 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D23704A828D94FC1004794E6 /* UnderLineTextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UnderLineTextField+Extension.swift"; sourceTree = "<group>"; };
 		D23704AF28D96442004794E6 /* RegisterProfileRootViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProfileRootViewReactor.swift; sourceTree = "<group>"; };
 		D23704B028D96442004794E6 /* RegisterProfileRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProfileRootViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +168,7 @@
 				D270A66428C9DCDA0015F54C /* netfox in Frameworks */,
 				D270A63D28C9D4CF0015F54C /* SnapKit in Frameworks */,
 				D270A63728C9D4710015F54C /* ReactorKit in Frameworks */,
+				D233D2E128E2A60F00095763 /* FirebaseCrashlytics in Frameworks */,
 				D23704AC28D958FA004794E6 /* RxKeyboard in Frameworks */,
 				D270A66128C9DC370015F54C /* ReusableKit in Frameworks */,
 				D270A64028C9D4DF0015F54C /* RxCocoa in Frameworks */,
@@ -168,12 +177,17 @@
 				D23333C528DD969A00E0A00D /* Lottie in Frameworks */,
 				D270A65428C9D5B00015F54C /* Moya in Frameworks */,
 				D23333B628DAFC4800E0A00D /* CropViewController in Frameworks */,
+				D233D2DF28E2A60F00095763 /* FirebaseAuth in Frameworks */,
 				D270A65628C9D5B00015F54C /* RxMoya in Frameworks */,
 				D270A65128C9D5660015F54C /* LookinServer in Frameworks */,
 				D270A65928C9D5C40015F54C /* Kingfisher in Frameworks */,
 				D270A64E28C9D5560015F54C /* Inject in Frameworks */,
+				D233D2E828E2B9A000095763 /* GoogleSignIn in Frameworks */,
 				D270A64B28C9D5450015F54C /* BonMot in Frameworks */,
+				D233D2E528E2A60F00095763 /* FirebaseRemoteConfig in Frameworks */,
 				D270A63A28C9D47D0015F54C /* Then in Frameworks */,
+				D233D2DD28E2A60F00095763 /* FirebaseAnalytics in Frameworks */,
+				D233D2E328E2A60F00095763 /* FirebaseMessaging in Frameworks */,
 				D23333CB28DD99CF00E0A00D /* RxKakaoSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,6 +393,7 @@
 				D270A62128C9D3A70015F54C /* AppDelegate.swift */,
 				D270A62328C9D3A70015F54C /* SceneDelegate.swift */,
 				D270A62F28C9D3A80015F54C /* Info.plist */,
+				D233D2D928E2A53000095763 /* GoogleService-Info.plist */,
 			);
 			path = PETCORDIAN;
 			sourceTree = "<group>";
@@ -508,6 +523,12 @@
 				D23333C428DD969A00E0A00D /* Lottie */,
 				D23333C728DD99B700E0A00D /* KakaoSDK */,
 				D23333CA28DD99CF00E0A00D /* RxKakaoSDK */,
+				D233D2DC28E2A60F00095763 /* FirebaseAnalytics */,
+				D233D2DE28E2A60F00095763 /* FirebaseAuth */,
+				D233D2E028E2A60F00095763 /* FirebaseCrashlytics */,
+				D233D2E228E2A60F00095763 /* FirebaseMessaging */,
+				D233D2E428E2A60F00095763 /* FirebaseRemoteConfig */,
+				D233D2E728E2B9A000095763 /* GoogleSignIn */,
 			);
 			productName = PETCORDIAN;
 			productReference = D270A61E28C9D3A70015F54C /* PETCORDIAN.app */;
@@ -556,6 +577,8 @@
 				D23333C328DD969A00E0A00D /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				D23333C628DD99B700E0A00D /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
 				D23333C928DD99CF00E0A00D /* XCRemoteSwiftPackageReference "kakao-ios-sdk-rx" */,
+				D233D2DB28E2A60F00095763 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				D233D2E628E2B9A000095763 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = D270A61F28C9D3A70015F54C /* Products */;
 			projectDirPath = "";
@@ -572,6 +595,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D270A62E28C9D3A80015F54C /* LaunchScreen.storyboard in Resources */,
+				D233D2DA28E2A53000095763 /* GoogleService-Info.plist in Resources */,
 				D26A8C0D28D2CFFD00FCDD7E /* Kyobo Handwriting 2019.otf in Resources */,
 				D270A62B28C9D3A80015F54C /* Assets.xcassets in Resources */,
 			);
@@ -888,6 +912,22 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		D233D2DB28E2A60F00095763 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		D233D2E628E2B9A000095763 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		D23704AA28D958FA004794E6 /* XCRemoteSwiftPackageReference "RxKeyboard" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RxSwiftCommunity/RxKeyboard";
@@ -1022,6 +1062,36 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D23333C928DD99CF00E0A00D /* XCRemoteSwiftPackageReference "kakao-ios-sdk-rx" */;
 			productName = RxKakaoSDK;
+		};
+		D233D2DC28E2A60F00095763 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D233D2DB28E2A60F00095763 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		D233D2DE28E2A60F00095763 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D233D2DB28E2A60F00095763 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		D233D2E028E2A60F00095763 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D233D2DB28E2A60F00095763 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		D233D2E228E2A60F00095763 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D233D2DB28E2A60F00095763 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		D233D2E428E2A60F00095763 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D233D2DB28E2A60F00095763 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		D233D2E728E2B9A000095763 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D233D2E628E2B9A000095763 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
 		};
 		D23704AB28D958FA004794E6 /* RxKeyboard */ = {
 			isa = XCSwiftPackageProductDependency;
