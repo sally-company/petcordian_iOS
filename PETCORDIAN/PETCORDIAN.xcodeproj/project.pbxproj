@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D223022C28E2BF5F00D967A4 /* GoogleLoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D223022B28E2BF5F00D967A4 /* GoogleLoginDataManager.swift */; };
 		D224B73A28D8403F0095F3EF /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D224B73928D8403F0095F3EF /* InputView.swift */; };
 		D224B73F28D8409D0095F3EF /* ProfileNameAgeViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D224B73B28D8409D0095F3EF /* ProfileNameAgeViewReactor.swift */; };
 		D224B74028D8409D0095F3EF /* ProfileNameAgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D224B73C28D8409D0095F3EF /* ProfileNameAgeViewController.swift */; };
@@ -95,6 +96,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D223022B28E2BF5F00D967A4 /* GoogleLoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginDataManager.swift; sourceTree = "<group>"; };
 		D224B73928D8403F0095F3EF /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		D224B73B28D8409D0095F3EF /* ProfileNameAgeViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNameAgeViewReactor.swift; sourceTree = "<group>"; };
 		D224B73C28D8409D0095F3EF /* ProfileNameAgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNameAgeViewController.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				D233341D28E1858D00E0A00D /* KakaoLoginDataManager.swift */,
+				D223022B28E2BF5F00D967A4 /* GoogleLoginDataManager.swift */,
 			);
 			path = SocialLoginDataManager;
 			sourceTree = "<group>";
@@ -648,6 +651,7 @@
 				D23704B428D96442004794E6 /* RegisterProfileRootViewController.swift in Sources */,
 				D224B73A28D8403F0095F3EF /* InputView.swift in Sources */,
 				D2D4544D28D1D8DA00312390 /* OnboardingContentView.swift in Sources */,
+				D223022C28E2BF5F00D967A4 /* GoogleLoginDataManager.swift in Sources */,
 				D270A65E28C9D5DF0015F54C /* UIViewController+Preview.swift in Sources */,
 				D2D4543528D064F700312390 /* SplashViewUseCase.swift in Sources */,
 				D26A8C1D28D41D9800FCDD7E /* SignUpViewUseCase.swift in Sources */,

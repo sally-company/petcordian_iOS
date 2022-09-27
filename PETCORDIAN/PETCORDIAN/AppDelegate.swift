@@ -6,6 +6,7 @@
 //
 
 import FirebaseCore
+import GoogleSignIn
 import KakaoSDKAuth
 import KakaoSDKCommon
 import UIKit
@@ -37,8 +38,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     open url: URL,
     options: [UIApplication.OpenURLOptionsKey : Any] = [:]
   ) -> Bool {
+    var googleHandled: Bool
+    
     if (AuthApi.isKakaoTalkLoginUrl(url)) {
       return AuthController.handleOpenUrl(url: url)
+    }
+    
+    googleHandled = GIDSignIn.sharedInstance.handle(url)
+    if googleHandled {
+      return true
     }
     
     return false

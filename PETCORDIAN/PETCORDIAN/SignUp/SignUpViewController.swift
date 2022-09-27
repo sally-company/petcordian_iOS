@@ -10,7 +10,7 @@ import RxCocoa
 import RxSwift
 import UIKit
 
-class SignUpViewController: UIViewController, ReactorKit.View {
+class SignUpViewController: BaseViewController, ReactorKit.View {
   
   typealias Reactor = SignUpViewReactor
   
@@ -71,14 +71,21 @@ class SignUpViewController: UIViewController, ReactorKit.View {
   func bindGoogleLoginButton() {
     self.contentView.actionView.googleLoginButtonView.button.rx.tap
       .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
-      .bind(onNext: { [weak self] in self?.presentRegisterProfileScene() })
+      .bind(onNext: { [weak self] in
+        guard let self = self else { return }
+        GoogleLoginDataManager.shared.signIn(vc: self)
+      })
       .disposed(by: self.disposeBag)
   }
   
   func bindNaverLoginButton() {
     self.contentView.actionView.naverLoginButtonView.button.rx.tap
       .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
-      .bind(onNext: { [weak self] in self?.presentRegisterProfileScene() })
+      .bind(onNext: { [weak self] in
+        guard let self = self else { return }
+        GoogleLoginDataManager.shared.signOut(vc: self)
+        
+      })
       .disposed(by: self.disposeBag)
   }
   
