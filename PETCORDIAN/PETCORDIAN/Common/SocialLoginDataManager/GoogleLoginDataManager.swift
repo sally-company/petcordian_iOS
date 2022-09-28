@@ -15,7 +15,7 @@ class GoogleLoginDataManager {
   static let shared = GoogleLoginDataManager()
   private init() { }
   
-  func signIn(vc: BaseViewController) {
+  func login(vc: BaseViewController) {
     guard let clientID = FirebaseApp.app()?.options.clientID else { return }
     
     let config = GIDConfiguration(clientID: clientID)
@@ -52,7 +52,7 @@ class GoogleLoginDataManager {
     }
   }
   
-  func signOut(vc: BaseViewController) {
+  func logout(vc: BaseViewController) {
     let firebaseAuth = Auth.auth()
     do {
       try firebaseAuth.signOut()

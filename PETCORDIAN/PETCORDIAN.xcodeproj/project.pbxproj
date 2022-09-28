@@ -94,6 +94,8 @@
 		D2D4544B28D1D35600312390 /* OnboardingImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4544A28D1D35600312390 /* OnboardingImageCollectionViewCell.swift */; };
 		D2D4544D28D1D8DA00312390 /* OnboardingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4544C28D1D8DA00312390 /* OnboardingContentView.swift */; };
 		D2EB0CB128E344F600F7CCCE /* NaverThirdPartyLogin in Frameworks */ = {isa = PBXBuildFile; productRef = D2EB0CB028E344F600F7CCCE /* NaverThirdPartyLogin */; };
+		D2EB0CB328E356B000F7CCCE /* NaverLoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EB0CB228E356B000F7CCCE /* NaverLoginDataManager.swift */; };
+		D2EB0CB628E3584F00F7CCCE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D2EB0CB528E3584F00F7CCCE /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -161,6 +163,7 @@
 		D2D4544828D1CA0F00312390 /* OnboardingCellReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCellReactor.swift; sourceTree = "<group>"; };
 		D2D4544A28D1D35600312390 /* OnboardingImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		D2D4544C28D1D8DA00312390 /* OnboardingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentView.swift; sourceTree = "<group>"; };
+		D2EB0CB228E356B000F7CCCE /* NaverLoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverLoginDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +196,7 @@
 				D233D2DD28E2A60F00095763 /* FirebaseAnalytics in Frameworks */,
 				D233D2E328E2A60F00095763 /* FirebaseMessaging in Frameworks */,
 				D23333CB28DD99CF00E0A00D /* RxKakaoSDK in Frameworks */,
+				D2EB0CB628E3584F00F7CCCE /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +256,7 @@
 			children = (
 				D233341D28E1858D00E0A00D /* KakaoLoginDataManager.swift */,
 				D223022B28E2BF5F00D967A4 /* GoogleLoginDataManager.swift */,
+				D2EB0CB228E356B000F7CCCE /* NaverLoginDataManager.swift */,
 			);
 			path = SocialLoginDataManager;
 			sourceTree = "<group>";
@@ -535,6 +540,7 @@
 				D233D2E428E2A60F00095763 /* FirebaseRemoteConfig */,
 				D233D2E728E2B9A000095763 /* GoogleSignIn */,
 				D2EB0CB028E344F600F7CCCE /* NaverThirdPartyLogin */,
+				D2EB0CB528E3584F00F7CCCE /* Alamofire */,
 			);
 			productName = PETCORDIAN;
 			productReference = D270A61E28C9D3A70015F54C /* PETCORDIAN.app */;
@@ -586,6 +592,7 @@
 				D233D2DB28E2A60F00095763 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				D233D2E628E2B9A000095763 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				D2EB0CAF28E344F600F7CCCE /* XCRemoteSwiftPackageReference "naveridlogin-sdk-ios-spm" */,
+				D2EB0CB428E3584F00F7CCCE /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = D270A61F28C9D3A70015F54C /* Products */;
 			projectDirPath = "";
@@ -670,6 +677,7 @@
 				D26A8C0628D2B7E100FCDD7E /* OnboardingViewReactor.swift in Sources */,
 				D233339B28DAAAE300E0A00D /* RelationItem.swift in Sources */,
 				D23333A328DAB61400E0A00D /* ProfileRelationViewUseCase.swift in Sources */,
+				D2EB0CB328E356B000F7CCCE /* NaverLoginDataManager.swift in Sources */,
 				D2D4544B28D1D35600312390 /* OnboardingImageCollectionViewCell.swift in Sources */,
 				D23704C128D9BF76004794E6 /* RelationButtonCell.swift in Sources */,
 				D26A8C1B28D41D9800FCDD7E /* SignUpViewController.swift in Sources */,
@@ -1056,6 +1064,14 @@
 				kind = branch;
 			};
 		};
+		D2EB0CB428E3584F00F7CCCE /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1183,6 +1199,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D2EB0CAF28E344F600F7CCCE /* XCRemoteSwiftPackageReference "naveridlogin-sdk-ios-spm" */;
 			productName = NaverThirdPartyLogin;
+		};
+		D2EB0CB528E3584F00F7CCCE /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2EB0CB428E3584F00F7CCCE /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
