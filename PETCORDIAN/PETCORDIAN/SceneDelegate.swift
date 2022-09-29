@@ -6,6 +6,7 @@
 //
 
 import Inject
+import NaverThirdPartyLogin
 import netfox
 import KakaoSDKAuth
 import KakaoSDKCommon
@@ -26,6 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     window?.windowScene = windowScene
     let vc = Inject.ViewControllerHost(SplashBuilder.build())
     let navController = UINavigationController(rootViewController: vc)
+    navController.isNavigationBarHidden = true
     window?.rootViewController = navController
     
     window?.makeKeyAndVisible()
@@ -39,10 +41,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     _ scene: UIScene,
     openURLContexts URLContexts: Set<UIOpenURLContext>
   ) {
-      if let url = URLContexts.first?.url {
-          if (AuthApi.isKakaoTalkLoginUrl(url)) {
-              _ = AuthController.handleOpenUrl(url: url)
-          }
+    // Kakao
+    if let url = URLContexts.first?.url {
+      if (AuthApi.isKakaoTalkLoginUrl(url)) {
+        _ = AuthController.handleOpenUrl(url: url)
       }
+    }
+    
+    // Naver
+    NaverThirdPartyLoginConnection
+      .getSharedInstance()
+      .receiveAccessToken(URLContexts.first?.url)
   }
 }

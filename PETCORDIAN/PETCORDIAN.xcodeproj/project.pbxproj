@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D223022C28E2BF5F00D967A4 /* GoogleLoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D223022B28E2BF5F00D967A4 /* GoogleLoginDataManager.swift */; };
 		D224B73A28D8403F0095F3EF /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D224B73928D8403F0095F3EF /* InputView.swift */; };
 		D224B73F28D8409D0095F3EF /* ProfileNameAgeViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D224B73B28D8409D0095F3EF /* ProfileNameAgeViewReactor.swift */; };
 		D224B74028D8409D0095F3EF /* ProfileNameAgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D224B73C28D8409D0095F3EF /* ProfileNameAgeViewController.swift */; };
@@ -31,6 +32,14 @@
 		D23333CB28DD99CF00E0A00D /* RxKakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = D23333CA28DD99CF00E0A00D /* RxKakaoSDK */; };
 		D23333F028E06AA400E0A00D /* RegisterProfileItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23333EF28E06AA400E0A00D /* RegisterProfileItem.swift */; };
 		D23333F228E1403600E0A00D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23333F128E1403600E0A00D /* BaseViewController.swift */; };
+		D233341E28E1858D00E0A00D /* KakaoLoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D233341D28E1858D00E0A00D /* KakaoLoginDataManager.swift */; };
+		D233D2DA28E2A53000095763 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D233D2D928E2A53000095763 /* GoogleService-Info.plist */; };
+		D233D2DD28E2A60F00095763 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D233D2DC28E2A60F00095763 /* FirebaseAnalytics */; };
+		D233D2DF28E2A60F00095763 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D233D2DE28E2A60F00095763 /* FirebaseAuth */; };
+		D233D2E128E2A60F00095763 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = D233D2E028E2A60F00095763 /* FirebaseCrashlytics */; };
+		D233D2E328E2A60F00095763 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = D233D2E228E2A60F00095763 /* FirebaseMessaging */; };
+		D233D2E528E2A60F00095763 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = D233D2E428E2A60F00095763 /* FirebaseRemoteConfig */; };
+		D233D2E828E2B9A000095763 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = D233D2E728E2B9A000095763 /* GoogleSignIn */; };
 		D23704A928D94FC1004794E6 /* UnderLineTextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23704A828D94FC1004794E6 /* UnderLineTextField+Extension.swift */; };
 		D23704AC28D958FA004794E6 /* RxKeyboard in Frameworks */ = {isa = PBXBuildFile; productRef = D23704AB28D958FA004794E6 /* RxKeyboard */; };
 		D23704B328D96442004794E6 /* RegisterProfileRootViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23704AF28D96442004794E6 /* RegisterProfileRootViewReactor.swift */; };
@@ -84,9 +93,14 @@
 		D2D4544928D1CA0F00312390 /* OnboardingCellReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4544828D1CA0F00312390 /* OnboardingCellReactor.swift */; };
 		D2D4544B28D1D35600312390 /* OnboardingImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4544A28D1D35600312390 /* OnboardingImageCollectionViewCell.swift */; };
 		D2D4544D28D1D8DA00312390 /* OnboardingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4544C28D1D8DA00312390 /* OnboardingContentView.swift */; };
+		D2EB0CB128E344F600F7CCCE /* NaverThirdPartyLogin in Frameworks */ = {isa = PBXBuildFile; productRef = D2EB0CB028E344F600F7CCCE /* NaverThirdPartyLogin */; };
+		D2EB0CB328E356B000F7CCCE /* NaverLoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EB0CB228E356B000F7CCCE /* NaverLoginDataManager.swift */; };
+		D2EB0CB628E3584F00F7CCCE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D2EB0CB528E3584F00F7CCCE /* Alamofire */; };
+		D2EB0CBD28E4475D00F7CCCE /* SocialLoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EB0CBC28E4475D00F7CCCE /* SocialLoginError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D223022B28E2BF5F00D967A4 /* GoogleLoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginDataManager.swift; sourceTree = "<group>"; };
 		D224B73928D8403F0095F3EF /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		D224B73B28D8409D0095F3EF /* ProfileNameAgeViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNameAgeViewReactor.swift; sourceTree = "<group>"; };
 		D224B73C28D8409D0095F3EF /* ProfileNameAgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNameAgeViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +121,8 @@
 		D23333AB28DAE98900E0A00D /* ProfileImageViewUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageViewUseCase.swift; sourceTree = "<group>"; };
 		D23333EF28E06AA400E0A00D /* RegisterProfileItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProfileItem.swift; sourceTree = "<group>"; };
 		D23333F128E1403600E0A00D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D233341D28E1858D00E0A00D /* KakaoLoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginDataManager.swift; sourceTree = "<group>"; };
+		D233D2D928E2A53000095763 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D23704A828D94FC1004794E6 /* UnderLineTextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UnderLineTextField+Extension.swift"; sourceTree = "<group>"; };
 		D23704AF28D96442004794E6 /* RegisterProfileRootViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProfileRootViewReactor.swift; sourceTree = "<group>"; };
 		D23704B028D96442004794E6 /* RegisterProfileRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProfileRootViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +164,8 @@
 		D2D4544828D1CA0F00312390 /* OnboardingCellReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCellReactor.swift; sourceTree = "<group>"; };
 		D2D4544A28D1D35600312390 /* OnboardingImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		D2D4544C28D1D8DA00312390 /* OnboardingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentView.swift; sourceTree = "<group>"; };
+		D2EB0CB228E356B000F7CCCE /* NaverLoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverLoginDataManager.swift; sourceTree = "<group>"; };
+		D2EB0CBC28E4475D00F7CCCE /* SocialLoginError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +176,8 @@
 				D270A66428C9DCDA0015F54C /* netfox in Frameworks */,
 				D270A63D28C9D4CF0015F54C /* SnapKit in Frameworks */,
 				D270A63728C9D4710015F54C /* ReactorKit in Frameworks */,
+				D2EB0CB128E344F600F7CCCE /* NaverThirdPartyLogin in Frameworks */,
+				D233D2E128E2A60F00095763 /* FirebaseCrashlytics in Frameworks */,
 				D23704AC28D958FA004794E6 /* RxKeyboard in Frameworks */,
 				D270A66128C9DC370015F54C /* ReusableKit in Frameworks */,
 				D270A64028C9D4DF0015F54C /* RxCocoa in Frameworks */,
@@ -166,13 +186,19 @@
 				D23333C528DD969A00E0A00D /* Lottie in Frameworks */,
 				D270A65428C9D5B00015F54C /* Moya in Frameworks */,
 				D23333B628DAFC4800E0A00D /* CropViewController in Frameworks */,
+				D233D2DF28E2A60F00095763 /* FirebaseAuth in Frameworks */,
 				D270A65628C9D5B00015F54C /* RxMoya in Frameworks */,
 				D270A65128C9D5660015F54C /* LookinServer in Frameworks */,
 				D270A65928C9D5C40015F54C /* Kingfisher in Frameworks */,
 				D270A64E28C9D5560015F54C /* Inject in Frameworks */,
+				D233D2E828E2B9A000095763 /* GoogleSignIn in Frameworks */,
 				D270A64B28C9D5450015F54C /* BonMot in Frameworks */,
+				D233D2E528E2A60F00095763 /* FirebaseRemoteConfig in Frameworks */,
 				D270A63A28C9D47D0015F54C /* Then in Frameworks */,
+				D233D2DD28E2A60F00095763 /* FirebaseAnalytics in Frameworks */,
+				D233D2E328E2A60F00095763 /* FirebaseMessaging in Frameworks */,
 				D23333CB28DD99CF00E0A00D /* RxKakaoSDK in Frameworks */,
+				D2EB0CB628E3584F00F7CCCE /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +251,17 @@
 				D23333EF28E06AA400E0A00D /* RegisterProfileItem.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		D233341C28E1857200E0A00D /* SocialLogin */ = {
+			isa = PBXGroup;
+			children = (
+				D2EB0CBB28E4475000F7CCCE /* Error */,
+				D233341D28E1858D00E0A00D /* KakaoLoginDataManager.swift */,
+				D223022B28E2BF5F00D967A4 /* GoogleLoginDataManager.swift */,
+				D2EB0CB228E356B000F7CCCE /* NaverLoginDataManager.swift */,
+			);
+			path = SocialLogin;
 			sourceTree = "<group>";
 		};
 		D23704B928D9A542004794E6 /* ProfileRelation */ = {
@@ -281,6 +318,7 @@
 				D26A8C0F28D2EA1C00FCDD7E /* Font.swift */,
 				D233339A28DAAAE300E0A00D /* RelationItem.swift */,
 				D224B74728D84ED60095F3EF /* UI */,
+				D233341C28E1857200E0A00D /* SocialLogin */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -368,6 +406,7 @@
 				D270A62128C9D3A70015F54C /* AppDelegate.swift */,
 				D270A62328C9D3A70015F54C /* SceneDelegate.swift */,
 				D270A62F28C9D3A80015F54C /* Info.plist */,
+				D233D2D928E2A53000095763 /* GoogleService-Info.plist */,
 			);
 			path = PETCORDIAN;
 			sourceTree = "<group>";
@@ -462,6 +501,14 @@
 			path = Section;
 			sourceTree = "<group>";
 		};
+		D2EB0CBB28E4475000F7CCCE /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				D2EB0CBC28E4475D00F7CCCE /* SocialLoginError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -497,6 +544,14 @@
 				D23333C428DD969A00E0A00D /* Lottie */,
 				D23333C728DD99B700E0A00D /* KakaoSDK */,
 				D23333CA28DD99CF00E0A00D /* RxKakaoSDK */,
+				D233D2DC28E2A60F00095763 /* FirebaseAnalytics */,
+				D233D2DE28E2A60F00095763 /* FirebaseAuth */,
+				D233D2E028E2A60F00095763 /* FirebaseCrashlytics */,
+				D233D2E228E2A60F00095763 /* FirebaseMessaging */,
+				D233D2E428E2A60F00095763 /* FirebaseRemoteConfig */,
+				D233D2E728E2B9A000095763 /* GoogleSignIn */,
+				D2EB0CB028E344F600F7CCCE /* NaverThirdPartyLogin */,
+				D2EB0CB528E3584F00F7CCCE /* Alamofire */,
 			);
 			productName = PETCORDIAN;
 			productReference = D270A61E28C9D3A70015F54C /* PETCORDIAN.app */;
@@ -545,6 +600,10 @@
 				D23333C328DD969A00E0A00D /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				D23333C628DD99B700E0A00D /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
 				D23333C928DD99CF00E0A00D /* XCRemoteSwiftPackageReference "kakao-ios-sdk-rx" */,
+				D233D2DB28E2A60F00095763 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				D233D2E628E2B9A000095763 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				D2EB0CAF28E344F600F7CCCE /* XCRemoteSwiftPackageReference "naveridlogin-sdk-ios-spm" */,
+				D2EB0CB428E3584F00F7CCCE /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = D270A61F28C9D3A70015F54C /* Products */;
 			projectDirPath = "";
@@ -561,6 +620,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D270A62E28C9D3A80015F54C /* LaunchScreen.storyboard in Resources */,
+				D233D2DA28E2A53000095763 /* GoogleService-Info.plist in Resources */,
 				D26A8C0D28D2CFFD00FCDD7E /* Kyobo Handwriting 2019.otf in Resources */,
 				D270A62B28C9D3A80015F54C /* Assets.xcassets in Resources */,
 			);
@@ -613,11 +673,13 @@
 				D23704B428D96442004794E6 /* RegisterProfileRootViewController.swift in Sources */,
 				D224B73A28D8403F0095F3EF /* InputView.swift in Sources */,
 				D2D4544D28D1D8DA00312390 /* OnboardingContentView.swift in Sources */,
+				D223022C28E2BF5F00D967A4 /* GoogleLoginDataManager.swift in Sources */,
 				D270A65E28C9D5DF0015F54C /* UIViewController+Preview.swift in Sources */,
 				D2D4543528D064F700312390 /* SplashViewUseCase.swift in Sources */,
 				D26A8C1D28D41D9800FCDD7E /* SignUpViewUseCase.swift in Sources */,
 				D26A8C2228D421DE00FCDD7E /* ProfileNameAgeContentView.swift in Sources */,
 				D23333AE28DAE98900E0A00D /* ProfileImageBuilder.swift in Sources */,
+				D233341E28E1858D00E0A00D /* KakaoLoginDataManager.swift in Sources */,
 				D23704BC28D9A573004794E6 /* ProfileRelationContentView.swift in Sources */,
 				D2D4543D28D083D900312390 /* RootBuilder.swift in Sources */,
 				D224B74928D84EE80095F3EF /* UnderLineTextField.swift in Sources */,
@@ -626,6 +688,8 @@
 				D26A8C0628D2B7E100FCDD7E /* OnboardingViewReactor.swift in Sources */,
 				D233339B28DAAAE300E0A00D /* RelationItem.swift in Sources */,
 				D23333A328DAB61400E0A00D /* ProfileRelationViewUseCase.swift in Sources */,
+				D2EB0CBD28E4475D00F7CCCE /* SocialLoginError.swift in Sources */,
+				D2EB0CB328E356B000F7CCCE /* NaverLoginDataManager.swift in Sources */,
 				D2D4544B28D1D35600312390 /* OnboardingImageCollectionViewCell.swift in Sources */,
 				D23704C128D9BF76004794E6 /* RelationButtonCell.swift in Sources */,
 				D26A8C1B28D41D9800FCDD7E /* SignUpViewController.swift in Sources */,
@@ -876,6 +940,22 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		D233D2DB28E2A60F00095763 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		D233D2E628E2B9A000095763 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		D23704AA28D958FA004794E6 /* XCRemoteSwiftPackageReference "RxKeyboard" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RxSwiftCommunity/RxKeyboard";
@@ -988,6 +1068,22 @@
 				kind = branch;
 			};
 		};
+		D2EB0CAF28E344F600F7CCCE /* XCRemoteSwiftPackageReference "naveridlogin-sdk-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jaemyeong/naveridlogin-sdk-ios-spm";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		D2EB0CB428E3584F00F7CCCE /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1010,6 +1106,36 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D23333C928DD99CF00E0A00D /* XCRemoteSwiftPackageReference "kakao-ios-sdk-rx" */;
 			productName = RxKakaoSDK;
+		};
+		D233D2DC28E2A60F00095763 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D233D2DB28E2A60F00095763 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		D233D2DE28E2A60F00095763 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D233D2DB28E2A60F00095763 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		D233D2E028E2A60F00095763 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D233D2DB28E2A60F00095763 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		D233D2E228E2A60F00095763 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D233D2DB28E2A60F00095763 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		D233D2E428E2A60F00095763 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D233D2DB28E2A60F00095763 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		D233D2E728E2B9A000095763 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D233D2E628E2B9A000095763 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
 		};
 		D23704AB28D958FA004794E6 /* RxKeyboard */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1080,6 +1206,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D270A66228C9DCDA0015F54C /* XCRemoteSwiftPackageReference "netfox" */;
 			productName = netfox;
+		};
+		D2EB0CB028E344F600F7CCCE /* NaverThirdPartyLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2EB0CAF28E344F600F7CCCE /* XCRemoteSwiftPackageReference "naveridlogin-sdk-ios-spm" */;
+			productName = NaverThirdPartyLogin;
+		};
+		D2EB0CB528E3584F00F7CCCE /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2EB0CB428E3584F00F7CCCE /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
