@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Alamofire/Alamofire.git",
       "state" : {
-        "revision" : "8dd85aee02e39dd280c75eef88ffdb86eed4b07b",
-        "version" : "5.6.2"
+        "branch" : "master",
+        "revision" : "8dd85aee02e39dd280c75eef88ffdb86eed4b07b"
       }
     },
     {
@@ -196,6 +196,15 @@
       "state" : {
         "revision" : "819d0a2173aff699fb8c364b6fb906f7cdb1a692",
         "version" : "2.30909.0"
+      }
+    },
+    {
+      "identity" : "naveridlogin-sdk-ios-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jaemyeong/naveridlogin-sdk-ios-spm",
+      "state" : {
+        "branch" : "main",
+        "revision" : "1569710ec29bc923492bbf7025423038e628c1e2"
       }
     },
     {
