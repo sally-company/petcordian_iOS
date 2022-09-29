@@ -15,7 +15,7 @@ class GoogleLoginDataManager {
   static let shared = GoogleLoginDataManager()
   private init() { }
   
-  func login(vc: BaseViewController) {
+  func login(vc: BaseViewController, completion: @escaping (_ userId: String?, _ error: Error?) -> ()) {
     guard let clientID = FirebaseApp.app()?.options.clientID else { return }
     
     let config = GIDConfiguration(clientID: clientID)
@@ -23,7 +23,9 @@ class GoogleLoginDataManager {
     GIDSignIn.sharedInstance.signIn(with: config, presenting: vc) { [unowned self] user, error in
       
       if let error = error {
-        vc.showAlert(title: "에러", message: error.localizedDescription, actionHandler: nil)
+        DispatchQueue.main.async {
+          completion(nil, error)
+        }
         return
       }
       
@@ -40,7 +42,9 @@ class GoogleLoginDataManager {
       
       Auth.auth().signIn(with: credential) { authDataResult, error in
         if let error = error {
-          vc.showAlert(title: "에러", message: error.localizedDescription, actionHandler: nil)
+          DispatchQueue.main.async {
+            completion(nil, error)
+          }
           return
         }
         
@@ -48,6 +52,10 @@ class GoogleLoginDataManager {
         print("user.uid", authDataResult?.user.uid ?? "")
         print("providerID", authDataResult?.additionalUserInfo?.providerID ?? "")
         print("user.email", authDataResult?.user.email ?? "")
+        
+        DispatchQueue.main.async {
+          completion(authDataResult?.user.uid, nil)
+        }
       }
     }
   }
