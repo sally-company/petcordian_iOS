@@ -96,6 +96,7 @@
 		D2EB0CB128E344F600F7CCCE /* NaverThirdPartyLogin in Frameworks */ = {isa = PBXBuildFile; productRef = D2EB0CB028E344F600F7CCCE /* NaverThirdPartyLogin */; };
 		D2EB0CB328E356B000F7CCCE /* NaverLoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EB0CB228E356B000F7CCCE /* NaverLoginDataManager.swift */; };
 		D2EB0CB628E3584F00F7CCCE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D2EB0CB528E3584F00F7CCCE /* Alamofire */; };
+		D2EB0CBD28E4475D00F7CCCE /* SocialLoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EB0CBC28E4475D00F7CCCE /* SocialLoginError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -164,6 +165,7 @@
 		D2D4544A28D1D35600312390 /* OnboardingImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		D2D4544C28D1D8DA00312390 /* OnboardingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentView.swift; sourceTree = "<group>"; };
 		D2EB0CB228E356B000F7CCCE /* NaverLoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverLoginDataManager.swift; sourceTree = "<group>"; };
+		D2EB0CBC28E4475D00F7CCCE /* SocialLoginError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,14 +253,15 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
-		D233341C28E1857200E0A00D /* SocialLoginDataManager */ = {
+		D233341C28E1857200E0A00D /* SocialLogin */ = {
 			isa = PBXGroup;
 			children = (
+				D2EB0CBB28E4475000F7CCCE /* Error */,
 				D233341D28E1858D00E0A00D /* KakaoLoginDataManager.swift */,
 				D223022B28E2BF5F00D967A4 /* GoogleLoginDataManager.swift */,
 				D2EB0CB228E356B000F7CCCE /* NaverLoginDataManager.swift */,
 			);
-			path = SocialLoginDataManager;
+			path = SocialLogin;
 			sourceTree = "<group>";
 		};
 		D23704B928D9A542004794E6 /* ProfileRelation */ = {
@@ -315,7 +318,7 @@
 				D26A8C0F28D2EA1C00FCDD7E /* Font.swift */,
 				D233339A28DAAAE300E0A00D /* RelationItem.swift */,
 				D224B74728D84ED60095F3EF /* UI */,
-				D233341C28E1857200E0A00D /* SocialLoginDataManager */,
+				D233341C28E1857200E0A00D /* SocialLogin */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -498,6 +501,14 @@
 			path = Section;
 			sourceTree = "<group>";
 		};
+		D2EB0CBB28E4475000F7CCCE /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				D2EB0CBC28E4475D00F7CCCE /* SocialLoginError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -677,6 +688,7 @@
 				D26A8C0628D2B7E100FCDD7E /* OnboardingViewReactor.swift in Sources */,
 				D233339B28DAAAE300E0A00D /* RelationItem.swift in Sources */,
 				D23333A328DAB61400E0A00D /* ProfileRelationViewUseCase.swift in Sources */,
+				D2EB0CBD28E4475D00F7CCCE /* SocialLoginError.swift in Sources */,
 				D2EB0CB328E356B000F7CCCE /* NaverLoginDataManager.swift in Sources */,
 				D2D4544B28D1D35600312390 /* OnboardingImageCollectionViewCell.swift in Sources */,
 				D23704C128D9BF76004794E6 /* RelationButtonCell.swift in Sources */,

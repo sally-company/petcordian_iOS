@@ -11,21 +11,25 @@ import KakaoSDKUser
 
 class KakaoLoginDataManager {
   
+  typealias Token = String
+  
   static let shared = KakaoLoginDataManager()
   private init() { }
   
-  func login(completion: @escaping (_ token: String?) -> ()) {
+  func login(completion: @escaping (_ token: Token?, _ error: Error?) -> ()) {
     if (UserApi.isKakaoTalkLoginAvailable()) {
       UserApi.shared.loginWithKakaoTalk {( oauthToken, error) in
-        if let error = error {
-          print(error)
+        if let _ = error {
+          DispatchQueue.main.async {
+            completion(nil, error)
+          }
         }
         else {
           print("loginWithKakaoTalk() success.")
           
           // AccessToken을 가져옴
           DispatchQueue.main.async {
-            completion(oauthToken?.accessToken)
+            completion(oauthToken?.accessToken, nil)
           }
         }
       }
@@ -33,11 +37,13 @@ class KakaoLoginDataManager {
       // 카카오톡이 설치되어 있지 않을 경우, 처리할 로직
       UserApi.shared.loginWithKakaoAccount { (oauthToken, error) in
         if let error = error {
-          print(error)
+          DispatchQueue.main.async {
+            completion(nil, error)
+          }
         }
         
         DispatchQueue.main.async {
-          completion(oauthToken?.accessToken)
+          completion(oauthToken?.accessToken, nil)
         }
       }
     }
@@ -56,17 +62,19 @@ class KakaoLoginDataManager {
     }
   }
   
-  func getUserId(completion: @escaping (Int64?) -> ()) {
+  func getUserId(completion: @escaping (_ id: Int64?, _ error: Error?) -> ()) {
     UserApi.shared.me() {(user, error) in
       if let error = error {
-        print(error)
+        DispatchQueue.main.async {
+          completion(nil, error)
+        }
       }
       else {
         print("me() success.")
         
         // 유저 아이디를 가져옴
         DispatchQueue.main.async {
-          completion(user?.id)
+          completion(user?.id, nil)
         }
       }
     }

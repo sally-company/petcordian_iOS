@@ -57,14 +57,22 @@ class SignUpViewController: BaseViewController, ReactorKit.View {
     self.contentView.actionView.kakaoLoginButtonView.button.rx.tap
       .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
       .bind(onNext: { [weak self] in
-        KakaoLoginDataManager.shared.login { token in
+        KakaoLoginDataManager.shared.login { token, error in
+          if let _ = error {
+            self?.showAlert(title: "에러", message: SocialLoginError.KakaoLoginError.loginFailed.description, actionHandler: nil)
+          }
+          
           #if DEBUG
-          print("accessToken: ", token)
+          print(token)
           #endif
-          KakaoLoginDataManager.shared.getUserId { id in
-            #if DEBUG
-            print("userId: ", id)
-            #endif
+          KakaoLoginDataManager.shared.getUserId { id, error in
+            if let _ = error {
+              self?.showAlert(title: "에러", message: SocialLoginError.KakaoLoginError.logoutFailed.description, actionHandler: nil)
+            }
+            
+          #if DEBUG
+          print(id)
+          #endif
           }
         }
       })
@@ -76,7 +84,15 @@ class SignUpViewController: BaseViewController, ReactorKit.View {
       .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
       .bind(onNext: { [weak self] in
         guard let self = self else { return }
-        GoogleLoginDataManager.shared.login(vc: self)
+        GoogleLoginDataManager.shared.login(vc: self) { userId, error in
+          if let _ = error {
+            self.showAlert(title: "에러", message: SocialLoginError.GoogleLoginError.loginFailed.description, actionHandler: nil)
+          }
+          
+          #if DEBUG
+          print(userId)
+          #endif
+        }
       })
       .disposed(by: self.disposeBag)
   }
