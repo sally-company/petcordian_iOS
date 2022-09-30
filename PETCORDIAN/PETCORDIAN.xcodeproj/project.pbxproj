@@ -93,6 +93,7 @@
 		D2D4544928D1CA0F00312390 /* OnboardingCellReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4544828D1CA0F00312390 /* OnboardingCellReactor.swift */; };
 		D2D4544B28D1D35600312390 /* OnboardingImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4544A28D1D35600312390 /* OnboardingImageCollectionViewCell.swift */; };
 		D2D4544D28D1D8DA00312390 /* OnboardingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4544C28D1D8DA00312390 /* OnboardingContentView.swift */; };
+		D2E2143828E6789B00B36CF3 /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E2143728E6789B00B36CF3 /* HomeEntity.swift */; };
 		D2EB0CB128E344F600F7CCCE /* NaverThirdPartyLogin in Frameworks */ = {isa = PBXBuildFile; productRef = D2EB0CB028E344F600F7CCCE /* NaverThirdPartyLogin */; };
 		D2EB0CB328E356B000F7CCCE /* NaverLoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EB0CB228E356B000F7CCCE /* NaverLoginDataManager.swift */; };
 		D2EB0CB628E3584F00F7CCCE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D2EB0CB528E3584F00F7CCCE /* Alamofire */; };
@@ -164,6 +165,7 @@
 		D2D4544828D1CA0F00312390 /* OnboardingCellReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCellReactor.swift; sourceTree = "<group>"; };
 		D2D4544A28D1D35600312390 /* OnboardingImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		D2D4544C28D1D8DA00312390 /* OnboardingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentView.swift; sourceTree = "<group>"; };
+		D2E2143728E6789B00B36CF3 /* HomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
 		D2EB0CB228E356B000F7CCCE /* NaverLoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverLoginDataManager.swift; sourceTree = "<group>"; };
 		D2EB0CBC28E4475D00F7CCCE /* SocialLoginError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -403,6 +405,7 @@
 				D2D4543F28D16D0100312390 /* Onboarding */,
 				D26A8C1228D3182900FCDD7E /* SignUp */,
 				D26A8C1E28D4211900FCDD7E /* RegisterProfile */,
+				D2E2143528E6786F00B36CF3 /* Home */,
 				D270A62128C9D3A70015F54C /* AppDelegate.swift */,
 				D270A62328C9D3A70015F54C /* SceneDelegate.swift */,
 				D270A62F28C9D3A80015F54C /* Info.plist */,
@@ -499,6 +502,22 @@
 				D2D4544628D1C99600312390 /* OnboardingImageSection.swift */,
 			);
 			path = Section;
+			sourceTree = "<group>";
+		};
+		D2E2143528E6786F00B36CF3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D2E2143628E6789000B36CF3 /* Entity */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D2E2143628E6789000B36CF3 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D2E2143728E6789B00B36CF3 /* HomeEntity.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		D2EB0CBB28E4475000F7CCCE /* Error */ = {
@@ -635,6 +654,7 @@
 			files = (
 				D23333A028DAB61400E0A00D /* ProfileRelationViewReactor.swift in Sources */,
 				D2D4543428D064F700312390 /* SplashBuilder.swift in Sources */,
+				D2E2143828E6789B00B36CF3 /* HomeEntity.swift in Sources */,
 				D224B74228D8409D0095F3EF /* ProfileNameAgeViewUseCase.swift in Sources */,
 				D2D4544228D1A54D00312390 /* OnboardingItems.swift in Sources */,
 				D224B74428D8491A0095F3EF /* UIButton+Extension.swift in Sources */,
