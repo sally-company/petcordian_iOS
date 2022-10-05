@@ -40,7 +40,11 @@ public let sampleProfile = ProfileInfo(id: 0,
                                        profileImg: UIImage(named: "sampleProfileImage"),
                                        petName: "달짜몽")
 
-public let sampleDiaryList: [DiaryItem] = [
+public var sampleDiaryList: [DiaryItem] = [
+  DiaryItem(image: UIImage(named: "sampleImage"), date: Date()),
+  DiaryItem(image: UIImage(named: "sampleImage"), date: Date()),
+  DiaryItem(image: UIImage(named: "sampleImage"), date: Date()),
+  DiaryItem(image: UIImage(named: "sampleImage"), date: Date()),
   DiaryItem(image: UIImage(named: "sampleImage"), date: Date()),
   DiaryItem(image: UIImage(named: "sampleImage"), date: Date()),
   DiaryItem(image: UIImage(named: "sampleImage"), date: Date()),
