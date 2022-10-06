@@ -1,19 +1,16 @@
 //
-//  SeparateCollectionViewCell.swift
+//  CalendarCollectionViewCell.swift
 //  PETCORDIAN
 //
 //  Created by Hyunwoo Jang on 2022/10/05.
 //
 
 import SnapKit
-import Then
 import UIKit
 
-class SeparateCollectionViewCell: UICollectionViewCell {
+class CalendarCollectionViewCell: UICollectionViewCell {
   
-  private let separateView = UIView().then {
-    $0.backgroundColor = .systemGray3
-  }
+  private let calendarView = CalendarView()
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -26,9 +23,9 @@ class SeparateCollectionViewCell: UICollectionViewCell {
   }
   
   private func setup() {
-    self.addSubview(self.separateView)
+    self.addSubview(calendarView)
     
-    self.separateView.snp.makeConstraints {
+    self.calendarView.snp.makeConstraints {
       $0.edges.equalToSuperview()
     }
   }

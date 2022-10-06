@@ -22,7 +22,7 @@ class FeedDiaryEmptyCollectionViewCell: UICollectionViewCell {
   private let contentLabel = UILabel().then {
     $0.numberOfLines = 3
     $0.textAlignment = .center
-    $0.attributedText = "아직 작성된 일기가 없다몽...\n사진을 등로하면 반려동물의 기분을\n확인할 수 있다몽!".styled(
+    $0.attributedText = "아직 작성된 일기가 없다몽...\n사진을 등록하면 반려동물의 기분을\n확인할 수 있다몽!".styled(
       with: StringStyle([
         .font(.systemFont(ofSize: 15)),
         .color(.gray)
@@ -36,6 +36,7 @@ class FeedDiaryEmptyCollectionViewCell: UICollectionViewCell {
   
   required init?(coder: NSCoder) {
     super.init(coder: coder)
+    fatalError("init(coder:) has not been implemented")
   }
   
   private func setup() {
