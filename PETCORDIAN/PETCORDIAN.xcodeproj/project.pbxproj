@@ -10,7 +10,7 @@
 		D216637728EE61ED00205609 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216637628EE61ED00205609 /* CalendarView.swift */; };
 		D216637928EE773300205609 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216637828EE773300205609 /* UIImage+Extension.swift */; };
 		D216637C28EE7A9900205609 /* BottomSheetPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216637B28EE7A9900205609 /* BottomSheetPopViewController.swift */; };
-		D216637F28EEA20D00205609 /* DiaryListPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216637E28EEA20D00205609 /* DiaryListPopupView.swift */; };
+		D216637F28EEA20D00205609 /* DiaryPopupListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216637E28EEA20D00205609 /* DiaryPopupListView.swift */; };
 		D216638328EEA39E00205609 /* DiaryListTitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216638228EEA39E00205609 /* DiaryListTitleCollectionViewCell.swift */; };
 		D216638528EEA4A100205609 /* DiaryListContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216638428EEA4A100205609 /* DiaryListContentCollectionViewCell.swift */; };
 		D216638B28EEBB5900205609 /* DiaryListPopupViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216638728EEBB5900205609 /* DiaryListPopupViewReactor.swift */; };
@@ -60,6 +60,7 @@
 		D23704BC28D9A573004794E6 /* ProfileRelationContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23704BB28D9A573004794E6 /* ProfileRelationContentView.swift */; };
 		D23704C128D9BF76004794E6 /* RelationButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23704C028D9BF76004794E6 /* RelationButtonCell.swift */; };
 		D2372BDE28EFF40D00E8BAD1 /* DiaryListContentItemReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2372BDD28EFF40D00E8BAD1 /* DiaryListContentItemReactor.swift */; };
+		D2372BE028F0147E00E8BAD1 /* DiaryPopupListViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2372BDF28F0147E00E8BAD1 /* DiaryPopupListViewReactor.swift */; };
 		D2533A3928ED79E600468A48 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = D2533A3828ED79E600468A48 /* FSCalendar */; };
 		D2533A3F28ED7CDA00468A48 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2533A3E28ED7CDA00468A48 /* CalendarCollectionViewCell.swift */; };
 		D25C404F28D8673500B5590D /* PETButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25C404E28D8673500B5590D /* PETButton.swift */; };
@@ -133,7 +134,7 @@
 		D216637628EE61ED00205609 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		D216637828EE773300205609 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		D216637B28EE7A9900205609 /* BottomSheetPopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetPopViewController.swift; sourceTree = "<group>"; };
-		D216637E28EEA20D00205609 /* DiaryListPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListPopupView.swift; sourceTree = "<group>"; };
+		D216637E28EEA20D00205609 /* DiaryPopupListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryPopupListView.swift; sourceTree = "<group>"; };
 		D216638228EEA39E00205609 /* DiaryListTitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListTitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		D216638428EEA4A100205609 /* DiaryListContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListContentCollectionViewCell.swift; sourceTree = "<group>"; };
 		D216638728EEBB5900205609 /* DiaryListPopupViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListPopupViewReactor.swift; sourceTree = "<group>"; };
@@ -172,6 +173,7 @@
 		D23704BB28D9A573004794E6 /* ProfileRelationContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRelationContentView.swift; sourceTree = "<group>"; };
 		D23704C028D9BF76004794E6 /* RelationButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationButtonCell.swift; sourceTree = "<group>"; };
 		D2372BDD28EFF40D00E8BAD1 /* DiaryListContentItemReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListContentItemReactor.swift; sourceTree = "<group>"; };
+		D2372BDF28F0147E00E8BAD1 /* DiaryPopupListViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryPopupListViewReactor.swift; sourceTree = "<group>"; };
 		D2533A3E28ED7CDA00468A48 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		D25C404E28D8673500B5590D /* PETButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PETButton.swift; sourceTree = "<group>"; };
 		D26A8C0228D2B7E100FCDD7E /* OnboardingViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewReactor.swift; sourceTree = "<group>"; };
@@ -289,7 +291,8 @@
 			isa = PBXGroup;
 			children = (
 				D216638128EEA33200205609 /* Cells */,
-				D216637E28EEA20D00205609 /* DiaryListPopupView.swift */,
+				D216637E28EEA20D00205609 /* DiaryPopupListView.swift */,
+				D2372BDF28F0147E00E8BAD1 /* DiaryPopupListViewReactor.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -860,6 +863,7 @@
 				D23333F028E06AA400E0A00D /* RegisterProfileItem.swift in Sources */,
 				D23333AC28DAE98900E0A00D /* ProfileImageViewReactor.swift in Sources */,
 				D23704A928D94FC1004794E6 /* UnderLineTextField+Extension.swift in Sources */,
+				D2372BE028F0147E00E8BAD1 /* DiaryPopupListViewReactor.swift in Sources */,
 				D293985428EC2E0D00971842 /* HomeViewReactor.swift in Sources */,
 				D216638C28EEBB5900205609 /* DiaryListPopupViewController.swift in Sources */,
 				D23704B828D98791004794E6 /* String+Extension.swift in Sources */,
@@ -887,7 +891,7 @@
 				D233341E28E1858D00E0A00D /* KakaoLoginDataManager.swift in Sources */,
 				D23704BC28D9A573004794E6 /* ProfileRelationContentView.swift in Sources */,
 				D293984528EC2A9600971842 /* Date+Formatter.swift in Sources */,
-				D216637F28EEA20D00205609 /* DiaryListPopupView.swift in Sources */,
+				D216637F28EEA20D00205609 /* DiaryPopupListView.swift in Sources */,
 				D2D4543D28D083D900312390 /* RootBuilder.swift in Sources */,
 				D2E46C1A28ED53CE00BC985B /* SeparateCollectionViewCell.swift in Sources */,
 				D224B74928D84EE80095F3EF /* UnderLineTextField.swift in Sources */,

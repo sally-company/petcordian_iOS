@@ -29,7 +29,9 @@ class DiaryListPopupViewController: BottomSheetPopViewController, ReactorKit.Vie
     $0.addGestureRecognizer(recognizer)
   }
   
-  private let contentView = DiaryListPopupView()
+  private lazy var contentView = DiaryPopupListView().then {
+    $0.delegate = self
+  }
   
   deinit {
     print("\(self)")
@@ -64,6 +66,17 @@ class DiaryListPopupViewController: BottomSheetPopViewController, ReactorKit.Vie
   }
   
   func bind(reactor: Reactor) {
-    
+    self.bindListViewReactor(reactor: reactor)
+  }
+  
+  private func bindListViewReactor(reactor: Reactor) {
+    self.contentView.reactor = DiaryPopupListViewReactor(datas: sampleProfileList)
+  }
+}
+
+extension DiaryListPopupViewController: DiaryPopupListViewDelegate {
+  
+  func diaryPopupListViewItemDidTap() {
+    self.dismiss(animated: true)
   }
 }

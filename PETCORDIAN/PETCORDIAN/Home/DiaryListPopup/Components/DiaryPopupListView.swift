@@ -1,23 +1,36 @@
 //
-//  DiaryListPopupView.swift
+//  DiaryPopupListView.swift
 //  PETCORDIAN
 //
 //  Created by Hyunwoo Jang on 2022/10/06.
 //
 
 import BonMot
+import ReactorKit
 import ReusableKit
 import SnapKit
 import Then
 import UIKit
 
-public class DiaryListPopupView: UIView {
+protocol DiaryPopupListViewDelegate: AnyObject {
+  func diaryPopupListViewItemDidTap()
+}
+
+class DiaryPopupListView
+: UIView,
+  ReactorKit.View {
+  
+  typealias Reactor = DiaryPopupListViewReactor
   
   enum Reusable {
     static let titleCell = ReusableCell<DiaryListTitleCollectionViewCell>()
     static let contentCell = ReusableCell<DiaryListContentCollectionViewCell>()
     static let newProfileCell = ReusableCell<DiaryListNewProfileCollectionViewCell>()
   }
+  
+  weak var delegate: DiaryPopupListViewDelegate?
+  
+  public var disposeBag: DisposeBag = .init()
   
   public lazy var collectionView = UICollectionView(
     frame: .zero,
@@ -73,12 +86,20 @@ public class DiaryListPopupView: UIView {
     
     self.startObserving()
   }
+  
+  func bind(reactor: Reactor) {
+  }
 }
 
-extension DiaryListPopupView: UICollectionViewDataSource {
+extension DiaryPopupListView: UICollectionViewDataSource {
   
   public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return sampleProfileList.count + 2
+    let itemCount = self.reactor?.diaryListContentItemReactors.count ?? 0
+    if itemCount == 5 {
+      return itemCount + 1
+    }
+
+    return itemCount + 2
   }
   
   
@@ -96,15 +117,26 @@ extension DiaryListPopupView: UICollectionViewDataSource {
       
     default:
       let cell = collectionView.dequeue(Reusable.contentCell, for: indexPath)
-      let profileData = sampleProfileList[indexPath.item - 1]
-      cell.reactor = DiaryListContentItemReactor(profileInfoData: profileData)
+      if let diaryListContentItemReactor = self.reactor?.diaryListContentItemReactors[indexPath.item - 1] {
+        cell.reactor = diaryListContentItemReactor
+      }
       
       return cell
     }
   }
 }
 
-extension DiaryListPopupView: UICollectionViewDelegateFlowLayout {
+extension DiaryPopupListView: UICollectionViewDelegate {
+  
+  public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let itemCount = self.reactor?.diaryListContentItemReactors.count ?? 0
+    if indexPath.item != 0 && indexPath.item != itemCount + 2 - 1 {
+      delegate?.diaryPopupListViewItemDidTap()
+    }
+  }
+}
+
+extension DiaryPopupListView: UICollectionViewDelegateFlowLayout {
   
   public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     let width = UIScreen.main.bounds.width

@@ -23,14 +23,18 @@ class DiaryListPopupViewReactor: Reactor {
   
   let initialState: State
   
+  public let diaryPopupListViewReactor: DiaryPopupListViewReactor
+  
   private let useCase: DiaryListPopupUseCase
   
   init(
-    useCase: DiaryListPopupUseCase
+    useCase: DiaryListPopupUseCase,
+    diaryPopupListViewReactor: DiaryPopupListViewReactor
   ) {
     defer { _ = self.state }
     self.initialState = State()
     self.useCase = useCase
+    self.diaryPopupListViewReactor = diaryPopupListViewReactor
   }
   
   func mutate(action: Action) -> Observable<Mutation> {

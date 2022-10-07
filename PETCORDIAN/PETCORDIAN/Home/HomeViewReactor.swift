@@ -34,7 +34,6 @@ class HomeViewReactor: Reactor {
   }
   
   func mutate(action: Action) -> Observable<Mutation> {
-    
   }
   
   func reduce(state: State, mutation: Mutation) -> State {

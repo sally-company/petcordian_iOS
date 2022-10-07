@@ -9,7 +9,11 @@ import ReactorKit
 
 final class DiaryListContentItemReactor: Reactor {
   
-  typealias Action = NoAction
+  enum Action {
+  }
+  
+  enum Mutation {
+  }
   
   struct State {
     let profileInfoData: ProfileInfo
