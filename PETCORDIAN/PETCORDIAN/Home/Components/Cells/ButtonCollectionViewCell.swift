@@ -5,11 +5,21 @@
 //  Created by Hyunwoo Jang on 2022/10/04.
 //
 
+import RxCocoa
+import RxSwift
 import SnapKit
 import Then
 import UIKit
 
+protocol ButtonCollectionViewCellDelegate: AnyObject {
+  func buttonCollectionViewCellButtonTap()
+}
+
 class ButtonCollectionViewCell: UICollectionViewCell {
+  
+  weak var delegate: ButtonCollectionViewCellDelegate?
+  
+  private let disposeBag: DisposeBag = .init()
   
   private let alarmButton = UIButton().then {
     $0.contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
@@ -24,6 +34,7 @@ class ButtonCollectionViewCell: UICollectionViewCell {
   override init(frame: CGRect) {
     super.init(frame: frame)
     self.setup()
+    self.bind()
   }
   
   required init?(coder: NSCoder) {
@@ -38,5 +49,18 @@ class ButtonCollectionViewCell: UICollectionViewCell {
       $0.left.equalTo(24)
       $0.centerY.equalToSuperview()
     }
+  }
+  
+  private func bind() {
+    self.bindAlarmButton()
+  }
+  
+  private func bindAlarmButton() {
+    self.alarmButton.rx.tap
+      .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
+      .bind(with: self) { obj, _ in
+        obj.delegate?.buttonCollectionViewCellButtonTap()
+      }
+      .disposed(by: self.disposeBag)
   }
 }

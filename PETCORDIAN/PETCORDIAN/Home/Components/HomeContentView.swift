@@ -13,7 +13,13 @@ import SnapKit
 import Then
 import UIKit
 
+protocol HomeContentViewDelegate: AnyObject {
+  func homeContentViewAlarmButtonTap()
+}
+
 public class HomeContentView: UIView {
+  
+  weak var delegate: HomeContentViewDelegate?
   
   enum Reusable {
     static let buttonCell = ReusableCell<ButtonCollectionViewCell>()
@@ -113,6 +119,8 @@ extension HomeContentView: UICollectionViewDataSource {
     switch indexPath.item {
     case 0:
       let cell = collectionView.dequeue(Reusable.buttonCell, for: indexPath)
+      
+      cell.delegate = self
       
       return cell
       
@@ -241,5 +249,12 @@ extension HomeContentView {
         $0.addArrangedSubview(self.feedTypeButton)
       }
     }
+  }
+}
+
+extension HomeContentView: ButtonCollectionViewCellDelegate {
+  
+  func buttonCollectionViewCellButtonTap() {
+    self.delegate?.homeContentViewAlarmButtonTap()
   }
 }

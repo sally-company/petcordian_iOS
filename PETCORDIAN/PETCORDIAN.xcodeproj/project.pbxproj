@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		D216637728EE61ED00205609 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216637628EE61ED00205609 /* CalendarView.swift */; };
 		D216637928EE773300205609 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216637828EE773300205609 /* UIImage+Extension.swift */; };
+		D216637C28EE7A9900205609 /* BottomSheetPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216637B28EE7A9900205609 /* BottomSheetPopViewController.swift */; };
+		D216637F28EEA20D00205609 /* DiaryListPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216637E28EEA20D00205609 /* DiaryListPopupView.swift */; };
+		D216638328EEA39E00205609 /* DiaryListTitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216638228EEA39E00205609 /* DiaryListTitleCollectionViewCell.swift */; };
+		D216638528EEA4A100205609 /* DiaryListContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216638428EEA4A100205609 /* DiaryListContentCollectionViewCell.swift */; };
+		D216638B28EEBB5900205609 /* DiaryListPopupViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216638728EEBB5900205609 /* DiaryListPopupViewReactor.swift */; };
+		D216638C28EEBB5900205609 /* DiaryListPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216638828EEBB5900205609 /* DiaryListPopupViewController.swift */; };
+		D216638D28EEBB5900205609 /* DiaryListPopupBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216638928EEBB5900205609 /* DiaryListPopupBuilder.swift */; };
+		D216638E28EEBB5900205609 /* DiaryListPopupViewUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216638A28EEBB5900205609 /* DiaryListPopupViewUseCase.swift */; };
+		D216639028EECC2600205609 /* DiaryListNewProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216638F28EECC2600205609 /* DiaryListNewProfileCollectionViewCell.swift */; };
 		D223022C28E2BF5F00D967A4 /* GoogleLoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D223022B28E2BF5F00D967A4 /* GoogleLoginDataManager.swift */; };
 		D224B73A28D8403F0095F3EF /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D224B73928D8403F0095F3EF /* InputView.swift */; };
 		D224B73F28D8409D0095F3EF /* ProfileNameAgeViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D224B73B28D8409D0095F3EF /* ProfileNameAgeViewReactor.swift */; };
@@ -50,6 +59,7 @@
 		D23704B828D98791004794E6 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23704B728D98791004794E6 /* String+Extension.swift */; };
 		D23704BC28D9A573004794E6 /* ProfileRelationContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23704BB28D9A573004794E6 /* ProfileRelationContentView.swift */; };
 		D23704C128D9BF76004794E6 /* RelationButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23704C028D9BF76004794E6 /* RelationButtonCell.swift */; };
+		D2372BDE28EFF40D00E8BAD1 /* DiaryListContentItemReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2372BDD28EFF40D00E8BAD1 /* DiaryListContentItemReactor.swift */; };
 		D2533A3928ED79E600468A48 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = D2533A3828ED79E600468A48 /* FSCalendar */; };
 		D2533A3F28ED7CDA00468A48 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2533A3E28ED7CDA00468A48 /* CalendarCollectionViewCell.swift */; };
 		D25C404F28D8673500B5590D /* PETButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25C404E28D8673500B5590D /* PETButton.swift */; };
@@ -122,6 +132,15 @@
 /* Begin PBXFileReference section */
 		D216637628EE61ED00205609 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		D216637828EE773300205609 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		D216637B28EE7A9900205609 /* BottomSheetPopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetPopViewController.swift; sourceTree = "<group>"; };
+		D216637E28EEA20D00205609 /* DiaryListPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListPopupView.swift; sourceTree = "<group>"; };
+		D216638228EEA39E00205609 /* DiaryListTitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListTitleCollectionViewCell.swift; sourceTree = "<group>"; };
+		D216638428EEA4A100205609 /* DiaryListContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListContentCollectionViewCell.swift; sourceTree = "<group>"; };
+		D216638728EEBB5900205609 /* DiaryListPopupViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListPopupViewReactor.swift; sourceTree = "<group>"; };
+		D216638828EEBB5900205609 /* DiaryListPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListPopupViewController.swift; sourceTree = "<group>"; };
+		D216638928EEBB5900205609 /* DiaryListPopupBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListPopupBuilder.swift; sourceTree = "<group>"; };
+		D216638A28EEBB5900205609 /* DiaryListPopupViewUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListPopupViewUseCase.swift; sourceTree = "<group>"; };
+		D216638F28EECC2600205609 /* DiaryListNewProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListNewProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		D223022B28E2BF5F00D967A4 /* GoogleLoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginDataManager.swift; sourceTree = "<group>"; };
 		D224B73928D8403F0095F3EF /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		D224B73B28D8409D0095F3EF /* ProfileNameAgeViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNameAgeViewReactor.swift; sourceTree = "<group>"; };
@@ -152,6 +171,7 @@
 		D23704B728D98791004794E6 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		D23704BB28D9A573004794E6 /* ProfileRelationContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRelationContentView.swift; sourceTree = "<group>"; };
 		D23704C028D9BF76004794E6 /* RelationButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationButtonCell.swift; sourceTree = "<group>"; };
+		D2372BDD28EFF40D00E8BAD1 /* DiaryListContentItemReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListContentItemReactor.swift; sourceTree = "<group>"; };
 		D2533A3E28ED7CDA00468A48 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		D25C404E28D8673500B5590D /* PETButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PETButton.swift; sourceTree = "<group>"; };
 		D26A8C0228D2B7E100FCDD7E /* OnboardingViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewReactor.swift; sourceTree = "<group>"; };
@@ -245,9 +265,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D216637A28EE7A7600205609 /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				D216637B28EE7A9900205609 /* BottomSheetPopViewController.swift */,
+			);
+			path = BottomSheet;
+			sourceTree = "<group>";
+		};
+		D216637D28EE7E6600205609 /* DiaryListPopup */ = {
+			isa = PBXGroup;
+			children = (
+				D216638028EEA21000205609 /* Components */,
+				D216638728EEBB5900205609 /* DiaryListPopupViewReactor.swift */,
+				D216638828EEBB5900205609 /* DiaryListPopupViewController.swift */,
+				D216638928EEBB5900205609 /* DiaryListPopupBuilder.swift */,
+				D216638A28EEBB5900205609 /* DiaryListPopupViewUseCase.swift */,
+			);
+			path = DiaryListPopup;
+			sourceTree = "<group>";
+		};
+		D216638028EEA21000205609 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D216638128EEA33200205609 /* Cells */,
+				D216637E28EEA20D00205609 /* DiaryListPopupView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D216638128EEA33200205609 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D216638228EEA39E00205609 /* DiaryListTitleCollectionViewCell.swift */,
+				D216638428EEA4A100205609 /* DiaryListContentCollectionViewCell.swift */,
+				D2372BDD28EFF40D00E8BAD1 /* DiaryListContentItemReactor.swift */,
+				D216638F28EECC2600205609 /* DiaryListNewProfileCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		D224B74728D84ED60095F3EF /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				D216637A28EE7A7600205609 /* BottomSheet */,
 				D224B74828D84EE80095F3EF /* UnderLineTextField.swift */,
 				D224B74A28D854620095F3EF /* RadioButtonController.swift */,
 				D25C404E28D8673500B5590D /* PETButton.swift */,
@@ -608,6 +669,7 @@
 			children = (
 				D2E2143628E6789000B36CF3 /* Entity */,
 				D293983928EC197600971842 /* Components */,
+				D216637D28EE7E6600205609 /* DiaryListPopup */,
 				D293985028EC2E0D00971842 /* HomeViewReactor.swift */,
 				D293985128EC2E0D00971842 /* HomeViewController.swift */,
 				D293985228EC2E0D00971842 /* HomeBuilder.swift */,
@@ -764,6 +826,8 @@
 				D224B74228D8409D0095F3EF /* ProfileNameAgeViewUseCase.swift in Sources */,
 				D293984928EC2BA600971842 /* RecentDiaryEmptyCollectionViewCell.swift in Sources */,
 				D293985528EC2E0D00971842 /* HomeViewController.swift in Sources */,
+				D216638D28EEBB5900205609 /* DiaryListPopupBuilder.swift in Sources */,
+				D2372BDE28EFF40D00E8BAD1 /* DiaryListContentItemReactor.swift in Sources */,
 				D2D4544228D1A54D00312390 /* OnboardingItems.swift in Sources */,
 				D224B74428D8491A0095F3EF /* UIButton+Extension.swift in Sources */,
 				D23333F228E1403600E0A00D /* BaseViewController.swift in Sources */,
@@ -787,6 +851,7 @@
 				D270A62428C9D3A70015F54C /* SceneDelegate.swift in Sources */,
 				D26A8C0828D2B7E100FCDD7E /* OnboardingBuilder.swift in Sources */,
 				D270A65D28C9D5DF0015F54C /* UIView+Preview.swift in Sources */,
+				D216637C28EE7A9900205609 /* BottomSheetPopViewController.swift in Sources */,
 				D26A8C1C28D41D9800FCDD7E /* SignUpBuilder.swift in Sources */,
 				D26A8C1A28D41D9800FCDD7E /* SignUpViewReactor.swift in Sources */,
 				D224B74028D8409D0095F3EF /* ProfileNameAgeViewController.swift in Sources */,
@@ -796,12 +861,14 @@
 				D23333AC28DAE98900E0A00D /* ProfileImageViewReactor.swift in Sources */,
 				D23704A928D94FC1004794E6 /* UnderLineTextField+Extension.swift in Sources */,
 				D293985428EC2E0D00971842 /* HomeViewReactor.swift in Sources */,
+				D216638C28EEBB5900205609 /* DiaryListPopupViewController.swift in Sources */,
 				D23704B828D98791004794E6 /* String+Extension.swift in Sources */,
 				D26A8C1028D2EA1C00FCDD7E /* Font.swift in Sources */,
 				D2D4543228D064F700312390 /* SplashViewReactor.swift in Sources */,
 				D2D4544928D1CA0F00312390 /* OnboardingCellReactor.swift in Sources */,
 				D26A8C1528D3185A00FCDD7E /* SignUpContentView.swift in Sources */,
 				D23333A228DAB61400E0A00D /* ProfileRelationBuilder.swift in Sources */,
+				D216638E28EEBB5900205609 /* DiaryListPopupViewUseCase.swift in Sources */,
 				D224B73F28D8409D0095F3EF /* ProfileNameAgeViewReactor.swift in Sources */,
 				D293985628EC2E0D00971842 /* HomeBuilder.swift in Sources */,
 				D2D4543328D064F700312390 /* SplashViewController.swift in Sources */,
@@ -816,9 +883,11 @@
 				D26A8C1D28D41D9800FCDD7E /* SignUpViewUseCase.swift in Sources */,
 				D26A8C2228D421DE00FCDD7E /* ProfileNameAgeContentView.swift in Sources */,
 				D23333AE28DAE98900E0A00D /* ProfileImageBuilder.swift in Sources */,
+				D216638528EEA4A100205609 /* DiaryListContentCollectionViewCell.swift in Sources */,
 				D233341E28E1858D00E0A00D /* KakaoLoginDataManager.swift in Sources */,
 				D23704BC28D9A573004794E6 /* ProfileRelationContentView.swift in Sources */,
 				D293984528EC2A9600971842 /* Date+Formatter.swift in Sources */,
+				D216637F28EEA20D00205609 /* DiaryListPopupView.swift in Sources */,
 				D2D4543D28D083D900312390 /* RootBuilder.swift in Sources */,
 				D2E46C1A28ED53CE00BC985B /* SeparateCollectionViewCell.swift in Sources */,
 				D224B74928D84EE80095F3EF /* UnderLineTextField.swift in Sources */,
@@ -835,7 +904,10 @@
 				D2D4544B28D1D35600312390 /* OnboardingImageCollectionViewCell.swift in Sources */,
 				D23704C128D9BF76004794E6 /* RelationButtonCell.swift in Sources */,
 				D293983E28EC287B00971842 /* ButtonCollectionViewCell.swift in Sources */,
+				D216638328EEA39E00205609 /* DiaryListTitleCollectionViewCell.swift in Sources */,
+				D216639028EECC2600205609 /* DiaryListNewProfileCollectionViewCell.swift in Sources */,
 				D26A8C1B28D41D9800FCDD7E /* SignUpViewController.swift in Sources */,
+				D216638B28EEBB5900205609 /* DiaryListPopupViewReactor.swift in Sources */,
 				D293984728EC2AB800971842 /* RecentDiaryListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

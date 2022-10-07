@@ -8,6 +8,8 @@
 import ReactorKit
 import RxCocoa
 import RxSwift
+import SnapKit
+import Then
 import UIKit
 
 class HomeViewController: UIViewController, ReactorKit.View {
@@ -20,7 +22,9 @@ class HomeViewController: UIViewController, ReactorKit.View {
   
   // MARK: UI
   
-  private let contentView = HomeContentView()
+  private lazy var contentView = HomeContentView().then {
+    $0.delegate = self
+  }
   
   deinit {
     print("\(self)")
@@ -45,5 +49,14 @@ class HomeViewController: UIViewController, ReactorKit.View {
   
   func bind(reactor: Reactor) {
     
+  }
+}
+
+extension HomeViewController: HomeContentViewDelegate {
+  
+  func homeContentViewAlarmButtonTap() {
+    let vc = DiaryListPopupBuilder.build()
+    
+    self.present(vc, animated: true)
   }
 }
