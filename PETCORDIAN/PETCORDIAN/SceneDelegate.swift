@@ -28,7 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     let vc = Inject.ViewControllerHost(SplashBuilder.build())
     let navController = UINavigationController(rootViewController: vc)
     navController.isNavigationBarHidden = true
-    window?.rootViewController = navController
+    window?.rootViewController = HomeBuilder.build()//navController
     
     window?.makeKeyAndVisible()
     
