@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D216637728EE61ED00205609 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216637628EE61ED00205609 /* CalendarView.swift */; };
+		D216637928EE773300205609 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216637828EE773300205609 /* UIImage+Extension.swift */; };
+		D216637C28EE7A9900205609 /* BottomSheetPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216637B28EE7A9900205609 /* BottomSheetPopViewController.swift */; };
+		D216637F28EEA20D00205609 /* DiaryPopupListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216637E28EEA20D00205609 /* DiaryPopupListView.swift */; };
+		D216638328EEA39E00205609 /* DiaryListTitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216638228EEA39E00205609 /* DiaryListTitleCollectionViewCell.swift */; };
+		D216638528EEA4A100205609 /* DiaryListContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216638428EEA4A100205609 /* DiaryListContentCollectionViewCell.swift */; };
+		D216638B28EEBB5900205609 /* DiaryListPopupViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216638728EEBB5900205609 /* DiaryListPopupViewReactor.swift */; };
+		D216638C28EEBB5900205609 /* DiaryListPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216638828EEBB5900205609 /* DiaryListPopupViewController.swift */; };
+		D216638D28EEBB5900205609 /* DiaryListPopupBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216638928EEBB5900205609 /* DiaryListPopupBuilder.swift */; };
+		D216638E28EEBB5900205609 /* DiaryListPopupViewUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216638A28EEBB5900205609 /* DiaryListPopupViewUseCase.swift */; };
+		D216639028EECC2600205609 /* DiaryListNewProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D216638F28EECC2600205609 /* DiaryListNewProfileCollectionViewCell.swift */; };
 		D223022C28E2BF5F00D967A4 /* GoogleLoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D223022B28E2BF5F00D967A4 /* GoogleLoginDataManager.swift */; };
 		D224B73A28D8403F0095F3EF /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D224B73928D8403F0095F3EF /* InputView.swift */; };
 		D224B73F28D8409D0095F3EF /* ProfileNameAgeViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D224B73B28D8409D0095F3EF /* ProfileNameAgeViewReactor.swift */; };
@@ -48,6 +59,10 @@
 		D23704B828D98791004794E6 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23704B728D98791004794E6 /* String+Extension.swift */; };
 		D23704BC28D9A573004794E6 /* ProfileRelationContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23704BB28D9A573004794E6 /* ProfileRelationContentView.swift */; };
 		D23704C128D9BF76004794E6 /* RelationButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23704C028D9BF76004794E6 /* RelationButtonCell.swift */; };
+		D2372BDE28EFF40D00E8BAD1 /* DiaryListContentItemReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2372BDD28EFF40D00E8BAD1 /* DiaryListContentItemReactor.swift */; };
+		D2372BE028F0147E00E8BAD1 /* DiaryPopupListViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2372BDF28F0147E00E8BAD1 /* DiaryPopupListViewReactor.swift */; };
+		D2533A3928ED79E600468A48 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = D2533A3828ED79E600468A48 /* FSCalendar */; };
+		D2533A3F28ED7CDA00468A48 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2533A3E28ED7CDA00468A48 /* CalendarCollectionViewCell.swift */; };
 		D25C404F28D8673500B5590D /* PETButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25C404E28D8673500B5590D /* PETButton.swift */; };
 		D26A8C0628D2B7E100FCDD7E /* OnboardingViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26A8C0228D2B7E100FCDD7E /* OnboardingViewReactor.swift */; };
 		D26A8C0728D2B7E100FCDD7E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26A8C0328D2B7E100FCDD7E /* OnboardingViewController.swift */; };
@@ -81,6 +96,19 @@
 		D270A66128C9DC370015F54C /* ReusableKit in Frameworks */ = {isa = PBXBuildFile; productRef = D270A66028C9DC370015F54C /* ReusableKit */; };
 		D270A66428C9DCDA0015F54C /* netfox in Frameworks */ = {isa = PBXBuildFile; productRef = D270A66328C9DCDA0015F54C /* netfox */; };
 		D270A66E28D062460015F54C /* SplashContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D270A66D28D062460015F54C /* SplashContentView.swift */; };
+		D293983E28EC287B00971842 /* ButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D293983D28EC287B00971842 /* ButtonCollectionViewCell.swift */; };
+		D293984328EC2A4000971842 /* RecentDiaryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D293984228EC2A4000971842 /* RecentDiaryCollectionViewCell.swift */; };
+		D293984528EC2A9600971842 /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D293984428EC2A9600971842 /* Date+Formatter.swift */; };
+		D293984728EC2AB800971842 /* RecentDiaryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D293984628EC2AB800971842 /* RecentDiaryListView.swift */; };
+		D293984928EC2BA600971842 /* RecentDiaryEmptyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D293984828EC2BA600971842 /* RecentDiaryEmptyCollectionViewCell.swift */; };
+		D293984D28EC2C7E00971842 /* RecentDiaryListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D293984C28EC2C7E00971842 /* RecentDiaryListCollectionViewCell.swift */; };
+		D293984F28EC2CEC00971842 /* HomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D293984E28EC2CEC00971842 /* HomeContentView.swift */; };
+		D293985428EC2E0D00971842 /* HomeViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D293985028EC2E0D00971842 /* HomeViewReactor.swift */; };
+		D293985528EC2E0D00971842 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D293985128EC2E0D00971842 /* HomeViewController.swift */; };
+		D293985628EC2E0D00971842 /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D293985228EC2E0D00971842 /* HomeBuilder.swift */; };
+		D293985728EC2E0D00971842 /* HomeViewUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D293985328EC2E0D00971842 /* HomeViewUseCase.swift */; };
+		D293986128EC362900971842 /* FeedDiaryListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D293986028EC362900971842 /* FeedDiaryListCollectionViewCell.swift */; };
+		D293986328EC3B7C00971842 /* DynamicHeightCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D293986228EC3B7C00971842 /* DynamicHeightCollectionView.swift */; };
 		D2D4543228D064F700312390 /* SplashViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4542E28D064F700312390 /* SplashViewReactor.swift */; };
 		D2D4543328D064F700312390 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4542F28D064F700312390 /* SplashViewController.swift */; };
 		D2D4543428D064F700312390 /* SplashBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4543028D064F700312390 /* SplashBuilder.swift */; };
@@ -93,6 +121,9 @@
 		D2D4544928D1CA0F00312390 /* OnboardingCellReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4544828D1CA0F00312390 /* OnboardingCellReactor.swift */; };
 		D2D4544B28D1D35600312390 /* OnboardingImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4544A28D1D35600312390 /* OnboardingImageCollectionViewCell.swift */; };
 		D2D4544D28D1D8DA00312390 /* OnboardingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4544C28D1D8DA00312390 /* OnboardingContentView.swift */; };
+		D2E2143828E6789B00B36CF3 /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E2143728E6789B00B36CF3 /* HomeEntity.swift */; };
+		D2E46C1828ED4F2400BC985B /* FeedDiaryEmptyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E46C1728ED4F2400BC985B /* FeedDiaryEmptyCollectionViewCell.swift */; };
+		D2E46C1A28ED53CE00BC985B /* SeparateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E46C1928ED53CE00BC985B /* SeparateCollectionViewCell.swift */; };
 		D2EB0CB128E344F600F7CCCE /* NaverThirdPartyLogin in Frameworks */ = {isa = PBXBuildFile; productRef = D2EB0CB028E344F600F7CCCE /* NaverThirdPartyLogin */; };
 		D2EB0CB328E356B000F7CCCE /* NaverLoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EB0CB228E356B000F7CCCE /* NaverLoginDataManager.swift */; };
 		D2EB0CB628E3584F00F7CCCE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D2EB0CB528E3584F00F7CCCE /* Alamofire */; };
@@ -100,6 +131,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D216637628EE61ED00205609 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		D216637828EE773300205609 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		D216637B28EE7A9900205609 /* BottomSheetPopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetPopViewController.swift; sourceTree = "<group>"; };
+		D216637E28EEA20D00205609 /* DiaryPopupListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryPopupListView.swift; sourceTree = "<group>"; };
+		D216638228EEA39E00205609 /* DiaryListTitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListTitleCollectionViewCell.swift; sourceTree = "<group>"; };
+		D216638428EEA4A100205609 /* DiaryListContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListContentCollectionViewCell.swift; sourceTree = "<group>"; };
+		D216638728EEBB5900205609 /* DiaryListPopupViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListPopupViewReactor.swift; sourceTree = "<group>"; };
+		D216638828EEBB5900205609 /* DiaryListPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListPopupViewController.swift; sourceTree = "<group>"; };
+		D216638928EEBB5900205609 /* DiaryListPopupBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListPopupBuilder.swift; sourceTree = "<group>"; };
+		D216638A28EEBB5900205609 /* DiaryListPopupViewUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListPopupViewUseCase.swift; sourceTree = "<group>"; };
+		D216638F28EECC2600205609 /* DiaryListNewProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListNewProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		D223022B28E2BF5F00D967A4 /* GoogleLoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginDataManager.swift; sourceTree = "<group>"; };
 		D224B73928D8403F0095F3EF /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		D224B73B28D8409D0095F3EF /* ProfileNameAgeViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNameAgeViewReactor.swift; sourceTree = "<group>"; };
@@ -130,6 +172,9 @@
 		D23704B728D98791004794E6 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		D23704BB28D9A573004794E6 /* ProfileRelationContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRelationContentView.swift; sourceTree = "<group>"; };
 		D23704C028D9BF76004794E6 /* RelationButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationButtonCell.swift; sourceTree = "<group>"; };
+		D2372BDD28EFF40D00E8BAD1 /* DiaryListContentItemReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListContentItemReactor.swift; sourceTree = "<group>"; };
+		D2372BDF28F0147E00E8BAD1 /* DiaryPopupListViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryPopupListViewReactor.swift; sourceTree = "<group>"; };
+		D2533A3E28ED7CDA00468A48 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		D25C404E28D8673500B5590D /* PETButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PETButton.swift; sourceTree = "<group>"; };
 		D26A8C0228D2B7E100FCDD7E /* OnboardingViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewReactor.swift; sourceTree = "<group>"; };
 		D26A8C0328D2B7E100FCDD7E /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +197,19 @@
 		D270A65B28C9D5DF0015F54C /* UIView+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Preview.swift"; sourceTree = "<group>"; };
 		D270A65C28C9D5DF0015F54C /* UIViewController+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Preview.swift"; sourceTree = "<group>"; };
 		D270A66D28D062460015F54C /* SplashContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashContentView.swift; sourceTree = "<group>"; };
+		D293983D28EC287B00971842 /* ButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCollectionViewCell.swift; sourceTree = "<group>"; };
+		D293984228EC2A4000971842 /* RecentDiaryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentDiaryCollectionViewCell.swift; sourceTree = "<group>"; };
+		D293984428EC2A9600971842 /* Date+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatter.swift"; sourceTree = "<group>"; };
+		D293984628EC2AB800971842 /* RecentDiaryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentDiaryListView.swift; sourceTree = "<group>"; };
+		D293984828EC2BA600971842 /* RecentDiaryEmptyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentDiaryEmptyCollectionViewCell.swift; sourceTree = "<group>"; };
+		D293984C28EC2C7E00971842 /* RecentDiaryListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentDiaryListCollectionViewCell.swift; sourceTree = "<group>"; };
+		D293984E28EC2CEC00971842 /* HomeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentView.swift; sourceTree = "<group>"; };
+		D293985028EC2E0D00971842 /* HomeViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewReactor.swift; sourceTree = "<group>"; };
+		D293985128EC2E0D00971842 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D293985228EC2E0D00971842 /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
+		D293985328EC2E0D00971842 /* HomeViewUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewUseCase.swift; sourceTree = "<group>"; };
+		D293986028EC362900971842 /* FeedDiaryListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDiaryListCollectionViewCell.swift; sourceTree = "<group>"; };
+		D293986228EC3B7C00971842 /* DynamicHeightCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightCollectionView.swift; sourceTree = "<group>"; };
 		D2D4542E28D064F700312390 /* SplashViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewReactor.swift; sourceTree = "<group>"; };
 		D2D4542F28D064F700312390 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		D2D4543028D064F700312390 /* SplashBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashBuilder.swift; sourceTree = "<group>"; };
@@ -164,6 +222,9 @@
 		D2D4544828D1CA0F00312390 /* OnboardingCellReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCellReactor.swift; sourceTree = "<group>"; };
 		D2D4544A28D1D35600312390 /* OnboardingImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		D2D4544C28D1D8DA00312390 /* OnboardingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentView.swift; sourceTree = "<group>"; };
+		D2E2143728E6789B00B36CF3 /* HomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
+		D2E46C1728ED4F2400BC985B /* FeedDiaryEmptyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDiaryEmptyCollectionViewCell.swift; sourceTree = "<group>"; };
+		D2E46C1928ED53CE00BC985B /* SeparateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparateCollectionViewCell.swift; sourceTree = "<group>"; };
 		D2EB0CB228E356B000F7CCCE /* NaverLoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverLoginDataManager.swift; sourceTree = "<group>"; };
 		D2EB0CBC28E4475D00F7CCCE /* SocialLoginError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,6 +247,7 @@
 				D23333C528DD969A00E0A00D /* Lottie in Frameworks */,
 				D270A65428C9D5B00015F54C /* Moya in Frameworks */,
 				D23333B628DAFC4800E0A00D /* CropViewController in Frameworks */,
+				D2533A3928ED79E600468A48 /* FSCalendar in Frameworks */,
 				D233D2DF28E2A60F00095763 /* FirebaseAuth in Frameworks */,
 				D270A65628C9D5B00015F54C /* RxMoya in Frameworks */,
 				D270A65128C9D5660015F54C /* LookinServer in Frameworks */,
@@ -205,9 +267,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D216637A28EE7A7600205609 /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				D216637B28EE7A9900205609 /* BottomSheetPopViewController.swift */,
+			);
+			path = BottomSheet;
+			sourceTree = "<group>";
+		};
+		D216637D28EE7E6600205609 /* DiaryListPopup */ = {
+			isa = PBXGroup;
+			children = (
+				D216638028EEA21000205609 /* Components */,
+				D216638728EEBB5900205609 /* DiaryListPopupViewReactor.swift */,
+				D216638828EEBB5900205609 /* DiaryListPopupViewController.swift */,
+				D216638928EEBB5900205609 /* DiaryListPopupBuilder.swift */,
+				D216638A28EEBB5900205609 /* DiaryListPopupViewUseCase.swift */,
+			);
+			path = DiaryListPopup;
+			sourceTree = "<group>";
+		};
+		D216638028EEA21000205609 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D216638128EEA33200205609 /* Cells */,
+				D216637E28EEA20D00205609 /* DiaryPopupListView.swift */,
+				D2372BDF28F0147E00E8BAD1 /* DiaryPopupListViewReactor.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D216638128EEA33200205609 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D216638228EEA39E00205609 /* DiaryListTitleCollectionViewCell.swift */,
+				D216638428EEA4A100205609 /* DiaryListContentCollectionViewCell.swift */,
+				D2372BDD28EFF40D00E8BAD1 /* DiaryListContentItemReactor.swift */,
+				D216638F28EECC2600205609 /* DiaryListNewProfileCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		D224B74728D84ED60095F3EF /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				D216637A28EE7A7600205609 /* BottomSheet */,
 				D224B74828D84EE80095F3EF /* UnderLineTextField.swift */,
 				D224B74A28D854620095F3EF /* RadioButtonController.swift */,
 				D25C404E28D8673500B5590D /* PETButton.swift */,
@@ -293,6 +397,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		D2533A3628ED796400468A48 /* CalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				D216637628EE61ED00205609 /* CalendarView.swift */,
+			);
+			path = CalendarView;
+			sourceTree = "<group>";
+		};
 		D26A8C0A28D2CEF600FCDD7E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +429,7 @@
 				D23333F128E1403600E0A00D /* BaseViewController.swift */,
 				D26A8C0F28D2EA1C00FCDD7E /* Font.swift */,
 				D233339A28DAAAE300E0A00D /* RelationItem.swift */,
+				D293986228EC3B7C00971842 /* DynamicHeightCollectionView.swift */,
 				D224B74728D84ED60095F3EF /* UI */,
 				D233341C28E1857200E0A00D /* SocialLogin */,
 			);
@@ -403,6 +516,7 @@
 				D2D4543F28D16D0100312390 /* Onboarding */,
 				D26A8C1228D3182900FCDD7E /* SignUp */,
 				D26A8C1E28D4211900FCDD7E /* RegisterProfile */,
+				D2E2143528E6786F00B36CF3 /* Home */,
 				D270A62128C9D3A70015F54C /* AppDelegate.swift */,
 				D270A62328C9D3A70015F54C /* SceneDelegate.swift */,
 				D270A62F28C9D3A80015F54C /* Info.plist */,
@@ -419,6 +533,8 @@
 				D224B74328D8491A0095F3EF /* UIButton+Extension.swift */,
 				D23704A828D94FC1004794E6 /* UnderLineTextField+Extension.swift */,
 				D23704B728D98791004794E6 /* String+Extension.swift */,
+				D293984428EC2A9600971842 /* Date+Formatter.swift */,
+				D216637828EE773300205609 /* UIImage+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -441,6 +557,56 @@
 				D270A66D28D062460015F54C /* SplashContentView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		D293983928EC197600971842 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D293983A28EC19A600971842 /* Cells */,
+				D293983F28EC2A0800971842 /* CollectionViews */,
+				D2533A3628ED796400468A48 /* CalendarView */,
+				D293984E28EC2CEC00971842 /* HomeContentView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D293983A28EC19A600971842 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D293983D28EC287B00971842 /* ButtonCollectionViewCell.swift */,
+				D293984C28EC2C7E00971842 /* RecentDiaryListCollectionViewCell.swift */,
+				D293986028EC362900971842 /* FeedDiaryListCollectionViewCell.swift */,
+				D2E46C1728ED4F2400BC985B /* FeedDiaryEmptyCollectionViewCell.swift */,
+				D2E46C1928ED53CE00BC985B /* SeparateCollectionViewCell.swift */,
+				D2533A3E28ED7CDA00468A48 /* CalendarCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D293983F28EC2A0800971842 /* CollectionViews */ = {
+			isa = PBXGroup;
+			children = (
+				D293984028EC2A2200971842 /* RecentDiary */,
+			);
+			path = CollectionViews;
+			sourceTree = "<group>";
+		};
+		D293984028EC2A2200971842 /* RecentDiary */ = {
+			isa = PBXGroup;
+			children = (
+				D293984128EC2A2B00971842 /* Cells */,
+				D293984628EC2AB800971842 /* RecentDiaryListView.swift */,
+			);
+			path = RecentDiary;
+			sourceTree = "<group>";
+		};
+		D293984128EC2A2B00971842 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D293984228EC2A4000971842 /* RecentDiaryCollectionViewCell.swift */,
+				D293984828EC2BA600971842 /* RecentDiaryEmptyCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		D2D4543628D083BA00312390 /* Root */ = {
@@ -501,6 +667,28 @@
 			path = Section;
 			sourceTree = "<group>";
 		};
+		D2E2143528E6786F00B36CF3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D2E2143628E6789000B36CF3 /* Entity */,
+				D293983928EC197600971842 /* Components */,
+				D216637D28EE7E6600205609 /* DiaryListPopup */,
+				D293985028EC2E0D00971842 /* HomeViewReactor.swift */,
+				D293985128EC2E0D00971842 /* HomeViewController.swift */,
+				D293985228EC2E0D00971842 /* HomeBuilder.swift */,
+				D293985328EC2E0D00971842 /* HomeViewUseCase.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D2E2143628E6789000B36CF3 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D2E2143728E6789B00B36CF3 /* HomeEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		D2EB0CBB28E4475000F7CCCE /* Error */ = {
 			isa = PBXGroup;
 			children = (
@@ -552,6 +740,7 @@
 				D233D2E728E2B9A000095763 /* GoogleSignIn */,
 				D2EB0CB028E344F600F7CCCE /* NaverThirdPartyLogin */,
 				D2EB0CB528E3584F00F7CCCE /* Alamofire */,
+				D2533A3828ED79E600468A48 /* FSCalendar */,
 			);
 			productName = PETCORDIAN;
 			productReference = D270A61E28C9D3A70015F54C /* PETCORDIAN.app */;
@@ -604,6 +793,7 @@
 				D233D2E628E2B9A000095763 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				D2EB0CAF28E344F600F7CCCE /* XCRemoteSwiftPackageReference "naveridlogin-sdk-ios-spm" */,
 				D2EB0CB428E3584F00F7CCCE /* XCRemoteSwiftPackageReference "Alamofire" */,
+				D2533A3728ED79E600468A48 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 			);
 			productRefGroup = D270A61F28C9D3A70015F54C /* Products */;
 			projectDirPath = "";
@@ -635,7 +825,12 @@
 			files = (
 				D23333A028DAB61400E0A00D /* ProfileRelationViewReactor.swift in Sources */,
 				D2D4543428D064F700312390 /* SplashBuilder.swift in Sources */,
+				D2E2143828E6789B00B36CF3 /* HomeEntity.swift in Sources */,
 				D224B74228D8409D0095F3EF /* ProfileNameAgeViewUseCase.swift in Sources */,
+				D293984928EC2BA600971842 /* RecentDiaryEmptyCollectionViewCell.swift in Sources */,
+				D293985528EC2E0D00971842 /* HomeViewController.swift in Sources */,
+				D216638D28EEBB5900205609 /* DiaryListPopupBuilder.swift in Sources */,
+				D2372BDE28EFF40D00E8BAD1 /* DiaryListContentItemReactor.swift in Sources */,
 				D2D4544228D1A54D00312390 /* OnboardingItems.swift in Sources */,
 				D224B74428D8491A0095F3EF /* UIButton+Extension.swift in Sources */,
 				D23333F228E1403600E0A00D /* BaseViewController.swift in Sources */,
@@ -643,17 +838,23 @@
 				D2D4543B28D083D900312390 /* RootViewReactor.swift in Sources */,
 				D224B74B28D854620095F3EF /* RadioButtonController.swift in Sources */,
 				D23704B528D96442004794E6 /* RegisterProfileRootBuilder.swift in Sources */,
+				D293985728EC2E0D00971842 /* HomeViewUseCase.swift in Sources */,
 				D270A62228C9D3A70015F54C /* AppDelegate.swift in Sources */,
 				D23333A728DAE97600E0A00D /* ProfileImageContentView.swift in Sources */,
+				D2533A3F28ED7CDA00468A48 /* CalendarCollectionViewCell.swift in Sources */,
 				D26A8C0928D2B7E100FCDD7E /* OnboardingViewUseCase.swift in Sources */,
+				D293986128EC362900971842 /* FeedDiaryListCollectionViewCell.swift in Sources */,
+				D293984F28EC2CEC00971842 /* HomeContentView.swift in Sources */,
 				D23704B328D96442004794E6 /* RegisterProfileRootViewReactor.swift in Sources */,
 				D26A8C0728D2B7E100FCDD7E /* OnboardingViewController.swift in Sources */,
 				D2D4544728D1C99600312390 /* OnboardingImageSection.swift in Sources */,
 				D2D4543C28D083D900312390 /* RootViewController.swift in Sources */,
+				D293986328EC3B7C00971842 /* DynamicHeightCollectionView.swift in Sources */,
 				D23333AD28DAE98900E0A00D /* ProfileImageViewController.swift in Sources */,
 				D270A62428C9D3A70015F54C /* SceneDelegate.swift in Sources */,
 				D26A8C0828D2B7E100FCDD7E /* OnboardingBuilder.swift in Sources */,
 				D270A65D28C9D5DF0015F54C /* UIView+Preview.swift in Sources */,
+				D216637C28EE7A9900205609 /* BottomSheetPopViewController.swift in Sources */,
 				D26A8C1C28D41D9800FCDD7E /* SignUpBuilder.swift in Sources */,
 				D26A8C1A28D41D9800FCDD7E /* SignUpViewReactor.swift in Sources */,
 				D224B74028D8409D0095F3EF /* ProfileNameAgeViewController.swift in Sources */,
@@ -662,16 +863,23 @@
 				D23333F028E06AA400E0A00D /* RegisterProfileItem.swift in Sources */,
 				D23333AC28DAE98900E0A00D /* ProfileImageViewReactor.swift in Sources */,
 				D23704A928D94FC1004794E6 /* UnderLineTextField+Extension.swift in Sources */,
+				D2372BE028F0147E00E8BAD1 /* DiaryPopupListViewReactor.swift in Sources */,
+				D293985428EC2E0D00971842 /* HomeViewReactor.swift in Sources */,
+				D216638C28EEBB5900205609 /* DiaryListPopupViewController.swift in Sources */,
 				D23704B828D98791004794E6 /* String+Extension.swift in Sources */,
 				D26A8C1028D2EA1C00FCDD7E /* Font.swift in Sources */,
 				D2D4543228D064F700312390 /* SplashViewReactor.swift in Sources */,
 				D2D4544928D1CA0F00312390 /* OnboardingCellReactor.swift in Sources */,
 				D26A8C1528D3185A00FCDD7E /* SignUpContentView.swift in Sources */,
 				D23333A228DAB61400E0A00D /* ProfileRelationBuilder.swift in Sources */,
+				D216638E28EEBB5900205609 /* DiaryListPopupViewUseCase.swift in Sources */,
 				D224B73F28D8409D0095F3EF /* ProfileNameAgeViewReactor.swift in Sources */,
+				D293985628EC2E0D00971842 /* HomeBuilder.swift in Sources */,
 				D2D4543328D064F700312390 /* SplashViewController.swift in Sources */,
 				D23704B428D96442004794E6 /* RegisterProfileRootViewController.swift in Sources */,
 				D224B73A28D8403F0095F3EF /* InputView.swift in Sources */,
+				D2E46C1828ED4F2400BC985B /* FeedDiaryEmptyCollectionViewCell.swift in Sources */,
+				D216637928EE773300205609 /* UIImage+Extension.swift in Sources */,
 				D2D4544D28D1D8DA00312390 /* OnboardingContentView.swift in Sources */,
 				D223022C28E2BF5F00D967A4 /* GoogleLoginDataManager.swift in Sources */,
 				D270A65E28C9D5DF0015F54C /* UIViewController+Preview.swift in Sources */,
@@ -679,20 +887,32 @@
 				D26A8C1D28D41D9800FCDD7E /* SignUpViewUseCase.swift in Sources */,
 				D26A8C2228D421DE00FCDD7E /* ProfileNameAgeContentView.swift in Sources */,
 				D23333AE28DAE98900E0A00D /* ProfileImageBuilder.swift in Sources */,
+				D216638528EEA4A100205609 /* DiaryListContentCollectionViewCell.swift in Sources */,
 				D233341E28E1858D00E0A00D /* KakaoLoginDataManager.swift in Sources */,
 				D23704BC28D9A573004794E6 /* ProfileRelationContentView.swift in Sources */,
+				D293984528EC2A9600971842 /* Date+Formatter.swift in Sources */,
+				D216637F28EEA20D00205609 /* DiaryPopupListView.swift in Sources */,
 				D2D4543D28D083D900312390 /* RootBuilder.swift in Sources */,
+				D2E46C1A28ED53CE00BC985B /* SeparateCollectionViewCell.swift in Sources */,
 				D224B74928D84EE80095F3EF /* UnderLineTextField.swift in Sources */,
+				D293984D28EC2C7E00971842 /* RecentDiaryListCollectionViewCell.swift in Sources */,
 				D23333AF28DAE98900E0A00D /* ProfileImageViewUseCase.swift in Sources */,
 				D224B74128D8409D0095F3EF /* ProfileNameAgeBuilder.swift in Sources */,
+				D216637728EE61ED00205609 /* CalendarView.swift in Sources */,
 				D26A8C0628D2B7E100FCDD7E /* OnboardingViewReactor.swift in Sources */,
+				D293984328EC2A4000971842 /* RecentDiaryCollectionViewCell.swift in Sources */,
 				D233339B28DAAAE300E0A00D /* RelationItem.swift in Sources */,
 				D23333A328DAB61400E0A00D /* ProfileRelationViewUseCase.swift in Sources */,
 				D2EB0CBD28E4475D00F7CCCE /* SocialLoginError.swift in Sources */,
 				D2EB0CB328E356B000F7CCCE /* NaverLoginDataManager.swift in Sources */,
 				D2D4544B28D1D35600312390 /* OnboardingImageCollectionViewCell.swift in Sources */,
 				D23704C128D9BF76004794E6 /* RelationButtonCell.swift in Sources */,
+				D293983E28EC287B00971842 /* ButtonCollectionViewCell.swift in Sources */,
+				D216638328EEA39E00205609 /* DiaryListTitleCollectionViewCell.swift in Sources */,
+				D216639028EECC2600205609 /* DiaryListNewProfileCollectionViewCell.swift in Sources */,
 				D26A8C1B28D41D9800FCDD7E /* SignUpViewController.swift in Sources */,
+				D216638B28EEBB5900205609 /* DiaryListPopupViewReactor.swift in Sources */,
+				D293984728EC2AB800971842 /* RecentDiaryListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -964,6 +1184,14 @@
 				kind = branch;
 			};
 		};
+		D2533A3728ED79E600468A48 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		D270A63528C9D4710015F54C /* XCRemoteSwiftPackageReference "ReactorKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactorKit/ReactorKit.git";
@@ -1141,6 +1369,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D23704AA28D958FA004794E6 /* XCRemoteSwiftPackageReference "RxKeyboard" */;
 			productName = RxKeyboard;
+		};
+		D2533A3828ED79E600468A48 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2533A3728ED79E600468A48 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
 		};
 		D270A63628C9D4710015F54C /* ReactorKit */ = {
 			isa = XCSwiftPackageProductDependency;
